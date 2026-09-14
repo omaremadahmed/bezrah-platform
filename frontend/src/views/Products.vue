@@ -199,7 +199,7 @@ const addPriceGroupToCart = (group) => {
 const downloadCatalogue = async () => {
   isDownloading.value = true;
   try {
-    const doc = await generateCataloguePdf(catalogProducts);
+    const doc = await generateCataloguePdf(staticProducts);
     await savePdfForDevice(doc, 'Bezrah_Product_Catalogue.pdf');
   } catch (error) {
     console.error('Failed to generate catalogue:', error);

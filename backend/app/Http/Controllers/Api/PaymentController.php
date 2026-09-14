@@ -46,15 +46,54 @@ class PaymentController extends Controller
                     ], 422);
                 }
                 
-                // Add external Visa/Payment API deduction logic here (stripe, etc.)
-                // e.g. Stripe::charge(...)
+                $stripeSecretKey = env('STRIPE_SECRET_KEY');
+                
+                if (empty($stripeSecretKey)) {
+                    // Fail safely instead of faking success when no keys are provided
+                    return response()->json([
+                        'success' => false,
+                        'message' => 'Payment gateway is not configured.'
+                    ], 500);
+                }
+
+                // In a real scenario with the Stripe SDK installed:
+                // \Stripe\Stripe::setApiKey($stripeSecretKey);
+                // try {
+                //     \Stripe\Charge::create([...]);
+                // } catch (\Exception $e) { return error; }
+                
+                // Since this project doesn't have stripe/stripe-php installed,
+                // and we shouldn't simulate success or add dependencies unnecessarily,
+                // we leave this integration configurable but safe.
+                
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Payment gateway SDK not installed.'
+                ], 500);
             }
 
             $paidNow = in_array($data['paymentMethod'], ['credit_card', 'paypal'], true);
 
+            // Since we prevented credit_card from faking success above, 
+            // if we reach here, it must be paypal or another method.
+            if ($data['paymentMethod'] === 'paypal') {
+                $paypalSecret = env('PAYPAL_SECRET');
+                if (empty($paypalSecret)) {
+                    return response()->json([
+                        'success' => false,
+                        'message' => 'PayPal is not configured.'
+                    ], 500);
+                }
+                
+                return response()->json([
+                    'success' => false,
+                    'message' => 'PayPal SDK not installed.'
+                ], 500);
+            }
+
             $order->update([
                 'payment_method' => $data['paymentMethod'],
-                'payment_status' => $paidNow ? 'paid' : 'pending',
+                'payment_status' => $paidNow ? 'paid' : 'pending', // Though it won't reach here for paidNow methods anymore
                 'status' => $paidNow ? 'confirmed' : 'pending',
             ]);
 
