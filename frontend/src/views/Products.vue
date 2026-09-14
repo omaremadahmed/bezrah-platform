@@ -225,20 +225,26 @@ onMounted(async () => {
 });
 
 const filteredProducts = computed(() => {
-  if (activeCategory.value === 'all') return backendProducts.value;
-  return backendProducts.value.filter(p => {
-    return p.category_name && p.category_name.toLowerCase() === activeCategory.value;
+  const products = backendProducts.value.length > 0 ? backendProducts.value : staticProducts;
+  if (activeCategory.value === 'all') return products;
+  return products.filter(p => {
+    const cat = (p.category_name || p.category || '').toLowerCase();
+    return cat === activeCategory.value;
   });
 });
 
 const refreshProducts = async () => {
   try {
     const res = await productService.getProducts({ per_page: 100 });
-    if (res && res.success) {
+    if (res && res.success && Array.isArray(res.data) && res.data.length > 0) {
       backendProducts.value = res.data;
+    } else {
+      // Fallback to static products
+      backendProducts.value = [];
     }
   } catch (e) {
-    console.error('Failed to fetch products', e);
+    console.warn('Failed to fetch products from API, using static data', e);
+    backendProducts.value = [];
   }
 };
 </script>

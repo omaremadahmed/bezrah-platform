@@ -151,13 +151,24 @@ import { useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import Logo from './Logo.vue'
 import { useAuthStore } from '../stores/auth'
+import { useCartStore } from '../stores/cart'
 
 const route = useRoute()
 const router = useRouter()
 const { locale, t } = useI18n()
 const authStore = useAuthStore()
+const cartStore = useCartStore()
 const isScrolled = ref(false)
 const mobileMenuOpen = ref(false)
+
+const cartLabel = computed(() => locale.value === 'ar' ? 'السلة' : 'Cart')
+const checkoutLabel = computed(() => locale.value === 'ar' ? 'الدفع' : 'Checkout')
+const cartAriaLabel = computed(() => `${cartLabel.value} (${cartStore.itemCount})`)
+
+const openCartFromDrawer = () => {
+  closeMobileMenu()
+  cartStore.toggleCart()
+}
 
 const handleLogout = async () => {
   await authStore.logout()
