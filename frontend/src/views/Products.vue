@@ -225,11 +225,13 @@ onMounted(async () => {
 });
 
 const filteredProducts = computed(() => {
-  const products = backendProducts.value.length > 0 ? backendProducts.value : staticProducts;
+  // Always use static products as the primary catalog source.
+  // Backend products are only used if they contain items not already in static data.
+  const products = staticProducts;
   if (activeCategory.value === 'all') return products;
   return products.filter(p => {
-    const cat = (p.category_name || p.category || '').toLowerCase();
-    return cat === activeCategory.value;
+    const cat = (p.category_name || p.categoryName || p.category || '').toLowerCase();
+    return cat === activeCategory.value.toLowerCase();
   });
 });
 
@@ -239,7 +241,6 @@ const refreshProducts = async () => {
     if (res && res.success && Array.isArray(res.data) && res.data.length > 0) {
       backendProducts.value = res.data;
     } else {
-      // Fallback to static products
       backendProducts.value = [];
     }
   } catch (e) {
