@@ -1,0 +1,7 @@
+backend/
+api/
+k8s/
+*.md
+php_releases.html
+docker-compose.yml
+Jenkinsfile

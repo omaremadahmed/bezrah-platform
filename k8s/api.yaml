@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bazrah-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: bazrah-api
+  template:
+    metadata:
+      labels:
+        app: bazrah-api
+    spec:
+      containers:
+      - name: bazrah-api
+        image: bazrah/api:latest
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: DB_HOST
+          value: postgres
+        - name: DB_USER
+          value: postgres
+        - name: DB_PASS
+          value: postgres
+        - name: DB_NAME
+          value: bazrahdb
+        - name: JWT_SECRET
+          value: "bazrah-super-secret-key-2026-prod"
+        ports:
+        - containerPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bazrah-api
+spec:
+  ports:
+  - port: 3000
+  selector:
+    app: bazrah-api
