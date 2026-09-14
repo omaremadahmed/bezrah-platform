@@ -13,7 +13,7 @@ class ProductService
      */
     public function getProducts(array $filters = [], int $perPage = 12): LengthAwarePaginator
     {
-        $query = Product::with(['category', 'translations.language', 'images'])
+        $query = Product::with(['category', 'translations.language', 'images', 'variants'])
             ->active()
             ->orderBy('sort_order');
 

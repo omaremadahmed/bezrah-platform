@@ -24,6 +24,7 @@ class ProductController extends Controller
         );
 
         $mapped = $products->map(function ($product) {
+            $firstVariant = $product->variants->first();
             return [
                 'id' => $product->id,
                 'slug' => $product->slug,
@@ -32,6 +33,9 @@ class ProductController extends Controller
                 'category_name' => $product->category ? $product->category->name : null,
                 'image' => $product->image,
                 'is_featured' => $product->is_featured,
+                'price_fob_piece' => $firstVariant ? $firstVariant->price_fob_piece : null,
+                'price_fob_carton' => $firstVariant ? $firstVariant->price_fob_carton : null,
+                'packaging' => $firstVariant ? $firstVariant->packaging : null,
             ];
         });
 

@@ -29,6 +29,7 @@ return [
 
     'allowed_origins_patterns' => [
         '/^http:\/\/(localhost|127\.0\.0\.1):517[0-9]$/',
+        '/^https:\/\/.*\.vercel\.app$/',
     ],
 
     'allowed_headers' => ['*'],

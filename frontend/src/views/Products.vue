@@ -142,10 +142,11 @@
 <script setup>
 import { ref, computed, watch, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
-import { priceListData, catalogProducts, productCategories, displayPrice, sellPrice } from '../data/priceList';
+import { priceListData, catalogProducts as staticProducts, productCategories, displayPrice, sellPrice } from '../data/priceList';
 import { useCartStore } from '../stores/cart';
 import { generateCataloguePdf, savePdfForDevice } from '../utils/downloadPdf';
 import AddProductModal from '../components/admin/AddProductModal.vue';
+import { productService } from '../services/productService';
 
 const cartStore = useCartStore();
 const route = useRoute();
@@ -217,15 +218,28 @@ const showToast = (msg) => {
   }, 4000);
 };
 
-const filteredProducts = computed(() => {
-  if (activeCategory.value === 'all') return catalogProducts;
-  return catalogProducts.filter(p => p.category === activeCategory.value);
+const backendProducts = ref([]);
+
+onMounted(async () => {
+  await refreshProducts();
 });
 
-const refreshProducts = () => {
-  // In a real app with API data, you would re-fetch the products here.
-  // Since currently it uses priceList.js data, we will just alert.
-  console.log('Products should be re-fetched here');
+const filteredProducts = computed(() => {
+  if (activeCategory.value === 'all') return backendProducts.value;
+  return backendProducts.value.filter(p => {
+    return p.category_name && p.category_name.toLowerCase() === activeCategory.value;
+  });
+});
+
+const refreshProducts = async () => {
+  try {
+    const res = await productService.getProducts({ per_page: 100 });
+    if (res && res.success) {
+      backendProducts.value = res.data;
+    }
+  } catch (e) {
+    console.error('Failed to fetch products', e);
+  }
 };
 </script>
 
