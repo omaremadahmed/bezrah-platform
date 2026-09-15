@@ -57,9 +57,7 @@
           <span class="cart-button__label">{{ cartLabel }}</span>
           <span v-if="cartStore.itemCount" class="cart-button__count">{{ cartStore.itemCount }}</span>
         </button>
-        <router-link to="/checkout" class="checkout-link">
-          {{ checkoutLabel }}
-        </router-link>
+
         <template v-if="!authStore.isAuthenticated">
           <router-link to="/login" class="nav-link">{{ $t('nav.login') || 'تسجيل الدخول' }}</router-link>
           <router-link to="/register" class="nav-link">{{ $t('nav.register') || 'إنشاء حساب' }}</router-link>
@@ -123,10 +121,7 @@
           <button type="button" class="mobile-nav-link mobile-nav-link--button" @click="openCartFromDrawer">
             {{ cartLabel }} ({{ cartStore.itemCount }})
           </button>
-          <router-link to="/checkout" class="mobile-nav-link">
-            {{ checkoutLabel }}
-          </router-link>
-          
+
           <template v-if="!authStore.isAuthenticated">
             <router-link to="/login" class="mobile-nav-link">{{ $t('nav.login') || 'تسجيل الدخول' }}</router-link>
             <router-link to="/register" class="mobile-nav-link">{{ $t('nav.register') || 'إنشاء حساب' }}</router-link>
@@ -162,7 +157,6 @@ const isScrolled = ref(false)
 const mobileMenuOpen = ref(false)
 
 const cartLabel = computed(() => locale.value === 'ar' ? 'السلة' : 'Cart')
-const checkoutLabel = computed(() => locale.value === 'ar' ? 'الدفع' : 'Checkout')
 const cartAriaLabel = computed(() => `${cartLabel.value} (${cartStore.itemCount})`)
 
 const openCartFromDrawer = () => {
@@ -427,6 +421,95 @@ onUnmounted(() => {
   background: rgba(244, 241, 232, 0.08);
   color: #fff;
   cursor: pointer;
+}
+
+.cart-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: 1px solid rgba(244, 241, 232, 0.28);
+  border-radius: 8px;
+  color: rgba(244, 241, 232, 0.9);
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: all 180ms ease;
+  position: relative;
+}
+
+.cart-button:hover {
+  background: rgba(244, 241, 232, 0.16);
+  color: #fff;
+}
+
+.cart-button svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.cart-button__label {
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.cart-button__count {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: #e74c3c;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 10px;
+  line-height: 1;
+}
+
+[dir="rtl"] .cart-button__count {
+  right: auto;
+  left: -6px;
+}
+
+.cart-icon-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  background: rgba(244, 241, 232, 0.08);
+  border: 1px solid rgba(244, 241, 232, 0.28);
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.cart-icon-button svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.cart-icon-button__count {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: #e74c3c;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 2px 5px;
+  border-radius: 10px;
+  line-height: 1;
 }
 
 .menu-toggle svg,

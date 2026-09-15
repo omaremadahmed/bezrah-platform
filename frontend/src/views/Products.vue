@@ -56,7 +56,7 @@
             @click="addToCart(product)"
           >
             <div class="grid-card-img">
-              <img :src="product.image" :alt="product.name" loading="lazy" />
+              <img :src="product.image" :alt="product.name" @error="$event.target.src = '/images/products/product-1.jpeg'" loading="lazy" />
               <span class="cat-badge">{{ product.categoryName }}</span>
             </div>
             <div class="grid-card-body">
@@ -108,7 +108,7 @@
                 <tr v-for="(variant, vIndex) in group.variants" :key="`${gIndex}-${vIndex}`">
                   <!-- Render Photo and Name only on the first row of the group, with rowspan -->
                   <td v-if="vIndex === 0" :rowspan="group.variants.length" class="photo-cell" @click="addPriceGroupToCart(group)">
-                    <img :src="group.image" :alt="group.name" class="table-img" />
+                    <img :src="group.image" :alt="group.name" @error="$event.target.src = '/images/products/product-1.jpeg'" class="table-img" />
                   </td>
                   <td v-if="vIndex === 0" :rowspan="group.variants.length" class="name-cell" @click="addPriceGroupToCart(group)">
                     <strong>{{ group.name }}</strong>

@@ -14,6 +14,13 @@ const messages = {
       register: 'Register',
       theme: 'Theme',
       logout: 'Logout',
+      cart: 'Shopping Cart',
+      checkout: 'Proceed to Checkout',
+    },
+    cart: {
+      empty: 'Your cart is empty',
+      continue: 'Continue Shopping',
+      total: 'Total:',
     },
     common: {
       languageName: 'English',
@@ -265,6 +272,13 @@ const messages = {
       register: 'إنشاء حساب',
       theme: 'المظهر',
       logout: 'تسجيل الخروج',
+      cart: 'سلة المشتريات',
+      checkout: 'إتمام الطلب',
+    },
+    cart: {
+      empty: 'سلة المشتريات فارغة',
+      continue: 'متابعة التسوق',
+      total: 'الإجمالي:',
     },
     common: {
       languageName: 'العربية',

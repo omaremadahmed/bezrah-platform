@@ -7,6 +7,7 @@
     </transition>
 
     <Navbar />
+    <CartDrawer />
     <ContactRail />
 
     <main :class="['app-main', { 'app-main--home': route.path === '/' }]">
@@ -73,6 +74,7 @@ import { computed, onMounted, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRoute, useRouter } from 'vue-router'
 import Navbar from './components/Navbar.vue'
+import CartDrawer from './components/CartDrawer.vue'
 import Logo from './components/Logo.vue'
 import ContactRail from './components/ContactRail.vue'
 import AOS from 'aos'
@@ -168,8 +170,8 @@ router.beforeEach(async (to, from) => {
 router.afterEach(() => {
   window.setTimeout(() => {
     isNavigating.value = false
-    AOS.refresh()
-  }, 220)
+    AOS.refreshHard()
+  }, 400)
 })
 </script>
 
