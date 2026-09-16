@@ -65,6 +65,34 @@
       </div>
     </section>
 
+    <section class="home-philosophy">
+      <div class="container home-philosophy__grid">
+        <div class="home-philosophy__copy" data-aos="fade-up">
+          <p class="section-kicker">Food Philosophy</p>
+          <h2>Quiet, specific, generous.</h2>
+          <p class="home-section-lead">
+            Picked in the field. Prepared carefully. Frozen close to harvest.
+          </p>
+          <p>
+            We believe in traditional food prepared at scale. Food that works naturally at the table. Our voice is the voice of someone who knows the food well enough to be brief about it. Short sentences. Declarative statements. Plain language.
+          </p>
+        </div>
+        <div class="home-philosophy__values" data-aos="fade-up" data-aos-delay="100">
+          <h3>Key Messages</h3>
+          <ul class="capability-list philosophy-list">
+            <li><span aria-hidden="true"></span> Traceable origin</li>
+            <li><span aria-hidden="true"></span> Recipes from the region</li>
+            <li><span aria-hidden="true"></span> Traditional preparation at industrial scale</li>
+            <li><span aria-hidden="true"></span> Professional export standards</li>
+            <li><span aria-hidden="true"></span> Cold chain maintained</li>
+            <li><span aria-hidden="true"></span> Certifications compliant</li>
+            <li><span aria-hidden="true"></span> Multi-language packaging</li>
+            <li><span aria-hidden="true"></span> Quiet and confident design</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <section id="products" class="home-products">
       <div class="container">
         <div class="home-section-head">
@@ -95,6 +123,30 @@
           <router-link to="/products" class="action-link action-link--outline">
             {{ $t('home.viewAll') }}
           </router-link>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-markets">
+      <div class="container">
+        <div class="home-section-head home-markets__head" data-aos="fade-up">
+          <p class="section-kicker">Markets</p>
+          <h2>Three shelves, three conversations.</h2>
+          <p>We export into three distinct retail cultures. Heritage food built for international export.</p>
+        </div>
+        <div class="markets-grid">
+          <div class="market-card" data-aos="fade-up" data-aos-delay="100">
+            <h3>United States</h3>
+            <p>Ethnic & Mediterranean Aisle</p>
+          </div>
+          <div class="market-card" data-aos="fade-up" data-aos-delay="200">
+            <h3>European Union</h3>
+            <p>Frozen & World Foods</p>
+          </div>
+          <div class="market-card" data-aos="fade-up" data-aos-delay="300">
+            <h3>Latin America</h3>
+            <p>Imported Delicatessen</p>
+          </div>
         </div>
       </div>
     </section>
@@ -267,6 +319,8 @@ const packageCards = computed(() => [
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
 .home-page {
   background: var(--color-cream);
   color: var(--color-charcoal);
@@ -752,7 +806,122 @@ const packageCards = computed(() => [
   margin-top: 0;
 }
 
+.home-philosophy {
+  background: #E5EDDE;
+  color: #365227;
+  padding-block: 82px;
+}
+
+.home-philosophy__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.82fr);
+  gap: 58px;
+  align-items: center;
+}
+
+.home-philosophy h2 {
+  color: #365227;
+  font-family: 'Cormorant Garamond', var(--font-display);
+  font-size: 2.65rem;
+  line-height: 1.1;
+  margin: 0;
+}
+
+[dir='rtl'] .home-philosophy h2,
+[dir='rtl'] .home-markets h2 {
+  font-family: var(--font-ar-display);
+}
+
+.home-philosophy .section-kicker {
+  color: #3D8740;
+}
+
+.home-philosophy p:not(.section-kicker) {
+  color: rgba(54, 82, 39, 0.85);
+}
+
+.home-philosophy__values {
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(54, 82, 39, 0.15);
+  border-radius: 8px;
+  padding: 28px;
+}
+
+.home-philosophy__values h3 {
+  margin: 0 0 16px;
+  color: #365227;
+  font-size: 1.35rem;
+  font-family: 'Cormorant Garamond', var(--font-display);
+}
+
+.philosophy-list span {
+  background: #365227;
+  color: #E5EDDE;
+}
+
+.home-markets {
+  background: #365227;
+  color: #E5EDDE;
+  padding-block: 82px;
+}
+
+.home-markets__head {
+  text-align: center;
+  margin: 0 auto 48px;
+}
+
+.home-markets .home-section-head h2 {
+  color: #E5EDDE;
+  font-family: 'Cormorant Garamond', var(--font-display);
+  font-size: 2.8rem;
+}
+
+.home-markets__head p:not(.section-kicker) {
+  color: rgba(244, 241, 232, 0.85);
+}
+
+.home-markets__head .section-kicker {
+  color: #74A748;
+}
+
+.markets-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.market-card {
+  background: rgba(229, 237, 222, 0.05);
+  border: 1px solid rgba(229, 237, 222, 0.15);
+  padding: 38px 24px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 300ms ease;
+}
+
+.market-card:hover {
+  transform: translateY(-4px);
+  background: rgba(229, 237, 222, 0.08);
+}
+
+.market-card h3 {
+  color: #F4F1E8;
+  font-family: 'Cormorant Garamond', var(--font-display);
+  font-size: 1.85rem;
+  margin: 0 0 12px;
+}
+
+.market-card p {
+  color: rgba(229, 237, 222, 0.8);
+  font-size: 1.05rem;
+  margin: 0;
+}
+
 @media (max-width: 1020px) {
+  .home-philosophy__grid {
+    grid-template-columns: 1fr;
+  }
+
   .home-hero h1 {
     font-size: 3.55rem;
   }
@@ -793,7 +962,9 @@ const packageCards = computed(() => [
   .home-about,
   .home-products,
   .home-packaging,
-  .home-brief {
+  .home-brief,
+  .home-philosophy,
+  .home-markets {
     padding-block: 60px;
   }
 
@@ -817,7 +988,9 @@ const packageCards = computed(() => [
   .home-section-head h2,
   .home-trade__copy h2,
   .home-contact h2,
-  .home-brief h2 {
+  .home-brief h2,
+  .home-philosophy h2,
+  .home-markets .home-section-head h2 {
     font-size: 2rem;
   }
 
@@ -841,7 +1014,8 @@ const packageCards = computed(() => [
     width: 100%;
   }
 
-  .category-grid {
+  .category-grid,
+  .markets-grid {
     grid-template-columns: 1fr;
   }
 
