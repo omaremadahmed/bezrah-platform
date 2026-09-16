@@ -22,7 +22,7 @@
         <div v-else class="cart-content">
           <ul class="cart-items">
             <li v-for="item in cartStore.items" :key="item.id" class="cart-item">
-              <img :src="item.image" :alt="item.name" @error="$event.target.src = '/images/products/product-1.jpeg'" class="item-img" />
+              <img :src="item.image" :alt="item.name" @error.once="$event.target.src = '/images/products/product-1.jpeg'" class="item-img" />
               <div class="item-details">
                 <h3>{{ locale === 'ar' && item.name_ar ? item.name_ar : item.name }}</h3>
                 <p class="item-pack">{{ item.packaging }}</p>
