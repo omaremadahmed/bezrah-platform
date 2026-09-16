@@ -184,3 +184,11 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary-light);
 }
+
+@media (prefers-reduced-motion: reduce) {
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
