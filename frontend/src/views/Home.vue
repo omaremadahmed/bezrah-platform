@@ -43,6 +43,9 @@
           <p>
             We are a Mediterranean food house exporting frozen vegetables, frozen prepared foods, and traditional pickles (mekhalal, mouneh) to households and food-service kitchens across the United States, the European Union, and Latin America. Our shelves sit between the commodity freezer aisle and the specialty deli. We are not the cheapest. We are not boutique. We are the dependable, beautiful middle — heritage food made to professional export standard.
           </p>
+          <p>
+            Read this before you draw, write, photograph, or print anything carrying the Bezrah name. It defines who we are, how we look, and the lines we will not cross. Treat it as the brief behind every brief.
+          </p>
           <ul class="check-list" style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
             <li>
               <span aria-hidden="true"></span>
