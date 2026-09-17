@@ -68,27 +68,59 @@
     <section class="home-philosophy">
       <div class="container home-philosophy__grid">
         <div class="home-philosophy__copy" data-aos="fade-up">
-          <p class="section-kicker">Food Philosophy</p>
+          <p class="section-kicker">HOW WE SOUND</p>
           <h2>Quiet, specific, generous.</h2>
           <p class="home-section-lead">
-            Picked in the field. Prepared carefully. Frozen close to harvest.
+            Bezrah does not shout. It tells you which village the cucumbers came from, how long the brine took, and what to serve it with — and then steps out of the kitchen. The voice is the voice of someone who knows the food well enough to be brief about it.
           </p>
-          <p>
-            We believe in traditional food prepared at scale. Food that works naturally at the table. Our voice is the voice of someone who knows the food well enough to be brief about it. Short sentences. Declarative statements. Plain language.
-          </p>
+          <div style="margin-top: 32px; display: grid; gap: 24px;">
+            <div>
+              <h4 style="font-size: 0.85rem; letter-spacing: 0.05em; margin: 0 0 8px; color: #3D8740;">SENTENCE SHAPE</h4>
+              <p style="margin: 0; font-size: 0.95rem;">Short. Declarative. One idea per line. Fragments are fine. We trust the reader to fill in the rest of the sentence.</p>
+            </div>
+            <div>
+              <h4 style="font-size: 0.85rem; letter-spacing: 0.05em; margin: 0 0 8px; color: #3D8740;">VOCABULARY</h4>
+              <p style="margin: 0; font-size: 0.95rem;">Plain English (or Spanish, French, Arabic, etc.). Avoid food-marketing clichés: "artisanal," "bursting," "perfection," "indulgent," "kissed by the sun."</p>
+            </div>
+            <div>
+              <h4 style="font-size: 0.85rem; letter-spacing: 0.05em; margin: 0 0 8px; color: #3D8740;">PUNCTUATION</h4>
+              <p style="margin: 0; font-size: 0.95rem;">Em-dashes and full stops. Never exclamation marks on packaging. Never on website except in recipe instructions.</p>
+            </div>
+          </div>
         </div>
         <div class="home-philosophy__values" data-aos="fade-up" data-aos-delay="100">
-          <h3>Key Messages</h3>
-          <ul class="capability-list philosophy-list">
-            <li><span aria-hidden="true"></span> Traceable origin</li>
-            <li><span aria-hidden="true"></span> Recipes from the region</li>
-            <li><span aria-hidden="true"></span> Traditional preparation at industrial scale</li>
-            <li><span aria-hidden="true"></span> Professional export standards</li>
-            <li><span aria-hidden="true"></span> Cold chain maintained</li>
-            <li><span aria-hidden="true"></span> Certifications compliant</li>
-            <li><span aria-hidden="true"></span> Multi-language packaging</li>
-            <li><span aria-hidden="true"></span> Quiet and confident design</li>
-          </ul>
+          <div style="display: grid; gap: 24px;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding-bottom: 24px; border-bottom: 1px solid rgba(54, 82, 39, 0.1);">
+              <div>
+                <h4 style="font-size: 0.8rem; letter-spacing: 0.05em; margin: 0 0 8px; color: #3D8740;">WE SOUND LIKE</h4>
+                <p style="margin: 0; font-size: 0.95rem; font-style: italic;">Picked in Beheira. Brined for six weeks. Sliced for sandwiches.</p>
+              </div>
+              <div>
+                <h4 style="font-size: 0.8rem; letter-spacing: 0.05em; margin: 0 0 8px; color: #A63F2F;">NOT LIKE</h4>
+                <p style="margin: 0; font-size: 0.95rem; font-style: italic;">Authentic farm-fresh artisanal pickles bursting with Mediterranean flavor!</p>
+              </div>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding-bottom: 24px; border-bottom: 1px solid rgba(54, 82, 39, 0.1);">
+              <div>
+                <h4 style="font-size: 0.8rem; letter-spacing: 0.05em; margin: 0 0 8px; color: #3D8740;">WE SOUND LIKE</h4>
+                <p style="margin: 0; font-size: 0.95rem; font-style: italic;">Frozen within four hours of harvest. Nothing else added.</p>
+              </div>
+              <div>
+                <h4 style="font-size: 0.8rem; letter-spacing: 0.05em; margin: 0 0 8px; color: #A63F2F;">NOT LIKE</h4>
+                <p style="margin: 0; font-size: 0.95rem; font-style: italic;">Locked in at peak freshness using our proprietary IQF process!</p>
+              </div>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <div>
+                <h4 style="font-size: 0.8rem; letter-spacing: 0.05em; margin: 0 0 8px; color: #3D8740;">WE SOUND LIKE</h4>
+                <p style="margin: 0; font-size: 0.95rem; font-style: italic;">Mezze. Or a side. Or breakfast — we're not strict about it.</p>
+              </div>
+              <div>
+                <h4 style="font-size: 0.8rem; letter-spacing: 0.05em; margin: 0 0 8px; color: #A63F2F;">NOT LIKE</h4>
+                <p style="margin: 0; font-size: 0.95rem; font-style: italic;">Versatile and family-friendly — perfect for every occasion!</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -132,20 +164,125 @@
         <div class="home-section-head home-markets__head" data-aos="fade-up">
           <p class="section-kicker">Markets</p>
           <h2>Three shelves, three conversations.</h2>
-          <p>We export into three distinct retail cultures. Heritage food built for international export.</p>
+          <p>We export into three distinct retail cultures. The identity must read the same in all of them, but tilt slightly in each.</p>
         </div>
         <div class="markets-grid">
           <div class="market-card" data-aos="fade-up" data-aos-delay="100">
             <h3>United States</h3>
-            <p>Ethnic & Mediterranean Aisle</p>
+            <p class="market-card__subtitle">Ethnic & Mediterranean Aisle</p>
+            <p class="market-card__desc">Buyers expect bilingual packaging (English first, Arabic accent), USDA-ready iconography, kosher/halal marks, and allergen clarity. Tilt: a little more editorial, a little more "specialty."</p>
           </div>
           <div class="market-card" data-aos="fade-up" data-aos-delay="200">
             <h3>European Union</h3>
-            <p>Frozen & World Foods</p>
+            <p class="market-card__subtitle">Frozen & World Foods</p>
+            <p class="market-card__desc">Buyers expect EU nutrition label compliance (FIC), Nutri-Score where applicable, multi-language back panel, and recyclable packaging callouts. Tilt: cleaner, calmer, more "design-led."</p>
           </div>
           <div class="market-card" data-aos="fade-up" data-aos-delay="300">
             <h3>Latin America</h3>
-            <p>Imported Delicatessen</p>
+            <p class="market-card__subtitle">Imported Delicatessen</p>
+            <p class="market-card__desc">Spanish-Portuguese back panel essential. Tilt: warmer, slightly more decorative, leaning into the shared Arab heritage with the region's Levantine communities.</p>
+          </div>
+        </div>
+
+        <div class="markets-stats" data-aos="fade-up" data-aos-delay="400">
+          <div class="market-stat">
+            <h4>~$210B</h4>
+            <p><strong>Global Frozen Veg & Prepared Food Market</strong><br/>Steady growth driven by convenience, home cooking, and the slow normalization of frozen as "fresh-frozen."</p>
+          </div>
+          <div class="market-stat">
+            <h4>3</h4>
+            <p><strong>Distinct Regulatory Regimes</strong><br/>FDA (US) · EU FIC 1169/2011 · MERCOSUR. Every artwork must satisfy the strictest on a per-market SKU.</p>
+          </div>
+          <div class="market-stat">
+            <h4>Premium-Middle</h4>
+            <p><strong>Our Shelf Position</strong><br/>Priced above commodity frozen aisle, below chef-driven boutique. Design must signal "craft" without signaling "luxury tax."</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-identity">
+      <div class="container">
+        <div class="home-section-head home-identity__head" data-aos="fade-up" style="max-width: 800px;">
+          <p class="section-kicker">IN THE WORLD</p>
+          <h2>A system, not a sticker.</h2>
+          <p>The identity is built to extend across packaging tiers (master brand, frozen line, pickles line), trade collateral (sell sheets, distributor decks), and digital surfaces (web, marketplace tiles, social). These are sketches of intent, not finals. Use them to test whether a new application "feels Bezrah" before producing it.</p>
+        </div>
+
+        <div class="identity-grid">
+          <div class="identity-card" data-aos="fade-up" data-aos-delay="100">
+            <h3>One seedling, two scripts.</h3>
+            <p>The Bezrah mark is a single composition: the Arabic word بذرة as the primary form, with a young seedling growing out of the dotless ة, and the Latin transliteration set beneath in a refined serif. They appear together as one lockup.</p>
+            <div class="identity-card__note">
+              <strong>Give it room:</strong> Minimum clear space on all sides equals the height of the letter B in the wordmark.
+            </div>
+          </div>
+
+          <div class="identity-card" data-aos="fade-up" data-aos-delay="200">
+            <h3>Three families, one conversation.</h3>
+            <ul class="typography-list">
+              <li>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px;">
+                  <strong style="margin: 0;">Cormorant Garamond</strong>
+                  <span style="font-size: 0.7rem; color: #7A4748; letter-spacing: 0.05em; font-weight: 700;">FREE GOOGLE FONTS</span>
+                </div>
+                <div style="font-size: 0.75rem; letter-spacing: 0.05em; font-weight: 700; color: #3D8740; margin-bottom: 12px;">DISPLAY · EDITORIAL</div>
+                <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: #365227; line-height: 1.2; margin-bottom: 8px;">Frozen at the field.</div>
+              </li>
+              <li>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px;">
+                  <strong style="margin: 0;">Inter</strong>
+                  <span style="font-size: 0.7rem; color: #7A4748; letter-spacing: 0.05em; font-weight: 700;">FREE GOOGLE FONTS</span>
+                </div>
+                <div style="font-size: 0.75rem; letter-spacing: 0.05em; font-weight: 700; color: #3D8740; margin-bottom: 12px;">BODY · OPERATIONAL</div>
+                <p style="font-size: 0.9rem; margin-bottom: 12px; color: rgba(54, 82, 39, 0.85); line-height: 1.5;">Use Inter for everything that has to be read carefully and quickly: ingredients lists, nutritional panels, regulatory copy, country-of-origin statements, e-commerce body, web UI, presentation footnotes. It is invisible by design, which is exactly what an export label needs. Set between 9 pt (minimum legal) and 16 pt (web body). Avoid weights above 600 in body settings.</p>
+              </li>
+              <li>
+                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px;">
+                  <strong style="margin: 0;">Amiri</strong>
+                  <span style="font-size: 0.7rem; color: #7A4748; letter-spacing: 0.05em; font-weight: 700;">FREE GOOGLE FONTS</span>
+                </div>
+                <div style="font-size: 0.75rem; letter-spacing: 0.05em; font-weight: 700; color: #3D8740; margin-bottom: 12px;">ARABIC · DISPLAY</div>
+                <div style="font-family: 'Amiri', serif; font-size: 1.8rem; color: #365227; line-height: 1.4; margin-bottom: 12px;" dir="rtl">بذرة صغيرة · مائدة كاملة</div>
+                <p style="font-size: 0.85rem; margin-bottom: 12px; color: rgba(54, 82, 39, 0.85); line-height: 1.5;">Amiri Regular: <span style="font-size: 0.7rem; letter-spacing: 0.05em; font-weight: 700; color: #365227;">ARABIC DISPLAY, PACKAGING</span> &nbsp;&nbsp; Noto Naskh Arabic: <span style="font-size: 0.7rem; letter-spacing: 0.05em; font-weight: 700; color: #365227;">ARABIC BODY, INGREDIENT LISTS</span><br/><br/>
+                <span style="font-size: 0.7rem; letter-spacing: 0.05em; font-weight: 700; color: #365227;">ALWAYS SET ARABIC 2 pt larger THAN ITS LATIN COUNTERPART FOR OPTICAL BALANCE</span></p>
+              </li>
+            </ul>
+            <p style="margin-top: 16px; font-size: 0.85rem; color: rgba(54, 82, 39, 0.7); font-style: italic;">All three families are open-source and free for commercial export use, which keeps licensing simple across packaging plants.</p>
+          </div>
+
+          <div class="identity-card identity-card--full" data-aos="fade-up" data-aos-delay="300">
+            <h3>A field, a seedling, and the bowl beneath.</h3>
+            <div class="palette-grid">
+              <div class="color-swatch" style="--swatch-color: #365227; color: white;">
+                <span>Bezrah Forest</span>
+                <span>#365227</span>
+              </div>
+              <div class="color-swatch" style="--swatch-color: #3D8740; color: white;">
+                <span>Leaf</span>
+                <span>#3D8740</span>
+              </div>
+              <div class="color-swatch" style="--swatch-color: #7A4748; color: white;">
+                <span>Spring</span>
+                <span>#7A4748</span>
+              </div>
+              <div class="color-swatch" style="--swatch-color: #F5EDDE; color: var(--color-charcoal);">
+                <span>Cream</span>
+                <span>#F5EDDE</span>
+              </div>
+              <div class="color-swatch" style="--swatch-color: #F4F1E8; color: var(--color-charcoal);">
+                <span>Bone</span>
+                <span>#F4F1E8</span>
+              </div>
+              <div class="color-swatch" style="--swatch-color: #B8633A; color: white;">
+                <span>Terracotta</span>
+                <span>#B8633A</span>
+              </div>
+              <div class="color-swatch" style="--swatch-color: #D9A441; color: white;">
+                <span>Saffron</span>
+                <span>#D9A441</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -897,6 +1034,8 @@ const packageCards = computed(() => [
   border-radius: 8px;
   text-align: center;
   transition: transform 300ms ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .market-card:hover {
@@ -908,13 +1047,179 @@ const packageCards = computed(() => [
   color: #F4F1E8;
   font-family: 'Cormorant Garamond', var(--font-display);
   font-size: 1.85rem;
-  margin: 0 0 12px;
+  margin: 0 0 6px;
 }
 
-.market-card p {
+.market-card__subtitle {
+  color: #74A748;
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 0 0 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.market-card__desc {
   color: rgba(229, 237, 222, 0.8);
-  font-size: 1.05rem;
+  font-size: 0.98rem;
+  line-height: 1.6;
   margin: 0;
+  text-align: left;
+}
+
+[dir='rtl'] .market-card__desc {
+  text-align: right;
+}
+
+.markets-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+  padding-top: 48px;
+  border-top: 1px solid rgba(229, 237, 222, 0.15);
+}
+
+.market-stat h4 {
+  font-family: 'Cormorant Garamond', var(--font-display);
+  font-size: 2.8rem;
+  color: #E5EDDE;
+  margin: 0 0 12px;
+  line-height: 1;
+}
+
+.market-stat p {
+  margin: 0;
+  color: rgba(229, 237, 222, 0.8);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.market-stat p strong {
+  color: #74A748;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.home-identity {
+  background: #F4F1E8;
+  color: #365227;
+  padding-block: 82px;
+}
+
+.home-identity__head {
+  text-align: center;
+  margin: 0 auto 48px;
+}
+
+.home-identity .home-section-head h2 {
+  color: #365227;
+  font-family: 'Cormorant Garamond', var(--font-display);
+  font-size: 2.8rem;
+}
+
+.home-identity__head p:not(.section-kicker) {
+  color: rgba(54, 82, 39, 0.85);
+}
+
+.home-identity__head .section-kicker {
+  color: #3D8740;
+}
+
+.identity-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.identity-card {
+  background: #fff;
+  border: 1px solid rgba(54, 82, 39, 0.1);
+  padding: 38px;
+  border-radius: 8px;
+}
+
+.identity-card--full {
+  grid-column: 1 / -1;
+}
+
+.identity-card h3 {
+  font-family: 'Cormorant Garamond', var(--font-display);
+  font-size: 1.85rem;
+  color: #365227;
+  margin: 0 0 16px;
+}
+
+[dir='rtl'] .identity-card h3 {
+  font-family: var(--font-ar-display);
+}
+
+.identity-card p {
+  color: rgba(54, 82, 39, 0.8);
+  line-height: 1.6;
+  margin: 0 0 24px;
+}
+
+.identity-card__note {
+  background: #E5EDDE;
+  padding: 16px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: #365227;
+}
+
+.typography-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.typography-list li {
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(54, 82, 39, 0.1);
+  color: rgba(54, 82, 39, 0.8);
+}
+
+.typography-list li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.typography-list strong {
+  color: #365227;
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.palette-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.color-swatch {
+  background: var(--swatch-color);
+  padding: 24px 16px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.color-swatch span:last-child {
+  opacity: 0.7;
+  font-weight: 400;
 }
 
 @media (max-width: 1020px) {
@@ -964,7 +1269,8 @@ const packageCards = computed(() => [
   .home-packaging,
   .home-brief,
   .home-philosophy,
-  .home-markets {
+  .home-markets,
+  .home-identity {
     padding-block: 60px;
   }
 
@@ -990,7 +1296,8 @@ const packageCards = computed(() => [
   .home-contact h2,
   .home-brief h2,
   .home-philosophy h2,
-  .home-markets .home-section-head h2 {
+  .home-markets .home-section-head h2,
+  .home-identity .home-section-head h2 {
     font-size: 2rem;
   }
 
@@ -1015,8 +1322,14 @@ const packageCards = computed(() => [
   }
 
   .category-grid,
-  .markets-grid {
+  .markets-grid,
+  .markets-stats,
+  .identity-grid {
     grid-template-columns: 1fr;
+  }
+
+  .identity-card--full {
+    grid-column: auto;
   }
 
   .category-card {
