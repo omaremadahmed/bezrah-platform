@@ -32,7 +32,7 @@ export const priceListData = [
       { items: 12, cartons: 2000, packaging: 'Jars 720g', drained: '0.350 G', fobCarton: '$16.63', fobPiece: '$1.39' },
       { items: 12, cartons: 3200, packaging: 'Jars 450g', drained: '0.220 G', fobCarton: '$14.07', fobPiece: '$1.18' },
       { items: 12, cartons: 3600, packaging: 'Jars 370g', drained: '0.170 G', fobCarton: '$8.80', fobPiece: '$0.74' },
-      { items: 24, cartons: 3200, packaging: 'Jars 200g', drained: '0.080 G', fobCarton: '$11.00', fobPiece: '$0.46' }
+      { items: 24, cartons: 3200, packaging: 'Jars 200g', drained: '0.090 G', fobCarton: '$11.00', fobPiece: '$0.46' }
     ]
   },
   {
@@ -49,7 +49,7 @@ export const priceListData = [
       { items: 12, cartons: 2000, packaging: 'Jars 720g', drained: '0.350 G', fobCarton: '$16.63', fobPiece: '$1.39' },
       { items: 12, cartons: 3200, packaging: 'Jars 450g', drained: '0.220 G', fobCarton: '$14.07', fobPiece: '$1.18' },
       { items: 12, cartons: 3600, packaging: 'Jars 370g', drained: '0.170 G', fobCarton: '$8.80', fobPiece: '$0.67' },
-      { items: 24, cartons: 3200, packaging: 'Jars 200g', drained: '0.080 G', fobCarton: '$10.00', fobPiece: '$0.42' }
+      { items: 24, cartons: 3200, packaging: 'Jars 200g', drained: '0.090 G', fobCarton: '$10.00', fobPiece: '$0.42' }
     ]
   },
   {
@@ -66,7 +66,7 @@ export const priceListData = [
       { items: 12, cartons: 2000, packaging: 'Jars 720g', drained: '0.400 G', fobCarton: '$16.63', fobPiece: '$1.39' },
       { items: 12, cartons: 3200, packaging: 'Jars 450g', drained: '0.240 G', fobCarton: '$14.07', fobPiece: '$1.18' },
       { items: 12, cartons: 3600, packaging: 'Jars 370g', drained: '0.200 G', fobCarton: '$10.23', fobPiece: '$0.85' },
-      { items: 24, cartons: 3200, packaging: 'Jars 200g', drained: '0.110 G', fobCarton: '$11.63', fobPiece: '$0.49' }
+      { items: 24, cartons: 3200, packaging: 'Jars 200g', drained: '0.110 G', fobCarton: '$11.83', fobPiece: '$0.49' }
     ]
   },
   {
@@ -83,7 +83,7 @@ export const priceListData = [
       { items: 12, cartons: 2000, packaging: 'Jars 720g', drained: '0.350 G', fobCarton: '$14.30', fobPiece: '$1.19' },
       { items: 12, cartons: 3200, packaging: 'Jars 450g', drained: '0.220 G', fobCarton: '$12.10', fobPiece: '$1.01' },
       { items: 12, cartons: 3500, packaging: 'Jars 370g', drained: '0.170 G', fobCarton: '$10.23', fobPiece: '$0.85' },
-      { items: 24, cartons: 3200, packaging: 'Jars 200g', drained: '0.080 G', fobCarton: '$12.79', fobPiece: '$0.54' }
+      { items: 24, cartons: 3200, packaging: 'Jars 200g', drained: '0.090 G', fobCarton: '$12.79', fobPiece: '$0.54' }
     ]
   },
   {
@@ -96,11 +96,11 @@ export const priceListData = [
       { items: 6, cartons: 1007, packaging: 'Tins A10', drained: '1.560 KG', fobCarton: '$25.85', fobPiece: '$4.31' },
       { items: 3, cartons: 1500, packaging: 'Tins A12', drained: '2 KG', fobCarton: '$18.15', fobPiece: '$6.05' },
       { items: 12, cartons: 5000, packaging: 'Cans 400g', drained: '0.170 G', fobCarton: '$9.35', fobPiece: '$0.78' },
-      { items: 12, cartons: 5400, packaging: 'Cans 280g', drained: '0.090 G', fobCarton: '$5.94', fobPiece: '$0.45' },
+      { items: 12, cartons: 5400, packaging: 'Cans 280g', drained: '0.090 G', fobCarton: '$5.94', fobPiece: '$0.50' },
       { items: 12, cartons: 2000, packaging: 'Jars 720g', drained: '0.350 G', fobCarton: '$14.30', fobPiece: '$1.19' },
       { items: 12, cartons: 3200, packaging: 'Jars 450g', drained: '0.220 G', fobCarton: '$11.00', fobPiece: '$0.92' },
       { items: 12, cartons: 3500, packaging: 'Jars 370g', drained: '0.170 G', fobCarton: '$8.80', fobPiece: '$0.67' },
-      { items: 24, cartons: 3200, packaging: 'Jars 200g', drained: '0.080 G', fobCarton: '$10.00', fobPiece: '$0.42' }
+      { items: 24, cartons: 3200, packaging: 'Jars 200g', drained: '0.090 G', fobCarton: '$10.00', fobPiece: '$0.42' }
     ]
   },
   {
@@ -110,11 +110,10 @@ export const priceListData = [
     categoryName: 'Pickles',
     image: img(7),
     variants: [
-      { items: 6, cartons: 1007, packaging: 'Tins A10', drained: '1.560 KG', fobCarton: '$14.71', fobPiece: '$2.45' },
       { items: 12, cartons: 2000, packaging: 'Jars 720g', drained: '0.350 G', fobCarton: '$13.11', fobPiece: '$1.09' },
       { items: 12, cartons: 3200, packaging: 'Jars 480g', drained: '0.220 G', fobCarton: '$10.16', fobPiece: '$0.85' },
       { items: 12, cartons: 3600, packaging: 'Jars 370g', drained: '0.170 G', fobCarton: '$6.71', fobPiece: '$0.56' },
-      { items: 6, cartons: 855, packaging: 'PET Plastic', drained: '1.550 KG', fobCarton: '$11.52', fobPiece: '$2.89' },
+      { items: 6, cartons: 855, packaging: 'PET Plastic', drained: '1.550 KG', fobCarton: '$11.52', fobPiece: '$2.88' },
       { items: 4, cartons: 1070, packaging: 'PET Plastic', drained: '1.800 KG', fobCarton: '$10.87', fobPiece: '$2.73' }
     ]
   },
@@ -140,11 +139,11 @@ export const priceListData = [
     categoryName: 'Pickles',
     image: img(19),
     variants: [
-      { items: 6, cartons: 1007, packaging: 'Tins A10', drained: '1.560 KG', fobCarton: '$12.21', fobPiece: '$1.02' },
-      { items: 12, cartons: 2000, packaging: 'Jars 720g', drained: '0.350 G', fobCarton: '$9.53', fobPiece: '$0.69' },
-      { items: 12, cartons: 3200, packaging: 'Jars 480g', drained: '0.220 G', fobCarton: '$6.05', fobPiece: '$0.51' },
-      { items: 12, cartons: 3500, packaging: 'Jars 370g', drained: '0.170 G', fobCarton: '$9.63', fobPiece: '$2.41' },
-      { items: 4, cartons: 1070, packaging: 'PET Plastic', drained: '1.800 KG', fobCarton: '$8.00', fobPiece: '$2.00' }
+      { items: 6, cartons: 1007, packaging: 'Tins A10', drained: '1.560 KG', fobCarton: '$13.66', fobPiece: '$2.28' },
+      { items: 12, cartons: 2000, packaging: 'Jars 720g', drained: '0.350 G', fobCarton: '$12.21', fobPiece: '$1.02' },
+      { items: 12, cartons: 3200, packaging: 'Jars 480g', drained: '0.220 G', fobCarton: '$9.53', fobPiece: '$0.68' },
+      { items: 12, cartons: 3600, packaging: 'Jars 370g', drained: '0.170 G', fobCarton: '$6.05', fobPiece: '$0.51' },
+      { items: 4, cartons: 1070, packaging: 'PET Plastic', drained: '1.800 KG', fobCarton: '$9.63', fobPiece: '$2.41' }
     ]
   },
   {
@@ -156,7 +155,7 @@ export const priceListData = [
     variants: [
       { items: 6, cartons: 1007, packaging: 'Tins A10', drained: '1.560 KG', fobCarton: '$12.93', fobPiece: '$2.16' },
       { items: 12, cartons: 2000, packaging: 'Jars 720g', drained: '0.350 G', fobCarton: '$11.55', fobPiece: '$0.97' },
-      { items: 12, cartons: 3200, packaging: 'Jars 480g', drained: '0.220 G', fobCarton: '$9.02', fobPiece: '$0.87' },
+      { items: 12, cartons: 3200, packaging: 'Jars 400g', drained: '0.220 G', fobCarton: '$9.02', fobPiece: '$0.87' },
       { items: 12, cartons: 3600, packaging: 'Jars 370g', drained: '0.170 G', fobCarton: '$7.04', fobPiece: '$0.59' },
       { items: 4, cartons: 1070, packaging: 'PET Plastic', drained: '1.800 KG', fobCarton: '$11.19', fobPiece: '$2.81' }
     ]

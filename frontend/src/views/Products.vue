@@ -63,8 +63,8 @@
               <h3>{{ product.name }}</h3>
               <p>{{ product.description }}</p>
               <div class="card-meta">
-                <span class="card-price">{{ displayPrice(product).amount }}</span>
-                <span class="card-pack">{{ displayPrice(product).unit || product.packaging }}</span>
+                <span class="card-price">{{ product.price_fob_piece !== '-' ? product.price_fob_piece : displayPrice(product).amount }}</span>
+                <span class="card-pack">{{ product.packaging || displayPrice(product).unit }}</span>
               </div>
               <button class="btn btn-primary add-cart-btn" type="button" @click.stop="addToCart(product)">
                 Add to Cart
@@ -104,7 +104,7 @@
               </tr>
             </thead>
             <tbody>
-              <template v-for="(group, gIndex) in priceListData" :key="gIndex">
+              <template v-for="(group, gIndex) in priceListDataComputed" :key="gIndex">
                 <tr v-for="(variant, vIndex) in group.variants" :key="`${gIndex}-${vIndex}`">
                   <!-- Render Photo and Name only on the first row of the group, with rowspan -->
                   <td v-if="vIndex === 0" :rowspan="group.variants.length" class="photo-cell" @click="addPriceGroupToCart(group)">
@@ -142,7 +142,7 @@
 <script setup>
 import { ref, computed, watch, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
-import { priceListData, catalogProducts as staticProducts, productCategories, displayPrice, sellPrice } from '../data/priceList';
+import { priceListData as staticPriceListData, catalogProducts as staticProducts, productCategories, displayPrice, sellPrice } from '../data/priceList';
 import { useCartStore } from '../stores/cart';
 import { generateCataloguePdf, savePdfForDevice } from '../utils/downloadPdf';
 import AddProductModal from '../components/admin/AddProductModal.vue';
@@ -199,7 +199,8 @@ const addPriceGroupToCart = (group) => {
 const downloadCatalogue = async () => {
   isDownloading.value = true;
   try {
-    const doc = await generateCataloguePdf(staticProducts);
+    const productsForPdf = catalogProductsList.value;
+    const doc = await generateCataloguePdf(productsForPdf);
     await savePdfForDevice(doc, 'Bezrah_Product_Catalogue.pdf');
   } catch (error) {
     console.error('Failed to generate catalogue:', error);
@@ -218,16 +219,37 @@ const showToast = (msg) => {
   }, 4000);
 };
 
-const backendProducts = ref([]);
+// Backend data refs
+const backendCatalog = ref([]);
+const backendPriceList = ref([]);
+const apiLoaded = ref(false);
+
+// Helper: format backend price to display string like '$29.41'
+const fmtPrice = (val) => {
+  if (val === null || val === undefined || val === '') return '-';
+  const num = parseFloat(val);
+  if (isNaN(num)) return '-';
+  return `$${num.toFixed(2)}`;
+};
+
+// Computed: catalog products list (backend preferred, static fallback)
+const catalogProductsList = computed(() => {
+  if (backendCatalog.value.length > 0) return backendCatalog.value;
+  return staticProducts;
+});
+
+// Computed: price list data (backend preferred, static fallback)
+const priceListDataComputed = computed(() => {
+  if (backendPriceList.value.length > 0) return backendPriceList.value;
+  return staticPriceListData;
+});
 
 onMounted(async () => {
   await refreshProducts();
 });
 
 const filteredProducts = computed(() => {
-  // Always use static products as the primary catalog source.
-  // Backend products are only used if they contain items not already in static data.
-  const products = staticProducts;
+  const products = catalogProductsList.value;
   if (activeCategory.value === 'all') return products;
   return products.filter(p => {
     const cat = (p.category_name || p.categoryName || p.category || '').toLowerCase();
@@ -237,15 +259,44 @@ const filteredProducts = computed(() => {
 
 const refreshProducts = async () => {
   try {
-    const res = await productService.getProducts({ per_page: 100 });
-    if (res && res.success && Array.isArray(res.data) && res.data.length > 0) {
-      backendProducts.value = res.data;
-    } else {
-      backendProducts.value = [];
+    // Fetch catalog products
+    const catalogRes = await productService.getProducts({ per_page: 100 });
+    if (catalogRes && catalogRes.success && Array.isArray(catalogRes.data) && catalogRes.data.length > 0) {
+      backendCatalog.value = catalogRes.data.map(p => ({
+        id: p.slug || p.id,
+        name: p.name,
+        description: p.description || p.packaging || '',
+        category: (p.category_name || '').toLowerCase(),
+        categoryName: p.category_name || '',
+        image: p.image,
+        price_fob_piece: p.price_fob_piece ? fmtPrice(p.price_fob_piece) : '-',
+        price_fob_carton: p.price_fob_carton ? fmtPrice(p.price_fob_carton) : '-',
+        packaging: p.packaging || '',
+      }));
     }
+
+    // Fetch price list
+    const priceRes = await productService.getPriceList();
+    if (priceRes && priceRes.success && Array.isArray(priceRes.data) && priceRes.data.length > 0) {
+      backendPriceList.value = priceRes.data.map(p => ({
+        id: p.id,
+        name: p.name,
+        image: p.image,
+        variants: (p.variants || []).map(v => ({
+          items: v.items ?? '-',
+          cartons: v.cartons,
+          packaging: v.packaging,
+          drained: v.drained,
+          fobCarton: v.fobCarton !== null && v.fobCarton !== undefined ? fmtPrice(v.fobCarton) : 'On request',
+          fobPiece: v.fobPiece !== null && v.fobPiece !== undefined ? fmtPrice(v.fobPiece) : '-',
+        }))
+      }));
+    }
+
+    apiLoaded.value = true;
   } catch (e) {
     console.warn('Failed to fetch products from API, using static data', e);
-    backendProducts.value = [];
+    apiLoaded.value = false;
   }
 };
 </script>
