@@ -1,4 +1,4 @@
-const img = (n) => `/images/products/product-${n}.jpeg`
+const img = (n) => `/images/products/product-${n}.jpeg`;
 
 export const priceListData = [
   {
@@ -128,7 +128,6 @@ export const priceListData = [
       { items: 12, cartons: 2000, packaging: 'Jars 720g', drained: '0.350 G', fobCarton: '$15.03', fobPiece: '$1.25' },
       { items: 12, cartons: 3200, packaging: 'Jars 480g', drained: '0.220 G', fobCarton: '$12.79', fobPiece: '$1.07' },
       { items: 12, cartons: 3600, packaging: 'Jars 370g', drained: '0.170 G', fobCarton: '$7.56', fobPiece: '$0.63' },
-      { items: 6, cartons: 1070, packaging: 'PET Plastic', drained: '1.800 KG', fobCarton: '$11.63', fobPiece: '$2.91' },
       { items: 4, cartons: 1070, packaging: 'PET Plastic', drained: '1.800 KG', fobCarton: '$13.66', fobPiece: '$2.28' }
     ]
   },
@@ -324,7 +323,7 @@ export const priceListData = [
       { items: '-', cartons: 2500, packaging: 'Carton bulk', drained: '10 kg', fobCarton: 'On request', fobPiece: '-' }
     ]
   }
-]
+];
 
 const defaultVariant = (group) => group.variants[0]
 
