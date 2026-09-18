@@ -61,10 +61,10 @@
             </div>
             <div class="grid-card-body">
               <h3>{{ product.name }}</h3>
-              <p>{{ product.description }}</p>
+              <p class="card-category">{{ product.categoryName }}</p>
               <div class="card-meta">
-                <span class="card-price">{{ product.price_fob_piece !== '-' ? product.price_fob_piece : displayPrice(product).amount }}</span>
-                <span class="card-pack">{{ product.packaging || displayPrice(product).unit }}</span>
+                <span class="card-price">{{ displayPrice(product).amount }}</span>
+                <span class="card-pack">{{ product.packaging }}</span>
               </div>
               <button class="btn btn-primary add-cart-btn" type="button" @click.stop="addToCart(product)">
                 Add to Cart
@@ -89,24 +89,36 @@
           </button>
         </div>
         
+        <!-- Category filter for price list -->
+        <div class="pricelist-filter">
+          <button
+            v-for="cat in categories"
+            :key="'pl-' + cat.id"
+            :class="['filter-btn', { active: activePriceCategory === cat.id }]"
+            @click="activePriceCategory = cat.id"
+          >
+            <span class="filter-icon">{{ cat.icon }}</span>
+            {{ cat.name }}
+          </button>
+        </div>
+
         <div class="table-responsive">
           <table class="price-table">
             <thead>
               <tr>
                 <th class="text-center">Photo</th>
                 <th>Product Name</th>
+                <th>Category</th>
                 <th class="text-center">Items / Carton</th>
-                <th class="text-center">Cartons / 20ft Container</th>
+                <th class="text-center">Cartons / Container</th>
                 <th>Packaging</th>
-                <th>Drained Weight</th>
                 <th class="price-col">Price FOB / Carton</th>
-                <th class="price-col">Price FOB / Piece</th>
               </tr>
             </thead>
             <tbody>
-              <template v-for="(group, gIndex) in priceListDataComputed" :key="gIndex">
+              <template v-for="(group, gIndex) in filteredPriceList" :key="gIndex">
                 <tr v-for="(variant, vIndex) in group.variants" :key="`${gIndex}-${vIndex}`">
-                  <!-- Render Photo and Name only on the first row of the group, with rowspan -->
+                  <!-- Render Photo, Name and Category only on the first row of the group, with rowspan -->
                   <td v-if="vIndex === 0" :rowspan="group.variants.length" class="photo-cell" @click="addPriceGroupToCart(group)">
                     <img :src="group.image" :alt="group.name" @error.once="$event.target.src = '/images/products/product-1.jpeg'" class="table-img" />
                   </td>
@@ -114,14 +126,15 @@
                     <strong>{{ group.name }}</strong>
                     <button type="button" class="table-add-btn" @click.stop="addPriceGroupToCart(group)">Add to Cart</button>
                   </td>
+                  <td v-if="vIndex === 0" :rowspan="group.variants.length" class="category-cell">
+                    <span class="table-cat-badge">{{ group.categoryName }}</span>
+                  </td>
                   
                   <!-- Variant Data -->
                   <td class="text-center">{{ variant.items }}</td>
                   <td class="text-center">{{ variant.cartons }}</td>
                   <td>{{ variant.packaging }}</td>
-                  <td>{{ variant.drained }}</td>
                   <td class="price-val">{{ variant.fobCarton }}</td>
-                  <td class="price-val">{{ variant.fobPiece }}</td>
                 </tr>
               </template>
             </tbody>
@@ -142,46 +155,13 @@
 <script setup>
 import { ref, computed, watch, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
-import { productCategories, displayPrice, sellPrice } from '../data/priceList';
+import { productCategories, displayPrice, sellPrice, catalogProducts, priceListData } from '../data/priceList';
 import { useCartStore } from '../stores/cart';
 import { generateCataloguePdf, savePdfForDevice } from '../utils/downloadPdf';
 import AddProductModal from '../components/admin/AddProductModal.vue';
 import { productService } from '../services/productService';
 
-const dynamicImagesGlob = import.meta.glob([
-  '/public/image/product/*.{jpeg,jpg,png,gif,webp,svg}',
-  '/public/images/products/*.{jpeg,jpg,png,gif,webp,svg}'
-], { eager: true });
 
-const dynamicProducts = Object.keys(dynamicImagesGlob).map((path, index) => {
-  const servedPath = path.replace('/public/', '/');
-  return {
-    id: `dyn-${index}`,
-    name: '', // Display without inventing fake names
-    description: '',
-    category: 'all',
-    categoryName: '',
-    image: servedPath,
-    price_fob_piece: '-',
-    price_fob_carton: '-',
-    packaging: '-',
-    variants: []
-  };
-});
-
-const dynamicPriceList = dynamicProducts.map(p => ({
-  id: p.id,
-  name: '', // Display without inventing fake names
-  image: p.image,
-  variants: [{
-    items: '-',
-    cartons: '-',
-    packaging: '-',
-    drained: '-',
-    fobCarton: '-',
-    fobPiece: '-'
-  }]
-}));
 
 const cartStore = useCartStore();
 const route = useRoute();
@@ -270,26 +250,31 @@ const fmtPrice = (val) => {
 // Computed: catalog products list (backend preferred, static fallback)
 const catalogProductsList = computed(() => {
   if (backendCatalog.value.length > 0) return backendCatalog.value;
-  return dynamicProducts;
+  return catalogProducts;
 });
 
 // Computed: price list data (backend preferred, static fallback)
 const priceListDataComputed = computed(() => {
   if (backendPriceList.value.length > 0) return backendPriceList.value;
-  return dynamicPriceList;
+  return priceListData;
 });
 
 onMounted(async () => {
   await refreshProducts();
 });
 
+const activePriceCategory = ref('all');
+
 const filteredProducts = computed(() => {
   const products = catalogProductsList.value;
   if (activeCategory.value === 'all') return products;
-  return products.filter(p => {
-    const cat = (p.category_name || p.categoryName || p.category || '').toLowerCase();
-    return cat === activeCategory.value.toLowerCase();
-  });
+  return products.filter(p => p.category === activeCategory.value);
+});
+
+const filteredPriceList = computed(() => {
+  const list = priceListDataComputed.value;
+  if (activePriceCategory.value === 'all') return list;
+  return list.filter(p => p.category === activePriceCategory.value);
 });
 
 const refreshProducts = async () => {
@@ -724,6 +709,40 @@ const refreshProducts = async () => {
 .add-product-btn:hover {
     transform: translateY(-2px);
     background: #174635;
+}
+
+.card-category {
+  color: var(--primary-color);
+  font-size: 0.8rem;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.pricelist-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px 30px;
+  background: #f8f9fa;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.category-cell {
+  background: white;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table-cat-badge {
+  display: inline-block;
+  background: var(--primary-color);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 @media (max-width: 768px) {
