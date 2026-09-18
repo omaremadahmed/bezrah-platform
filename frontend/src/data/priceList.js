@@ -1,326 +1,636 @@
 const img = (n) => `/images/products/product-${n}.jpeg`;
 
+export const productCategories = [
+  { id: 'all', name: 'All', icon: '🌿' },
+  { id: 'olives', name: 'Fresh / Pickled Olives', icon: '🫒' },
+  { id: 'peppers', name: 'Fresh / Pickled Peppers', icon: '🌶️' },
+  { id: 'frozen', name: 'Frozen IQF', icon: '❄️' },
+  { id: 'unverified', name: 'Unverified / Needs Manual Confirmation', icon: '⚠️' }
+];
+
 export const priceListData = [
+  // A) صور الزيتون — Olives
   {
-    id: 'whole-green-olives',
+    id: 'whole-green-olives-unverified-5',
     name: 'Whole Green Olives',
-    category: 'olives',
-    categoryName: 'Olives',
-    image: img(1),
-    variants: [
-      { items: 6, cartons: 1007, packaging: 'Tins A10', drained: '1.800 KG', fobCarton: '$29.41', fobPiece: '$4.90' },
-      { items: 3, cartons: 1500, packaging: 'Tins A12', drained: '2.500 KG', fobCarton: '$21.11', fobPiece: '$7.04' },
-      { items: 12, cartons: 5000, packaging: 'Cans 400g', drained: '0.200 G', fobCarton: '$10.87', fobPiece: '$0.91' },
-      { items: 12, cartons: 5400, packaging: 'Cans 280g', drained: '0.110 G', fobCarton: '$6.91', fobPiece: '$0.57' },
-      { items: 12, cartons: 2000, packaging: 'Jars 720g', drained: '0.400 G', fobCarton: '$16.63', fobPiece: '$1.39' },
-      { items: 12, cartons: 3200, packaging: 'Jars 450g', drained: '0.240 G', fobCarton: '$14.07', fobPiece: '$1.18' },
-      { items: 12, cartons: 3600, packaging: 'Jars 370g', drained: '0.200 G', fobCarton: '$10.23', fobPiece: '$0.85' },
-      { items: 24, cartons: 3200, packaging: 'Jars 200g', drained: '0.110 G', fobCarton: '$12.79', fobPiece: '$0.54' }
-    ]
-  },
-  {
-    id: 'pitted-green-olives',
-    name: 'Pitted Green Olives',
-    category: 'olives',
-    categoryName: 'Olives',
-    image: img(1),
-    variants: [
-      { items: 6, cartons: 1007, packaging: 'Tins A10', drained: '1.450 KG', fobCarton: '$30.06', fobPiece: '$5.02' },
-      { items: 3, cartons: 1500, packaging: 'Tins A12', drained: '2 KG', fobCarton: '$21.11', fobPiece: '$7.04' },
-      { items: 12, cartons: 5000, packaging: 'Cans 400g', drained: '0.170 G', fobCarton: '$10.87', fobPiece: '$0.91' },
-      { items: 12, cartons: 5400, packaging: 'Cans 280g', drained: '0.090 G', fobCarton: '$6.91', fobPiece: '$0.57' },
-      { items: 12, cartons: 2000, packaging: 'Jars 720g', drained: '0.350 G', fobCarton: '$16.63', fobPiece: '$1.39' },
-      { items: 12, cartons: 3200, packaging: 'Jars 450g', drained: '0.220 G', fobCarton: '$14.07', fobPiece: '$1.18' },
-      { items: 12, cartons: 3600, packaging: 'Jars 370g', drained: '0.170 G', fobCarton: '$8.80', fobPiece: '$0.74' },
-      { items: 24, cartons: 3200, packaging: 'Jars 200g', drained: '0.090 G', fobCarton: '$11.00', fobPiece: '$0.46' }
-    ]
-  },
-  {
-    id: 'sliced-green-olives',
-    name: 'Sliced Green Olives',
-    category: 'olives',
-    categoryName: 'Olives',
+    category: 'unverified',
+    categoryName: 'Unverified / Needs Manual Confirmation',
     image: img(5),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'needs_manual_confirmation',
     variants: [
-      { items: 6, cartons: 1007, packaging: 'Tins A10', drained: '1.560 KG', fobCarton: '$30.06', fobPiece: '$5.02' },
-      { items: 3, cartons: 1500, packaging: 'Tins A12', drained: '2 KG', fobCarton: '$21.11', fobPiece: '$7.04' },
-      { items: 12, cartons: 5000, packaging: 'Cans 400g', drained: '0.170 G', fobCarton: '$10.87', fobPiece: '$0.91' },
-      { items: 12, cartons: 5400, packaging: 'Cans 280g', drained: '0.090 G', fobCarton: '$6.91', fobPiece: '$0.57' },
-      { items: 12, cartons: 2000, packaging: 'Jars 720g', drained: '0.350 G', fobCarton: '$16.63', fobPiece: '$1.39' },
-      { items: 12, cartons: 3200, packaging: 'Jars 450g', drained: '0.220 G', fobCarton: '$14.07', fobPiece: '$1.18' },
-      { items: 12, cartons: 3600, packaging: 'Jars 370g', drained: '0.170 G', fobCarton: '$8.80', fobPiece: '$0.67' },
-      { items: 24, cartons: 3200, packaging: 'Jars 200g', drained: '0.090 G', fobCarton: '$10.00', fobPiece: '$0.42' }
+      { items: 6, cartons: 1007, packaging: 'Tins A10', fobCarton: '$29.41' },
+      { items: 3, cartons: 1500, packaging: 'Tins A12', fobCarton: '$21.11' },
+      { items: 12, cartons: 5000, packaging: 'Cans 400g', fobCarton: '$10.87' },
+      { items: 12, cartons: 5400, packaging: 'Cans 280g', fobCarton: '$6.91' },
+      { items: 12, cartons: 2000, packaging: 'Jars 720g', fobCarton: '$16.63' },
+      { items: 12, cartons: 3200, packaging: 'Jars 450g', fobCarton: '$14.07' },
+      { items: 12, cartons: 3600, packaging: 'Jars 370g', fobCarton: '$10.23' },
+      { items: 24, cartons: 3200, packaging: 'Jars 200g', fobCarton: '$12.79' }
     ]
   },
   {
-    id: 'whole-black-olives',
+    id: 'whole-black-olives-unverified-15',
+    name: 'Whole Black Olives',
+    category: 'unverified',
+    categoryName: 'Unverified / Needs Manual Confirmation',
+    image: img(15),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'needs_manual_confirmation',
+    variants: [
+      { items: 6, cartons: 1007, packaging: 'Tins A10', fobCarton: '$29.41' },
+      { items: 3, cartons: 1500, packaging: 'Tins A12', fobCarton: '$21.11' },
+      { items: 12, cartons: 5000, packaging: 'Cans 400g', fobCarton: '$10.87' },
+      { items: 12, cartons: 5400, packaging: 'Cans 280g', fobCarton: '$6.91' },
+      { items: 12, cartons: 2000, packaging: 'Jars 720g', fobCarton: '$16.63' },
+      { items: 12, cartons: 3200, packaging: 'Jars 450g', fobCarton: '$14.07' },
+      { items: 12, cartons: 3600, packaging: 'Jars 370g', fobCarton: '$10.23' },
+      { items: 24, cartons: 3200, packaging: 'Jars 200g', fobCarton: '$11.63' }
+    ]
+  },
+  {
+    id: 'whole-black-olives-17',
     name: 'Whole Black Olives',
     category: 'olives',
-    categoryName: 'Olives',
-    image: img(2),
+    categoryName: 'Fresh / Pickled Olives',
+    image: img(17),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'verified_from_visual_reference',
     variants: [
-      { items: 6, cartons: 1007, packaging: 'Tins A10', drained: '1.800 KG', fobCarton: '$29.41', fobPiece: '$4.90' },
-      { items: 3, cartons: 1500, packaging: 'Tins A12', drained: '2.500 KG', fobCarton: '$21.11', fobPiece: '$7.04' },
-      { items: 12, cartons: 5000, packaging: 'Cans 400g', drained: '0.200 G', fobCarton: '$10.87', fobPiece: '$0.91' },
-      { items: 12, cartons: 5400, packaging: 'Cans 280g', drained: '0.110 G', fobCarton: '$6.91', fobPiece: '$0.57' },
-      { items: 12, cartons: 2000, packaging: 'Jars 720g', drained: '0.400 G', fobCarton: '$16.63', fobPiece: '$1.39' },
-      { items: 12, cartons: 3200, packaging: 'Jars 450g', drained: '0.240 G', fobCarton: '$14.07', fobPiece: '$1.18' },
-      { items: 12, cartons: 3600, packaging: 'Jars 370g', drained: '0.200 G', fobCarton: '$10.23', fobPiece: '$0.85' },
-      { items: 24, cartons: 3200, packaging: 'Jars 200g', drained: '0.110 G', fobCarton: '$11.83', fobPiece: '$0.49' }
+      { items: 6, cartons: 1007, packaging: 'Tins A10', fobCarton: '$29.41' },
+      { items: 3, cartons: 1500, packaging: 'Tins A12', fobCarton: '$21.11' },
+      { items: 12, cartons: 5000, packaging: 'Cans 400g', fobCarton: '$10.87' },
+      { items: 12, cartons: 5400, packaging: 'Cans 280g', fobCarton: '$6.91' },
+      { items: 12, cartons: 2000, packaging: 'Jars 720g', fobCarton: '$16.63' },
+      { items: 12, cartons: 3200, packaging: 'Jars 450g', fobCarton: '$14.07' },
+      { items: 12, cartons: 3600, packaging: 'Jars 370g', fobCarton: '$10.23' },
+      { items: 24, cartons: 3200, packaging: 'Jars 200g', fobCarton: '$11.63' }
     ]
   },
   {
-    id: 'pitted-black-olives',
+    id: 'whole-green-olives-20',
+    name: 'Whole Green Olives',
+    category: 'olives',
+    categoryName: 'Fresh / Pickled Olives',
+    image: img(20),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'verified_from_visual_reference',
+    variants: [
+      { items: 6, cartons: 1007, packaging: 'Tins A10', fobCarton: '$29.41' },
+      { items: 3, cartons: 1500, packaging: 'Tins A12', fobCarton: '$21.11' },
+      { items: 12, cartons: 5000, packaging: 'Cans 400g', fobCarton: '$10.87' },
+      { items: 12, cartons: 5400, packaging: 'Cans 280g', fobCarton: '$6.91' },
+      { items: 12, cartons: 2000, packaging: 'Jars 720g', fobCarton: '$16.63' },
+      { items: 12, cartons: 3200, packaging: 'Jars 450g', fobCarton: '$14.07' },
+      { items: 12, cartons: 3600, packaging: 'Jars 370g', fobCarton: '$10.23' },
+      { items: 24, cartons: 3200, packaging: 'Jars 200g', fobCarton: '$12.79' }
+    ]
+  },
+  {
+    id: 'sliced-green-olives-29',
+    name: 'Sliced Green Olives',
+    category: 'olives',
+    categoryName: 'Fresh / Pickled Olives',
+    image: img(29),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'verified_from_visual_reference',
+    variants: [
+      { items: 6, cartons: 1007, packaging: 'Tins A10', fobCarton: '$30.06' },
+      { items: 3, cartons: 1500, packaging: 'Tins A12', fobCarton: '$21.11' },
+      { items: 12, cartons: 5000, packaging: 'Cans 400g', fobCarton: '$10.87' },
+      { items: 12, cartons: 5400, packaging: 'Cans 280g', fobCarton: '$6.91' },
+      { items: 12, cartons: 2000, packaging: 'Jars 720g', fobCarton: '$16.63' },
+      { items: 12, cartons: 3200, packaging: 'Jars 450g', fobCarton: '$14.07' },
+      { items: 12, cartons: 3600, packaging: 'Jars 370g', fobCarton: '$8.00' },
+      { items: 24, cartons: 3200, packaging: 'Jars 200g', fobCarton: '$10.00' }
+    ]
+  },
+  {
+    id: 'whole-green-olives-30',
+    name: 'Whole Green Olives',
+    category: 'olives',
+    categoryName: 'Fresh / Pickled Olives',
+    image: img(30),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'verified_from_visual_reference',
+    variants: [
+      { items: 6, cartons: 1007, packaging: 'Tins A10', fobCarton: '$29.41' },
+      { items: 3, cartons: 1500, packaging: 'Tins A12', fobCarton: '$21.11' },
+      { items: 12, cartons: 5000, packaging: 'Cans 400g', fobCarton: '$10.87' },
+      { items: 12, cartons: 5400, packaging: 'Cans 280g', fobCarton: '$6.91' },
+      { items: 12, cartons: 2000, packaging: 'Jars 720g', fobCarton: '$16.63' },
+      { items: 12, cartons: 3200, packaging: 'Jars 450g', fobCarton: '$14.07' },
+      { items: 12, cartons: 3600, packaging: 'Jars 370g', fobCarton: '$10.23' },
+      { items: 24, cartons: 3200, packaging: 'Jars 200g', fobCarton: '$12.79' }
+    ]
+  },
+  {
+    id: 'pitted-black-olives-35',
     name: 'Pitted Black Olives',
     category: 'olives',
-    categoryName: 'Olives',
-    image: img(2),
+    categoryName: 'Fresh / Pickled Olives',
+    image: img(35),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'verified_from_visual_reference',
     variants: [
-      { items: 6, cartons: 1007, packaging: 'Tins A10', drained: '1.450 KG', fobCarton: '$25.85', fobPiece: '$4.31' },
-      { items: 3, cartons: 1500, packaging: 'Tins A12', drained: '2 KG', fobCarton: '$18.15', fobPiece: '$6.05' },
-      { items: 12, cartons: 5000, packaging: 'Cans 400g', drained: '0.170 G', fobCarton: '$9.35', fobPiece: '$0.78' },
-      { items: 12, cartons: 5400, packaging: 'Cans 280g', drained: '0.090 G', fobCarton: '$5.94', fobPiece: '$0.50' },
-      { items: 12, cartons: 2000, packaging: 'Jars 720g', drained: '0.350 G', fobCarton: '$14.30', fobPiece: '$1.19' },
-      { items: 12, cartons: 3200, packaging: 'Jars 450g', drained: '0.220 G', fobCarton: '$12.10', fobPiece: '$1.01' },
-      { items: 12, cartons: 3500, packaging: 'Jars 370g', drained: '0.170 G', fobCarton: '$10.23', fobPiece: '$0.85' },
-      { items: 24, cartons: 3200, packaging: 'Jars 200g', drained: '0.090 G', fobCarton: '$12.79', fobPiece: '$0.54' }
+      { items: 6, cartons: 1007, packaging: 'Tins A10', fobCarton: '$25.85' },
+      { items: 3, cartons: 1500, packaging: 'Tins A12', fobCarton: '$18.15' },
+      { items: 12, cartons: 5000, packaging: 'Cans 400g', fobCarton: '$9.35' },
+      { items: 12, cartons: 5400, packaging: 'Cans 280g', fobCarton: '$5.94' },
+      { items: 12, cartons: 2000, packaging: 'Jars 720g', fobCarton: '$14.30' },
+      { items: 12, cartons: 3200, packaging: 'Jars 450g', fobCarton: '$12.10' },
+      { items: 12, cartons: 3600, packaging: 'Jars 370g', fobCarton: '$10.23' },
+      { items: 24, cartons: 3200, packaging: 'Jars 200g', fobCarton: '$12.79' }
     ]
   },
   {
-    id: 'sliced-black-olives',
+    id: 'sliced-black-olives-43',
     name: 'Sliced Black Olives',
     category: 'olives',
-    categoryName: 'Olives',
-    image: img(2),
-    variants: [
-      { items: 6, cartons: 1007, packaging: 'Tins A10', drained: '1.560 KG', fobCarton: '$25.85', fobPiece: '$4.31' },
-      { items: 3, cartons: 1500, packaging: 'Tins A12', drained: '2 KG', fobCarton: '$18.15', fobPiece: '$6.05' },
-      { items: 12, cartons: 5000, packaging: 'Cans 400g', drained: '0.170 G', fobCarton: '$9.35', fobPiece: '$0.78' },
-      { items: 12, cartons: 5400, packaging: 'Cans 280g', drained: '0.090 G', fobCarton: '$5.94', fobPiece: '$0.50' },
-      { items: 12, cartons: 2000, packaging: 'Jars 720g', drained: '0.350 G', fobCarton: '$14.30', fobPiece: '$1.19' },
-      { items: 12, cartons: 3200, packaging: 'Jars 450g', drained: '0.220 G', fobCarton: '$11.00', fobPiece: '$0.92' },
-      { items: 12, cartons: 3500, packaging: 'Jars 370g', drained: '0.170 G', fobCarton: '$8.80', fobPiece: '$0.67' },
-      { items: 24, cartons: 3200, packaging: 'Jars 200g', drained: '0.090 G', fobCarton: '$10.00', fobPiece: '$0.42' }
-    ]
-  },
-  {
-    id: 'green-jalapeno',
-    name: 'Green Jalapeño',
-    category: 'pickles',
-    categoryName: 'Pickles',
-    image: img(7),
-    variants: [
-      { items: 12, cartons: 2000, packaging: 'Jars 720g', drained: '0.350 G', fobCarton: '$13.11', fobPiece: '$1.09' },
-      { items: 12, cartons: 3200, packaging: 'Jars 480g', drained: '0.220 G', fobCarton: '$10.16', fobPiece: '$0.85' },
-      { items: 12, cartons: 3600, packaging: 'Jars 370g', drained: '0.170 G', fobCarton: '$6.71', fobPiece: '$0.56' },
-      { items: 6, cartons: 855, packaging: 'PET Plastic', drained: '1.550 KG', fobCarton: '$11.52', fobPiece: '$2.88' },
-      { items: 4, cartons: 1070, packaging: 'PET Plastic', drained: '1.800 KG', fobCarton: '$10.87', fobPiece: '$2.73' }
-    ]
-  },
-  {
-    id: 'red-jalapeno',
-    name: 'Red Jalapeño',
-    category: 'pickles',
-    categoryName: 'Pickles',
-    image: img(10),
-    variants: [
-      { items: 6, cartons: 1007, packaging: 'Tins A10', drained: '1.560 KG', fobCarton: '$16.63', fobPiece: '$2.77' },
-      { items: 12, cartons: 2000, packaging: 'Jars 720g', drained: '0.350 G', fobCarton: '$15.03', fobPiece: '$1.25' },
-      { items: 12, cartons: 3200, packaging: 'Jars 480g', drained: '0.220 G', fobCarton: '$12.79', fobPiece: '$1.07' },
-      { items: 12, cartons: 3600, packaging: 'Jars 370g', drained: '0.170 G', fobCarton: '$7.56', fobPiece: '$0.63' },
-      { items: 4, cartons: 1070, packaging: 'PET Plastic', drained: '1.800 KG', fobCarton: '$13.66', fobPiece: '$2.28' }
-    ]
-  },
-  {
-    id: 'banana-pepper',
-    name: 'Banana Pepper',
-    category: 'pickles',
-    categoryName: 'Pickles',
-    image: img(19),
-    variants: [
-      { items: 6, cartons: 1007, packaging: 'Tins A10', drained: '1.560 KG', fobCarton: '$13.66', fobPiece: '$2.28' },
-      { items: 12, cartons: 2000, packaging: 'Jars 720g', drained: '0.350 G', fobCarton: '$12.21', fobPiece: '$1.02' },
-      { items: 12, cartons: 3200, packaging: 'Jars 480g', drained: '0.220 G', fobCarton: '$9.53', fobPiece: '$0.68' },
-      { items: 12, cartons: 3600, packaging: 'Jars 370g', drained: '0.170 G', fobCarton: '$6.05', fobPiece: '$0.51' },
-      { items: 4, cartons: 1070, packaging: 'PET Plastic', drained: '1.800 KG', fobCarton: '$9.63', fobPiece: '$2.41' }
-    ]
-  },
-  {
-    id: 'pepperoncini-pepper',
-    name: 'Pepperoncini Pepper',
-    category: 'pickles',
-    categoryName: 'Pickles',
-    image: img(10),
-    variants: [
-      { items: 6, cartons: 1007, packaging: 'Tins A10', drained: '1.560 KG', fobCarton: '$12.93', fobPiece: '$2.16' },
-      { items: 12, cartons: 2000, packaging: 'Jars 720g', drained: '0.350 G', fobCarton: '$11.55', fobPiece: '$0.97' },
-      { items: 12, cartons: 3200, packaging: 'Jars 400g', drained: '0.220 G', fobCarton: '$9.02', fobPiece: '$0.87' },
-      { items: 12, cartons: 3600, packaging: 'Jars 370g', drained: '0.170 G', fobCarton: '$7.04', fobPiece: '$0.59' },
-      { items: 4, cartons: 1070, packaging: 'PET Plastic', drained: '1.800 KG', fobCarton: '$11.19', fobPiece: '$2.81' }
-    ]
-  },
-  {
-    id: 'sweet-cherry-pepper',
-    name: 'Sweet Cherry Pepper',
-    category: 'pickles',
-    categoryName: 'Pickles',
-    image: img(10),
-    variants: [
-      { items: 6, cartons: 1007, packaging: 'Tins A10', drained: '1.200 KG', fobCarton: '$31.46', fobPiece: '$5.25' },
-      { items: 3, cartons: 1500, packaging: 'Tins A12', drained: '1.800 KG', fobCarton: '$25.71', fobPiece: '$8.57' },
-      { items: 12, cartons: 3600, packaging: 'Jars 370g', drained: '0.150 G', fobCarton: '$14.07', fobPiece: '$1.18' }
-    ]
-  },
-  {
-    id: 'sweet-kardola-pepper',
-    name: 'Sweet Kardola Pepper',
-    category: 'pickles',
-    categoryName: 'Pickles',
-    image: img(10),
-    variants: [
-      { items: 6, cartons: 1007, packaging: 'Tins A10', drained: '1.200 KG', fobCarton: '$31.46', fobPiece: '$5.25' },
-      { items: 3, cartons: 1500, packaging: 'Tins A12', drained: '1.800 KG', fobCarton: '$25.71', fobPiece: '$8.57' },
-      { items: 12, cartons: 3600, packaging: 'Jars 370g', drained: '0.150 G', fobCarton: '$14.07', fobPiece: '$1.18' }
-    ]
-  },
-  {
-    id: 'sliced-lombardi-pepper',
-    name: 'Sliced Lombardi Pepper',
-    category: 'pickles',
-    categoryName: 'Pickles',
-    image: img(10),
-    variants: [
-      { items: 3, cartons: 1500, packaging: 'Tins A12', drained: '2.300 KG', fobCarton: '$18.61', fobPiece: '$6.20' }
-    ]
-  },
-  {
-    id: 'molokhia',
-    name: 'Molokhia',
-    category: 'vegetables',
-    categoryName: 'Vegetables',
-    image: img(19),
-    variants: [
-      { items: '-', cartons: 2500, packaging: 'Carton bulk', drained: '10 kg', fobCarton: '$10.23', fobPiece: '-' }
-    ]
-  },
-  {
-    id: 'spinach',
-    name: 'Spinach',
-    category: 'vegetables',
-    categoryName: 'Vegetables',
-    image: img(19),
-    variants: [
-      { items: '-', cartons: 2500, packaging: 'Carton bulk', drained: '10 kg', fobCarton: 'On request', fobPiece: '-' }
-    ]
-  },
-  {
-    id: 'artichokes',
-    name: 'Artichokes',
-    category: 'vegetables',
-    categoryName: 'Vegetables',
-    image: img(18),
-    variants: [
-      { items: '-', cartons: 2500, packaging: 'Carton bulk', drained: '10 kg', fobCarton: '$13.87', fobPiece: '-' }
-    ]
-  },
-  {
-    id: 'sweet-corn',
-    name: 'Sweet Corn',
-    category: 'vegetables',
-    categoryName: 'Vegetables',
-    image: img(15),
-    variants: [
-      { items: '-', cartons: 2500, packaging: 'Carton bulk', drained: '10 kg', fobCarton: '$17.90', fobPiece: '-' }
-    ]
-  },
-  {
-    id: 'okra',
-    name: 'Okra',
-    category: 'vegetables',
-    categoryName: 'Vegetables',
-    image: img(19),
-    variants: [
-      { items: '-', cartons: 2500, packaging: 'Carton bulk', drained: '10 kg', fobCarton: '$12.79', fobPiece: '-' }
-    ]
-  },
-  {
-    id: 'peas',
-    name: 'Peas',
-    category: 'vegetables',
-    categoryName: 'Vegetables',
-    image: img(16),
-    variants: [
-      { items: '-', cartons: 2500, packaging: 'Carton bulk', drained: '10 kg', fobCarton: 'On request', fobPiece: '-' }
-    ]
-  },
-  {
-    id: 'cauliflower',
-    name: 'Cauliflower',
-    category: 'vegetables',
-    categoryName: 'Vegetables',
-    image: img(19),
-    variants: [
-      { items: '-', cartons: 1800, packaging: 'Carton bulk', drained: '10 kg', fobCarton: '$10.87', fobPiece: '-' }
-    ]
-  },
-  {
-    id: 'broccoli',
-    name: 'Broccoli',
-    category: 'vegetables',
-    categoryName: 'Vegetables',
-    image: img(19),
-    variants: [
-      { items: '-', cartons: 1800, packaging: 'Carton bulk', drained: '10 kg', fobCarton: '$12.15', fobPiece: '-' }
-    ]
-  },
-  {
-    id: 'green-beans',
-    name: 'Green Beans',
-    category: 'vegetables',
-    categoryName: 'Vegetables',
-    image: img(19),
-    variants: [
-      { items: '-', cartons: 2500, packaging: 'Carton bulk', drained: '10 kg', fobCarton: '$11.51', fobPiece: '-' }
-    ]
-  },
-  {
-    id: 'mango',
-    name: 'Mango',
-    category: 'fruits',
-    categoryName: 'Fruits',
-    image: img(42),
-    variants: [
-      { items: '-', cartons: 2500, packaging: 'Carton bulk', drained: '10 kg', fobCarton: '$19.18', fobPiece: '-' }
-    ]
-  },
-  {
-    id: 'strawberry',
-    name: 'Strawberry',
-    category: 'fruits',
-    categoryName: 'Fruits',
+    categoryName: 'Fresh / Pickled Olives',
     image: img(43),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'verified_from_visual_reference',
     variants: [
-      { items: '-', cartons: 2500, packaging: 'Carton bulk', drained: '10 kg', fobCarton: '$12.79', fobPiece: '-' }
+      { items: 6, cartons: 1007, packaging: 'Tins A10', fobCarton: '$25.85' },
+      { items: 3, cartons: 1500, packaging: 'Tins A12', fobCarton: '$18.15' },
+      { items: 12, cartons: 5000, packaging: 'Cans 400g', fobCarton: '$9.35' },
+      { items: 12, cartons: 5400, packaging: 'Cans 280g', fobCarton: '$5.94' },
+      { items: 12, cartons: 2000, packaging: 'Jars 720g', fobCarton: '$14.30' },
+      { items: 12, cartons: 3200, packaging: 'Jars 450g', fobCarton: '$11.00' },
+      { items: 12, cartons: 3600, packaging: 'Jars 370g', fobCarton: '$8.00' },
+      { items: 24, cartons: 3200, packaging: 'Jars 200g', fobCarton: '$10.00' }
+    ]
+  },
+  // B) صور الفلفل — Peppers
+  {
+    id: 'green-jalapeno-unverified-6',
+    name: 'Green Jalapeño',
+    category: 'unverified',
+    categoryName: 'Unverified / Needs Manual Confirmation',
+    image: img(6),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'needs_manual_confirmation',
+    variants: [
+      { items: 12, cartons: 2000, packaging: 'Jars 720g', fobCarton: '$13.11' },
+      { items: 12, cartons: 3200, packaging: 'Jars 480g', fobCarton: '$10.16' },
+      { items: 12, cartons: 3600, packaging: 'Jars 370g', fobCarton: '$6.71' },
+      { items: 6, cartons: 855, packaging: 'PET Plastic', fobCarton: '$11.52' },
+      { items: 4, cartons: 1070, packaging: 'PET Plastic', fobCarton: '$10.87' }
     ]
   },
   {
-    id: 'bell-peppers',
-    name: 'Bell Peppers',
-    category: 'vegetables',
-    categoryName: 'Vegetables',
+    id: 'green-jalapeno-unverified-8',
+    name: 'Green Jalapeño / Pepper',
+    category: 'unverified',
+    categoryName: 'Unverified / Needs Manual Confirmation',
+    image: img(8),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'needs_manual_confirmation',
+    variants: [
+      { items: 12, cartons: 2000, packaging: 'Jars 720g', fobCarton: '$13.11' },
+      { items: 12, cartons: 3200, packaging: 'Jars 480g', fobCarton: '$10.16' },
+      { items: 12, cartons: 3600, packaging: 'Jars 370g', fobCarton: '$6.71' },
+      { items: 6, cartons: 855, packaging: 'PET Plastic', fobCarton: '$11.52' },
+      { items: 4, cartons: 1070, packaging: 'PET Plastic', fobCarton: '$10.87' }
+    ]
+  },
+  {
+    id: 'green-jalapeno-unverified-10',
+    name: 'Green Jalapeño / Pepper',
+    category: 'unverified',
+    categoryName: 'Unverified / Needs Manual Confirmation',
+    image: img(10),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'needs_manual_confirmation',
+    variants: [
+      { items: 12, cartons: 2000, packaging: 'Jars 720g', fobCarton: '$13.11' },
+      { items: 12, cartons: 3200, packaging: 'Jars 480g', fobCarton: '$10.16' },
+      { items: 12, cartons: 3600, packaging: 'Jars 370g', fobCarton: '$6.71' },
+      { items: 6, cartons: 855, packaging: 'PET Plastic', fobCarton: '$11.52' },
+      { items: 4, cartons: 1070, packaging: 'PET Plastic', fobCarton: '$10.87' }
+    ]
+  },
+  {
+    id: 'sliced-lombardi-pepper-23',
+    name: 'Sliced Lombardi Pepper',
+    category: 'peppers',
+    categoryName: 'Fresh / Pickled Peppers',
+    image: img(23),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'verified_from_visual_reference',
+    variants: [
+      { items: 3, cartons: 1500, packaging: 'Tins A12', fobCarton: '$18.61' }
+    ]
+  },
+  {
+    id: 'banana-pepper-26',
+    name: 'Banana Pepper',
+    category: 'peppers',
+    categoryName: 'Fresh / Pickled Peppers',
+    image: img(26),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'verified_from_visual_reference',
+    variants: [
+      { items: 6, cartons: 1007, packaging: 'Tins A10', fobCarton: '$13.66' },
+      { items: 12, cartons: 2000, packaging: 'Jars 720g', fobCarton: '$12.21' },
+      { items: 12, cartons: 3200, packaging: 'Jars 480g', fobCarton: '$9.53' },
+      { items: 12, cartons: 3600, packaging: 'Jars 370g', fobCarton: '$6.05' },
+      { items: 4, cartons: 1070, packaging: 'PET Plastic', fobCarton: '$9.63' }
+    ]
+  },
+  {
+    id: 'sliced-green-jalapeno-27',
+    name: 'Sliced Green Jalapeño',
+    category: 'peppers',
+    categoryName: 'Fresh / Pickled Peppers',
+    image: img(27),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'verified_from_visual_reference',
+    variants: [
+      { items: 12, cartons: 2000, packaging: 'Jars 720g', fobCarton: '$13.11' },
+      { items: 12, cartons: 3200, packaging: 'Jars 480g', fobCarton: '$10.16' },
+      { items: 12, cartons: 3600, packaging: 'Jars 370g', fobCarton: '$6.71' },
+      { items: 6, cartons: 855, packaging: 'PET Plastic', fobCarton: '$11.52' },
+      { items: 4, cartons: 1070, packaging: 'PET Plastic', fobCarton: '$10.87' }
+    ]
+  },
+  {
+    id: 'red-jalapeno-28',
+    name: 'Red Jalapeño',
+    category: 'peppers',
+    categoryName: 'Fresh / Pickled Peppers',
+    image: img(28),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'verified_from_visual_reference',
+    variants: [
+      { items: 6, cartons: 1007, packaging: 'Tins A10', fobCarton: '$16.63' },
+      { items: 12, cartons: 2000, packaging: 'Jars 720g', fobCarton: '$15.03' },
+      { items: 12, cartons: 3200, packaging: 'Jars 480g', fobCarton: '$12.79' },
+      { items: 12, cartons: 3600, packaging: 'Jars 370g', fobCarton: '$7.56' },
+      { items: 4, cartons: 1070, packaging: 'PET Plastic', fobCarton: '$11.63' }
+    ]
+  },
+  {
+    id: 'sweet-kardola-pepper-32',
+    name: 'Sweet Kardola Pepper',
+    category: 'peppers',
+    categoryName: 'Fresh / Pickled Peppers',
+    image: img(32),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'verified_from_visual_reference',
+    variants: [
+      { items: 6, cartons: 1007, packaging: 'Tins A10', fobCarton: '$31.46' },
+      { items: 3, cartons: 1500, packaging: 'Tins A12', fobCarton: '$25.71' },
+      { items: 12, cartons: 3600, packaging: 'Jars 370g', fobCarton: '$14.07' }
+    ]
+  },
+  {
+    id: 'sweet-cherry-pepper-33',
+    name: 'Sweet Cherry Pepper',
+    category: 'peppers',
+    categoryName: 'Fresh / Pickled Peppers',
+    image: img(33),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'verified_from_visual_reference',
+    variants: [
+      { items: 6, cartons: 1007, packaging: 'Tins A10', fobCarton: '$31.46' },
+      { items: 3, cartons: 1500, packaging: 'Tins A12', fobCarton: '$25.71' },
+      { items: 12, cartons: 3600, packaging: 'Jars 370g', fobCarton: '$14.07' }
+    ]
+  },
+  {
+    id: 'green-pepper-unverified-36',
+    name: 'Green Pepper',
+    category: 'unverified',
+    categoryName: 'Unverified / Needs Manual Confirmation',
     image: img(36),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'needs_manual_confirmation',
     variants: [
-      { items: '-', cartons: 2500, packaging: 'Carton bulk', drained: '10 kg', fobCarton: 'On request', fobPiece: '-' }
+      { items: 12, cartons: 2000, packaging: 'Jars 720g', fobCarton: '$13.11' },
+      { items: 12, cartons: 3200, packaging: 'Jars 480g', fobCarton: '$10.16' },
+      { items: 12, cartons: 3600, packaging: 'Jars 370g', fobCarton: '$6.71' },
+      { items: 6, cartons: 855, packaging: 'PET Plastic', fobCarton: '$11.52' },
+      { items: 4, cartons: 1070, packaging: 'PET Plastic', fobCarton: '$10.87' }
     ]
   },
   {
-    id: 'peach',
-    name: 'Peach',
-    category: 'fruits',
-    categoryName: 'Fruits',
-    image: img(11),
+    id: 'pepperoncini-pepper-40',
+    name: 'Pepperoncini Pepper',
+    category: 'peppers',
+    categoryName: 'Fresh / Pickled Peppers',
+    image: img(40),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'verified_from_visual_reference',
     variants: [
-      { items: '-', cartons: 2500, packaging: 'Carton bulk', drained: '10 kg', fobCarton: 'On request', fobPiece: '-' }
+      { items: 6, cartons: 1007, packaging: 'Tins A10', fobCarton: '$12.93' },
+      { items: 12, cartons: 2000, packaging: 'Jars 720g', fobCarton: '$11.55' },
+      { items: 12, cartons: 3200, packaging: 'Jars 480g', fobCarton: '$9.02' },
+      { items: 12, cartons: 3600, packaging: 'Jars 370g', fobCarton: '$7.04' },
+      { items: 4, cartons: 1070, packaging: 'PET Plastic', fobCarton: '$11.19' }
+    ]
+  },
+  // C) صور الخضروات والفاكهة المجمدة — Frozen IQF
+  {
+    id: 'molokhia-unverified-2',
+    name: 'Molokhia',
+    category: 'unverified',
+    categoryName: 'Unverified / Needs Manual Confirmation',
+    image: img(2),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'needs_manual_confirmation',
+    variants: [
+      { items: '-', cartons: 2500, packaging: 'Carton bulk (10 kg)', fobCarton: '$1023.25' }
+    ]
+  },
+  {
+    id: 'spinach-3',
+    name: 'Spinach',
+    category: 'frozen',
+    categoryName: 'Frozen IQF',
+    image: img(3),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'verified_from_visual_reference',
+    variants: [
+      { items: '-', cartons: 2500, packaging: 'Carton bulk (10 kg)', fobCarton: 'On request' }
+    ]
+  },
+  {
+    id: 'cauliflower-7',
+    name: 'Cauliflower',
+    category: 'frozen',
+    categoryName: 'Frozen IQF',
+    image: img(7),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'verified_from_visual_reference',
+    variants: [
+      { items: '-', cartons: 1800, packaging: 'Carton bulk (10 kg)', fobCarton: '$1087.21' }
+    ]
+  },
+  {
+    id: 'peach-9',
+    name: 'Peach',
+    category: 'frozen',
+    categoryName: 'Frozen IQF',
+    image: img(9),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'verified_from_visual_reference',
+    variants: [
+      { items: '-', cartons: 2500, packaging: 'Carton bulk (10 kg)', fobCarton: 'On request' }
+    ]
+  },
+  {
+    id: 'sweet-corn-unverified-11',
+    name: 'Sweet Corn',
+    category: 'unverified',
+    categoryName: 'Unverified / Needs Manual Confirmation',
+    image: img(11),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'needs_manual_confirmation',
+    variants: [
+      { items: '-', cartons: 2500, packaging: 'Carton bulk (10 kg)', fobCarton: '$1790.70' }
+    ]
+  },
+  {
+    id: 'mango-12',
+    name: 'Mango',
+    category: 'frozen',
+    categoryName: 'Frozen IQF',
+    image: img(12),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'verified_from_visual_reference',
+    variants: [
+      { items: '-', cartons: 2500, packaging: 'Carton bulk (10 kg)', fobCarton: '$1918.61' }
+    ]
+  },
+  {
+    id: 'broccoli-13',
+    name: 'Broccoli',
+    category: 'frozen',
+    categoryName: 'Frozen IQF',
+    image: img(13),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'verified_from_visual_reference',
+    variants: [
+      { items: '-', cartons: 1800, packaging: 'Carton bulk (10 kg)', fobCarton: '$1215.12' }
+    ]
+  },
+  {
+    id: 'sweet-corn-14',
+    name: 'Sweet Corn',
+    category: 'frozen',
+    categoryName: 'Frozen IQF',
+    image: img(14),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'verified_from_visual_reference',
+    variants: [
+      { items: '-', cartons: 2500, packaging: 'Carton bulk (10 kg)', fobCarton: '$1790.70' }
+    ]
+  },
+  {
+    id: 'strawberry-16',
+    name: 'Strawberry',
+    category: 'frozen',
+    categoryName: 'Frozen IQF',
+    image: img(16),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'verified_from_visual_reference',
+    variants: [
+      { items: '-', cartons: 2500, packaging: 'Carton bulk (10 kg)', fobCarton: '$1279.07' }
+    ]
+  },
+  {
+    id: 'mango-18',
+    name: 'Mango',
+    category: 'frozen',
+    categoryName: 'Frozen IQF',
+    image: img(18),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'verified_from_visual_reference',
+    variants: [
+      { items: '-', cartons: 2500, packaging: 'Carton bulk (10 kg)', fobCarton: '$1918.61' }
+    ]
+  },
+  {
+    id: 'green-beans-19',
+    name: 'Green Beans',
+    category: 'frozen',
+    categoryName: 'Frozen IQF',
+    image: img(19),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'verified_from_visual_reference',
+    variants: [
+      { items: '-', cartons: 2500, packaging: 'Carton bulk (10 kg)', fobCarton: '$1151.16' }
+    ]
+  },
+  {
+    id: 'spinach-21',
+    name: 'Spinach',
+    category: 'frozen',
+    categoryName: 'Frozen IQF',
+    image: img(21),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'verified_from_visual_reference',
+    variants: [
+      { items: '-', cartons: 2500, packaging: 'Carton bulk (10 kg)', fobCarton: 'On request' }
+    ]
+  },
+  {
+    id: 'cauliflower-22',
+    name: 'Cauliflower',
+    category: 'frozen',
+    categoryName: 'Frozen IQF',
+    image: img(22),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'verified_from_visual_reference',
+    variants: [
+      { items: '-', cartons: 1800, packaging: 'Carton bulk (10 kg)', fobCarton: '$1087.21' }
+    ]
+  },
+  {
+    id: 'brussels-sprouts-unverified-24',
+    name: 'Brussels Sprouts',
+    category: 'unverified',
+    categoryName: 'Unverified / Needs Manual Confirmation',
+    image: img(24),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'needs_manual_confirmation',
+    variants: [
+      { items: '-', cartons: 2500, packaging: 'Carton bulk (10 kg)', fobCarton: 'On request' }
+    ]
+  },
+  {
+    id: 'bell-peppers-25',
+    name: 'Bell Peppers',
+    category: 'frozen',
+    categoryName: 'Frozen IQF',
+    image: img(25),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'verified_from_visual_reference',
+    variants: [
+      { items: '-', cartons: 2500, packaging: 'Carton bulk (10 kg)', fobCarton: 'On request' }
+    ]
+  },
+  {
+    id: 'sweet-corn-31',
+    name: 'Sweet Corn',
+    category: 'frozen',
+    categoryName: 'Frozen IQF',
+    image: img(31),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'verified_from_visual_reference',
+    variants: [
+      { items: '-', cartons: 2500, packaging: 'Carton bulk (10 kg)', fobCarton: '$1790.70' }
+    ]
+  },
+  {
+    id: 'okra-34',
+    name: 'Okra',
+    category: 'frozen',
+    categoryName: 'Frozen IQF',
+    image: img(34),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'verified_from_visual_reference',
+    variants: [
+      { items: '-', cartons: 2500, packaging: 'Carton bulk (10 kg)', fobCarton: '$1279.07' }
+    ]
+  },
+  {
+    id: 'peas-37',
+    name: 'Peas',
+    category: 'frozen',
+    categoryName: 'Frozen IQF',
+    image: img(37),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'verified_from_visual_reference',
+    variants: [
+      { items: '-', cartons: 2500, packaging: 'Carton bulk (10 kg)', fobCarton: 'On request' }
+    ]
+  },
+  {
+    id: 'peach-38',
+    name: 'Peach',
+    category: 'frozen',
+    categoryName: 'Frozen IQF',
+    image: img(38),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'verified_from_visual_reference',
+    variants: [
+      { items: '-', cartons: 2500, packaging: 'Carton bulk (10 kg)', fobCarton: 'On request' }
+    ]
+  },
+  {
+    id: 'artichokes-39',
+    name: 'Artichokes',
+    category: 'frozen',
+    categoryName: 'Frozen IQF',
+    image: img(39),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'verified_from_visual_reference',
+    variants: [
+      { items: '-', cartons: 2500, packaging: 'Carton bulk (10 kg)', fobCarton: '$1087.21' }
+    ]
+  },
+  {
+    id: 'strawberry-41',
+    name: 'Strawberry',
+    category: 'frozen',
+    categoryName: 'Frozen IQF',
+    image: img(41),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'verified_from_visual_reference',
+    variants: [
+      { items: '-', cartons: 2500, packaging: 'Carton bulk (10 kg)', fobCarton: '$1279.07' }
+    ]
+  },
+  {
+    id: 'broccoli-42',
+    name: 'Broccoli',
+    category: 'frozen',
+    categoryName: 'Frozen IQF',
+    image: img(42),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'verified_from_visual_reference',
+    variants: [
+      { items: '-', cartons: 1800, packaging: 'Carton bulk (10 kg)', fobCarton: '$1215.12' }
+    ]
+  },
+  {
+    id: 'molokhia-44',
+    name: 'Molokhia',
+    category: 'frozen',
+    categoryName: 'Frozen IQF',
+    image: img(44),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'verified_from_visual_reference',
+    variants: [
+      { items: '-', cartons: 2500, packaging: 'Carton bulk (10 kg)', fobCarton: '$1023.25' }
+    ]
+  },
+  // D) صور تحتاج مراجعة يدوية (Extra unverified without clear matched names)
+  {
+    id: 'product-1-unverified',
+    name: 'Unknown (Peas/Pepper like)',
+    category: 'unverified',
+    categoryName: 'Unverified / Needs Manual Confirmation',
+    image: img(1),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'needs_manual_confirmation',
+    variants: [
+      { items: '-', cartons: '-', packaging: 'Unknown', fobCarton: 'On request' }
+    ]
+  },
+  {
+    id: 'product-4-unverified',
+    name: 'Unknown (Eggplant like)',
+    category: 'unverified',
+    categoryName: 'Unverified / Needs Manual Confirmation',
+    image: img(4),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'needs_manual_confirmation',
+    variants: [
+      { items: '-', cartons: '-', packaging: 'Unknown', fobCarton: 'On request' }
     ]
   }
 ];
@@ -333,9 +643,6 @@ const isListedPrice = (value) => {
 }
 
 export const displayPrice = (product) => {
-  if (isListedPrice(product.price_fob_piece)) {
-    return { amount: product.price_fob_piece, unit: 'FOB / Piece' }
-  }
   if (isListedPrice(product.price_fob_carton)) {
     return { amount: product.price_fob_carton, unit: 'FOB / Carton' }
   }
@@ -356,17 +663,10 @@ export const catalogProducts = priceListData.map((group) => {
     category: group.category,
     categoryName: group.categoryName,
     image: group.image,
-    price_fob_piece: variant.fobPiece,
     price_fob_carton: variant.fobCarton,
     packaging: variant.packaging,
-    variants: group.variants
+    variants: group.variants,
+    verification_status: group.verification_status,
+    price_source: group.price_source
   }
 })
-
-export const productCategories = [
-  { id: 'all', name: 'All', icon: '🌿' },
-  { id: 'olives', name: 'Olives', icon: '🫒' },
-  { id: 'pickles', name: 'Pickles', icon: '🥒' },
-  { id: 'fruits', name: 'Fruits', icon: '🍑' },
-  { id: 'vegetables', name: 'Vegetables', icon: '🥫' }
-]
