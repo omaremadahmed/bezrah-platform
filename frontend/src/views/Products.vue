@@ -142,11 +142,46 @@
 <script setup>
 import { ref, computed, watch, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
-import { priceListData as staticPriceListData, catalogProducts as staticProducts, productCategories, displayPrice, sellPrice } from '../data/priceList';
+import { productCategories, displayPrice, sellPrice } from '../data/priceList';
 import { useCartStore } from '../stores/cart';
 import { generateCataloguePdf, savePdfForDevice } from '../utils/downloadPdf';
 import AddProductModal from '../components/admin/AddProductModal.vue';
 import { productService } from '../services/productService';
+
+const dynamicImagesGlob = import.meta.glob([
+  '/public/image/product/*.{jpeg,jpg,png,gif,webp,svg}',
+  '/public/images/products/*.{jpeg,jpg,png,gif,webp,svg}'
+], { eager: true });
+
+const dynamicProducts = Object.keys(dynamicImagesGlob).map((path, index) => {
+  const servedPath = path.replace('/public/', '/');
+  return {
+    id: `dyn-${index}`,
+    name: '', // Display without inventing fake names
+    description: '',
+    category: 'all',
+    categoryName: '',
+    image: servedPath,
+    price_fob_piece: '-',
+    price_fob_carton: '-',
+    packaging: '-',
+    variants: []
+  };
+});
+
+const dynamicPriceList = dynamicProducts.map(p => ({
+  id: p.id,
+  name: '', // Display without inventing fake names
+  image: p.image,
+  variants: [{
+    items: '-',
+    cartons: '-',
+    packaging: '-',
+    drained: '-',
+    fobCarton: '-',
+    fobPiece: '-'
+  }]
+}));
 
 const cartStore = useCartStore();
 const route = useRoute();
@@ -235,13 +270,13 @@ const fmtPrice = (val) => {
 // Computed: catalog products list (backend preferred, static fallback)
 const catalogProductsList = computed(() => {
   if (backendCatalog.value.length > 0) return backendCatalog.value;
-  return staticProducts;
+  return dynamicProducts;
 });
 
 // Computed: price list data (backend preferred, static fallback)
 const priceListDataComputed = computed(() => {
   if (backendPriceList.value.length > 0) return backendPriceList.value;
-  return staticPriceListData;
+  return dynamicPriceList;
 });
 
 onMounted(async () => {
@@ -259,8 +294,13 @@ const filteredProducts = computed(() => {
 
 const refreshProducts = async () => {
   try {
+    // We disable API fetching because PostgreSQL cannot be modified
+    // and the backend is missing the Pickles/IQF products.
+    // Instead, we rely entirely on the static `priceList.js` reference file.
+    /*
     // Fetch catalog products
     const catalogRes = await productService.getProducts({ per_page: 100 });
+
     if (catalogRes && catalogRes.success && Array.isArray(catalogRes.data) && catalogRes.data.length > 0) {
       backendCatalog.value = catalogRes.data.map(p => ({
         id: p.slug || p.id,
@@ -292,6 +332,7 @@ const refreshProducts = async () => {
         }))
       }));
     }
+    */
 
     apiLoaded.value = true;
   } catch (e) {
