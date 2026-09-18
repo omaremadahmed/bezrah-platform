@@ -68,8 +68,8 @@ export const priceListData = [
     ]
   },
   {
-    id: 'whole-green-olives-20',
-    name: 'Whole Green Olives',
+    id: 'pitted-green-olives-20',
+    name: 'pitted Green Olives',
     category: 'olives',
     categoryName: 'Fresh / Pickled Olives',
     image: img(20),
