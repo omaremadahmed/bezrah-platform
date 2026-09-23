@@ -59,12 +59,12 @@
         </button>
 
         <template v-if="!authStore.isAuthenticated">
-          <router-link to="/login" class="nav-link">{{ $t('nav.login') || 'تسجيل الدخول' }}</router-link>
-          <router-link to="/register" class="nav-link">{{ $t('nav.register') || 'إنشاء حساب' }}</router-link>
+          <router-link to="/login" class="nav-link">{{ $t('nav.login') }}</router-link>
+          <router-link to="/register" class="nav-link">{{ $t('nav.register') }}</router-link>
         </template>
         <template v-else>
-          <router-link to="/profile" class="nav-link">{{ authStore.user?.full_name || authStore.user?.name || 'الملف الشخصي' }}</router-link>
-          <button type="button" @click="handleLogout" class="nav-link" style="border: none; background: none; cursor: pointer;">{{ $t('nav.logout') || 'تسجيل خروج' }}</button>
+          <router-link to="/profile" class="nav-link">{{ authStore.user?.full_name || authStore.user?.name || $t('nav.profile') }}</router-link>
+          <button type="button" @click="handleLogout" class="nav-link" style="border: none; background: none; cursor: pointer;">{{ $t('nav.logout') }}</button>
         </template>
         <router-link to="/quotation" class="quote-link">
           {{ $t('nav.requestQuote') }}
@@ -123,12 +123,12 @@
           </button>
 
           <template v-if="!authStore.isAuthenticated">
-            <router-link to="/login" class="mobile-nav-link">{{ $t('nav.login') || 'تسجيل الدخول' }}</router-link>
-            <router-link to="/register" class="mobile-nav-link">{{ $t('nav.register') || 'إنشاء حساب' }}</router-link>
+            <router-link to="/login" class="mobile-nav-link">{{ $t('nav.login') }}</router-link>
+            <router-link to="/register" class="mobile-nav-link">{{ $t('nav.register') }}</router-link>
           </template>
           <template v-else>
-            <router-link to="/profile" class="mobile-nav-link">{{ authStore.user?.full_name || authStore.user?.name || 'الملف الشخصي' }}</router-link>
-            <button type="button" @click="handleLogout" class="mobile-nav-link" style="border: none; background: none; cursor: pointer; text-align: start; width: 100%;">{{ $t('nav.logout') || 'تسجيل خروج' }}</button>
+            <router-link to="/profile" class="mobile-nav-link">{{ authStore.user?.full_name || authStore.user?.name || $t('nav.profile') }}</router-link>
+            <button type="button" @click="handleLogout" class="mobile-nav-link" style="border: none; background: none; cursor: pointer; text-align: start; width: 100%;">{{ $t('nav.logout') }}</button>
           </template>
         </div>
 
@@ -156,7 +156,7 @@ const cartStore = useCartStore()
 const isScrolled = ref(false)
 const mobileMenuOpen = ref(false)
 
-const cartLabel = computed(() => locale.value === 'ar' ? 'السلة' : 'Cart')
+const cartLabel = computed(() => t('nav.cartShort'))
 const cartAriaLabel = computed(() => `${cartLabel.value} (${cartStore.itemCount})`)
 
 const openCartFromDrawer = () => {
@@ -185,7 +185,6 @@ const drawerLinks = computed(() => [
   { to: '/', label: t('nav.home') },
   { to: '/about', label: t('nav.about') },
   { to: '/products', label: t('nav.products') },
-  ...productLinks.value,
   { to: '/contact', label: t('nav.contact') },
 ])
 

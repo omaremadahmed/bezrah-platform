@@ -16,6 +16,8 @@ const messages = {
       logout: 'Logout',
       cart: 'Shopping Cart',
       checkout: 'Proceed to Checkout',
+      profile: 'Profile',
+      cartShort: 'Cart',
     },
     cart: {
       empty: 'Your cart is empty',
@@ -274,6 +276,8 @@ const messages = {
       logout: 'تسجيل الخروج',
       cart: 'سلة المشتريات',
       checkout: 'إتمام الطلب',
+      profile: 'الملف الشخصي',
+      cartShort: 'السلة',
     },
     cart: {
       empty: 'سلة المشتريات فارغة',
