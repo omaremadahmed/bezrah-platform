@@ -35,33 +35,33 @@
         </div>
 
         <div class="home-about__copy" data-aos="fade-up" data-aos-delay="100">
-          <p class="section-kicker">A seed, and a standard.</p>
-          <h2>From a seed, a whole table.</h2>
+          <p class="section-kicker">{{ $t('brand.kicker') }}</p>
+          <h2>{{ $t('brand.heading') }}</h2>
           <p class="home-section-lead">
-            "Bezrah" — بذرة — is the Arabic word for seed. Everything we make begins there: a single seed, the soil it knew, the hands that picked it, the jar or pack it ends in.
+            {{ $t('brand.lead') }}
           </p>
           <p>
-            We are a Mediterranean food house exporting frozen vegetables, frozen prepared foods, and traditional pickles (mekhalal, mouneh) to households and food-service kitchens across the United States, the European Union, and Latin America. Our shelves sit between the commodity freezer aisle and the specialty deli. We are not the cheapest. We are not boutique. We are the dependable, beautiful middle — heritage food made to professional export standard.
+            {{ $t('brand.body') }}
           </p>
           <p>
-            Read this before you draw, write, photograph, or print anything carrying the Bezrah name. It defines who we are, how we look, and the lines we will not cross. Treat it as the brief behind every brief.
+            {{ $t('brand.brief') }}
           </p>
           <ul class="check-list" style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
             <li>
               <span aria-hidden="true"></span>
-              <strong>Origin:</strong> Traceable. We say where the seed came from, and we say it in Arabic on the label.
+              <strong>{{ $t('brand.originLabel') }}</strong> {{ $t('brand.originText') }}
             </li>
             <li>
               <span aria-hidden="true"></span>
-              <strong>Craft:</strong> Recipes from a region, not a focus group. Frozen and pickled the way a grandmother would, at industrial scale.
+              <strong>{{ $t('brand.craftLabel') }}</strong> {{ $t('brand.craftText') }}
             </li>
             <li>
               <span aria-hidden="true"></span>
-              <strong>Reach:</strong> Built for the export container and the long shelf. Cold chain, certifications, multi-language packaging.
+              <strong>{{ $t('brand.reachLabel') }}</strong> {{ $t('brand.reachText') }}
             </li>
             <li>
               <span aria-hidden="true"></span>
-              <strong>Restraint:</strong> Quiet design. Confident green. No shouting on the freezer door.
+              <strong>{{ $t('brand.restraintLabel') }}</strong> {{ $t('brand.restraintText') }}
             </li>
           </ul>
         </div>
@@ -71,23 +71,23 @@
     <section class="home-philosophy">
       <div class="container home-philosophy__grid">
         <div class="home-philosophy__copy" data-aos="fade-up">
-          <p class="section-kicker">HOW WE SOUND</p>
-          <h2>Quiet, specific, generous.</h2>
+          <p class="section-kicker">{{ $t('philosophy.kicker') }}</p>
+          <h2>{{ $t('philosophy.heading') }}</h2>
           <p class="home-section-lead">
-            Bezrah does not shout. It tells you which village the cucumbers came from, how long the brine took, and what to serve it with — and then steps out of the kitchen. The voice is the voice of someone who knows the food well enough to be brief about it.
+            {{ $t('philosophy.lead') }}
           </p>
           <div style="margin-top: 32px; display: grid; gap: 24px;">
             <div>
-              <h4 style="font-size: 0.85rem; letter-spacing: 0.05em; margin: 0 0 8px; color: #3D8740;">SENTENCE SHAPE</h4>
-              <p style="margin: 0; font-size: 0.95rem;">Short. Declarative. One idea per line. Fragments are fine. We trust the reader to fill in the rest of the sentence.</p>
+              <h4 style="font-size: 0.85rem; letter-spacing: 0.05em; margin: 0 0 8px; color: #3D8740;">{{ $t('philosophy.sentenceShapeTitle') }}</h4>
+              <p style="margin: 0; font-size: 0.95rem;">{{ $t('philosophy.sentenceShapeText') }}</p>
             </div>
             <div>
-              <h4 style="font-size: 0.85rem; letter-spacing: 0.05em; margin: 0 0 8px; color: #3D8740;">VOCABULARY</h4>
-              <p style="margin: 0; font-size: 0.95rem;">Plain English (or Spanish, French, Arabic, etc.). Avoid food-marketing clichés: "artisanal," "bursting," "perfection," "indulgent," "kissed by the sun."</p>
+              <h4 style="font-size: 0.85rem; letter-spacing: 0.05em; margin: 0 0 8px; color: #3D8740;">{{ $t('philosophy.vocabularyTitle') }}</h4>
+              <p style="margin: 0; font-size: 0.95rem;">{{ $t('philosophy.vocabularyText') }}</p>
             </div>
             <div>
-              <h4 style="font-size: 0.85rem; letter-spacing: 0.05em; margin: 0 0 8px; color: #3D8740;">PUNCTUATION</h4>
-              <p style="margin: 0; font-size: 0.95rem;">Em-dashes and full stops. Never exclamation marks on packaging. Never on website except in recipe instructions.</p>
+              <h4 style="font-size: 0.85rem; letter-spacing: 0.05em; margin: 0 0 8px; color: #3D8740;">{{ $t('philosophy.punctuationTitle') }}</h4>
+              <p style="margin: 0; font-size: 0.95rem;">{{ $t('philosophy.punctuationText') }}</p>
             </div>
           </div>
         </div>
@@ -95,32 +95,32 @@
           <div style="display: grid; gap: 24px;">
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding-bottom: 24px; border-bottom: 1px solid rgba(54, 82, 39, 0.1);">
               <div>
-                <h4 style="font-size: 0.8rem; letter-spacing: 0.05em; margin: 0 0 8px; color: #3D8740;">WE SOUND LIKE</h4>
-                <p style="margin: 0; font-size: 0.95rem; font-style: italic;">Picked in Beheira. Brined for six weeks. Sliced for sandwiches.</p>
+                <h4 style="font-size: 0.8rem; letter-spacing: 0.05em; margin: 0 0 8px; color: #3D8740;">{{ $t('philosophy.weSoundLike') }}</h4>
+                <p style="margin: 0; font-size: 0.95rem; font-style: italic;">{{ $t('philosophy.example1Good') }}</p>
               </div>
               <div>
-                <h4 style="font-size: 0.8rem; letter-spacing: 0.05em; margin: 0 0 8px; color: #A63F2F;">NOT LIKE</h4>
-                <p style="margin: 0; font-size: 0.95rem; font-style: italic;">Authentic farm-fresh artisanal pickles bursting with Mediterranean flavor!</p>
+                <h4 style="font-size: 0.8rem; letter-spacing: 0.05em; margin: 0 0 8px; color: #A63F2F;">{{ $t('philosophy.notLike') }}</h4>
+                <p style="margin: 0; font-size: 0.95rem; font-style: italic;">{{ $t('philosophy.example1Bad') }}</p>
               </div>
             </div>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding-bottom: 24px; border-bottom: 1px solid rgba(54, 82, 39, 0.1);">
               <div>
-                <h4 style="font-size: 0.8rem; letter-spacing: 0.05em; margin: 0 0 8px; color: #3D8740;">WE SOUND LIKE</h4>
-                <p style="margin: 0; font-size: 0.95rem; font-style: italic;">Frozen within four hours of harvest. Nothing else added.</p>
+                <h4 style="font-size: 0.8rem; letter-spacing: 0.05em; margin: 0 0 8px; color: #3D8740;">{{ $t('philosophy.weSoundLike') }}</h4>
+                <p style="margin: 0; font-size: 0.95rem; font-style: italic;">{{ $t('philosophy.example2Good') }}</p>
               </div>
               <div>
-                <h4 style="font-size: 0.8rem; letter-spacing: 0.05em; margin: 0 0 8px; color: #A63F2F;">NOT LIKE</h4>
-                <p style="margin: 0; font-size: 0.95rem; font-style: italic;">Locked in at peak freshness using our proprietary IQF process!</p>
+                <h4 style="font-size: 0.8rem; letter-spacing: 0.05em; margin: 0 0 8px; color: #A63F2F;">{{ $t('philosophy.notLike') }}</h4>
+                <p style="margin: 0; font-size: 0.95rem; font-style: italic;">{{ $t('philosophy.example2Bad') }}</p>
               </div>
             </div>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
               <div>
-                <h4 style="font-size: 0.8rem; letter-spacing: 0.05em; margin: 0 0 8px; color: #3D8740;">WE SOUND LIKE</h4>
-                <p style="margin: 0; font-size: 0.95rem; font-style: italic;">Mezze. Or a side. Or breakfast — we're not strict about it.</p>
+                <h4 style="font-size: 0.8rem; letter-spacing: 0.05em; margin: 0 0 8px; color: #3D8740;">{{ $t('philosophy.weSoundLike') }}</h4>
+                <p style="margin: 0; font-size: 0.95rem; font-style: italic;">{{ $t('philosophy.example3Good') }}</p>
               </div>
               <div>
-                <h4 style="font-size: 0.8rem; letter-spacing: 0.05em; margin: 0 0 8px; color: #A63F2F;">NOT LIKE</h4>
-                <p style="margin: 0; font-size: 0.95rem; font-style: italic;">Versatile and family-friendly — perfect for every occasion!</p>
+                <h4 style="font-size: 0.8rem; letter-spacing: 0.05em; margin: 0 0 8px; color: #A63F2F;">{{ $t('philosophy.notLike') }}</h4>
+                <p style="margin: 0; font-size: 0.95rem; font-style: italic;">{{ $t('philosophy.example3Bad') }}</p>
               </div>
             </div>
           </div>
@@ -165,118 +165,119 @@
     <section class="home-markets">
       <div class="container">
         <div class="home-section-head home-markets__head" data-aos="fade-up">
-          <p class="section-kicker">Markets</p>
-          <h2>Three shelves, three conversations.</h2>
-          <p>We export into three distinct retail cultures. The identity must read the same in all of them, but tilt slightly in each.</p>
+          <p class="section-kicker">{{ $t('markets.kicker') }}</p>
+          <h2>{{ $t('markets.heading') }}</h2>
+          <p>{{ $t('markets.intro') }}</p>
         </div>
         <div class="markets-grid">
           <div class="market-card" data-aos="fade-up" data-aos-delay="100">
-            <h3>United States</h3>
-            <p class="market-card__subtitle">Ethnic & Mediterranean Aisle</p>
-            <p class="market-card__desc">Buyers expect bilingual packaging (English first, Arabic accent), USDA-ready iconography, kosher/halal marks, and allergen clarity. Tilt: a little more editorial, a little more "specialty."</p>
+            <h3>{{ $t('markets.usTitle') }}</h3>
+            <p class="market-card__subtitle">{{ $t('markets.usSubtitle') }}</p>
+            <p class="market-card__desc">{{ $t('markets.usDesc') }}</p>
           </div>
           <div class="market-card" data-aos="fade-up" data-aos-delay="200">
-            <h3>European Union</h3>
-            <p class="market-card__subtitle">Frozen & World Foods</p>
-            <p class="market-card__desc">Buyers expect EU nutrition label compliance (FIC), Nutri-Score where applicable, multi-language back panel, and recyclable packaging callouts. Tilt: cleaner, calmer, more "design-led."</p>
+            <h3>{{ $t('markets.euTitle') }}</h3>
+            <p class="market-card__subtitle">{{ $t('markets.euSubtitle') }}</p>
+            <p class="market-card__desc">{{ $t('markets.euDesc') }}</p>
           </div>
           <div class="market-card" data-aos="fade-up" data-aos-delay="300">
-            <h3>Latin America</h3>
-            <p class="market-card__subtitle">Imported Delicatessen</p>
-            <p class="market-card__desc">Spanish-Portuguese back panel essential. Tilt: warmer, slightly more decorative, leaning into the shared Arab heritage with the region's Levantine communities.</p>
+            <h3>{{ $t('markets.latamTitle') }}</h3>
+            <p class="market-card__subtitle">{{ $t('markets.latamSubtitle') }}</p>
+            <p class="market-card__desc">{{ $t('markets.latamDesc') }}</p>
           </div>
         </div>
 
         <div class="markets-stats" data-aos="fade-up" data-aos-delay="400">
           <div class="market-stat">
-            <h4>~$210B</h4>
-            <p><strong>Global Frozen Veg & Prepared Food Market</strong><br/>Steady growth driven by convenience, home cooking, and the slow normalization of frozen as "fresh-frozen."</p>
+            <h4>{{ $t('markets.stat1Value') }}</h4>
+            <p><strong>{{ $t('markets.stat1Title') }}</strong><br/>{{ $t('markets.stat1Desc') }}</p>
           </div>
           <div class="market-stat">
-            <h4>3</h4>
-            <p><strong>Distinct Regulatory Regimes</strong><br/>FDA (US) · EU FIC 1169/2011 · MERCOSUR. Every artwork must satisfy the strictest on a per-market SKU.</p>
+            <h4>{{ $t('markets.stat2Value') }}</h4>
+            <p><strong>{{ $t('markets.stat2Title') }}</strong><br/>{{ $t('markets.stat2Desc') }}</p>
           </div>
           <div class="market-stat">
-            <h4>Premium-Middle</h4>
-            <p><strong>Our Shelf Position</strong><br/>Priced above commodity frozen aisle, below chef-driven boutique. Design must signal "craft" without signaling "luxury tax."</p>
+            <h4>{{ $t('markets.stat3Value') }}</h4>
+            <p><strong>{{ $t('markets.stat3Title') }}</strong><br/>{{ $t('markets.stat3Desc') }}</p>
           </div>
         </div>
       </div>
     </section>
 
+
     <section class="home-identity">
       <div class="container">
         <div class="home-section-head home-identity__head" data-aos="fade-up" style="max-width: 800px;">
-          <p class="section-kicker">IN THE WORLD</p>
-          <h2>A system, not a sticker.</h2>
-          <p>The identity is built to extend across packaging tiers (master brand, frozen line, pickles line), trade collateral (sell sheets, distributor decks), and digital surfaces (web, marketplace tiles, social). These are sketches of intent, not finals. Use them to test whether a new application "feels Bezrah" before producing it.</p>
+          <p class="section-kicker">{{ $t('identity.kicker') }}</p>
+          <h2>{{ $t('identity.heading') }}</h2>
+          <p>{{ $t('identity.intro') }}</p>
         </div>
 
         <div class="identity-grid">
           <div class="identity-card" data-aos="fade-up" data-aos-delay="100">
-            <h3>One seedling, two scripts.</h3>
-            <p>The Bezrah mark is a single composition: the Arabic word بذرة as the primary form, with a young seedling growing out of the dotless ة, and the Latin transliteration set beneath in a refined serif. They appear together as one lockup.</p>
+            <h3>{{ $t('identity.logoTitle') }}</h3>
+            <p>{{ $t('identity.logoDesc') }}</p>
             <div class="identity-card__note">
-              <strong>Give it room:</strong> Minimum clear space on all sides equals the height of the letter B in the wordmark.
+              <strong>{{ $t('identity.logoNote') }}</strong> {{ $t('identity.logoNoteText') }}
             </div>
           </div>
 
           <div class="identity-card" data-aos="fade-up" data-aos-delay="200">
-            <h3>Three families, one conversation.</h3>
+            <h3>{{ $t('identity.typoTitle') }}</h3>
             <ul class="typography-list">
               <li>
                 <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px;">
                   <strong style="margin: 0;">Cormorant Garamond</strong>
-                  <span style="font-size: 0.7rem; color: #7A4748; letter-spacing: 0.05em; font-weight: 700;">FREE GOOGLE FONTS</span>
+                  <span style="font-size: 0.7rem; color: #7A4748; letter-spacing: 0.05em; font-weight: 700;">{{ $t('identity.freeGoogleFonts') }}</span>
                 </div>
-                <div style="font-size: 0.75rem; letter-spacing: 0.05em; font-weight: 700; color: #3D8740; margin-bottom: 12px;">DISPLAY · EDITORIAL</div>
-                <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: #365227; line-height: 1.2; margin-bottom: 8px;">Frozen at the field.</div>
+                <div style="font-size: 0.75rem; letter-spacing: 0.05em; font-weight: 700; color: #3D8740; margin-bottom: 12px;">{{ $t('identity.cormorantRole') }}</div>
+                <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: #365227; line-height: 1.2; margin-bottom: 8px;">{{ $t('identity.cormorantSample') }}</div>
               </li>
               <li>
                 <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px;">
                   <strong style="margin: 0;">Inter</strong>
-                  <span style="font-size: 0.7rem; color: #7A4748; letter-spacing: 0.05em; font-weight: 700;">FREE GOOGLE FONTS</span>
+                  <span style="font-size: 0.7rem; color: #7A4748; letter-spacing: 0.05em; font-weight: 700;">{{ $t('identity.freeGoogleFonts') }}</span>
                 </div>
-                <div style="font-size: 0.75rem; letter-spacing: 0.05em; font-weight: 700; color: #3D8740; margin-bottom: 12px;">BODY · OPERATIONAL</div>
-                <p style="font-size: 0.9rem; margin-bottom: 12px; color: rgba(54, 82, 39, 0.85); line-height: 1.5;">Use Inter for everything that has to be read carefully and quickly: ingredients lists, nutritional panels, regulatory copy, country-of-origin statements, e-commerce body, web UI, presentation footnotes. It is invisible by design, which is exactly what an export label needs. Set between 9 pt (minimum legal) and 16 pt (web body). Avoid weights above 600 in body settings.</p>
+                <div style="font-size: 0.75rem; letter-spacing: 0.05em; font-weight: 700; color: #3D8740; margin-bottom: 12px;">{{ $t('identity.interRole') }}</div>
+                <p style="font-size: 0.9rem; margin-bottom: 12px; color: rgba(54, 82, 39, 0.85); line-height: 1.5;">{{ $t('identity.interDesc') }}</p>
               </li>
               <li>
                 <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px;">
                   <strong style="margin: 0;">Amiri</strong>
-                  <span style="font-size: 0.7rem; color: #7A4748; letter-spacing: 0.05em; font-weight: 700;">FREE GOOGLE FONTS</span>
+                  <span style="font-size: 0.7rem; color: #7A4748; letter-spacing: 0.05em; font-weight: 700;">{{ $t('identity.freeGoogleFonts') }}</span>
                 </div>
-                <div style="font-size: 0.75rem; letter-spacing: 0.05em; font-weight: 700; color: #3D8740; margin-bottom: 12px;">ARABIC · DISPLAY</div>
-                <div style="font-family: 'Amiri', serif; font-size: 1.8rem; color: #365227; line-height: 1.4; margin-bottom: 12px;" dir="rtl">بذرة صغيرة · مائدة كاملة</div>
-                <p style="font-size: 0.85rem; margin-bottom: 12px; color: rgba(54, 82, 39, 0.85); line-height: 1.5;">Amiri Regular: <span style="font-size: 0.7rem; letter-spacing: 0.05em; font-weight: 700; color: #365227;">ARABIC DISPLAY, PACKAGING</span> &nbsp;&nbsp; Noto Naskh Arabic: <span style="font-size: 0.7rem; letter-spacing: 0.05em; font-weight: 700; color: #365227;">ARABIC BODY, INGREDIENT LISTS</span><br/><br/>
-                <span style="font-size: 0.7rem; letter-spacing: 0.05em; font-weight: 700; color: #365227;">ALWAYS SET ARABIC 2 pt larger THAN ITS LATIN COUNTERPART FOR OPTICAL BALANCE</span></p>
+                <div style="font-size: 0.75rem; letter-spacing: 0.05em; font-weight: 700; color: #3D8740; margin-bottom: 12px;">{{ $t('identity.amiriRole') }}</div>
+                <div style="font-family: 'Amiri', serif; font-size: 1.8rem; color: #365227; line-height: 1.4; margin-bottom: 12px;" dir="rtl">{{ $t('identity.amiriSample') }}</div>
+                <p style="font-size: 0.85rem; margin-bottom: 12px; color: rgba(54, 82, 39, 0.85); line-height: 1.5;">Amiri Regular: <span style="font-size: 0.7rem; letter-spacing: 0.05em; font-weight: 700; color: #365227;">{{ $t('identity.amiriDesc1Label') }}</span> &nbsp;&nbsp; Noto Naskh Arabic: <span style="font-size: 0.7rem; letter-spacing: 0.05em; font-weight: 700; color: #365227;">{{ $t('identity.amiriDesc2Label') }}</span><br/><br/>
+                <span style="font-size: 0.7rem; letter-spacing: 0.05em; font-weight: 700; color: #365227;">{{ $t('identity.amiriNote') }}</span></p>
               </li>
             </ul>
-            <p style="margin-top: 16px; font-size: 0.85rem; color: rgba(54, 82, 39, 0.7); font-style: italic;">All three families are open-source and free for commercial export use, which keeps licensing simple across packaging plants.</p>
+            <p style="margin-top: 16px; font-size: 0.85rem; color: rgba(54, 82, 39, 0.7); font-style: italic;">{{ $t('identity.typoFootnote') }}</p>
           </div>
 
           <div class="identity-card identity-card--full" data-aos="fade-up" data-aos-delay="300">
-            <h3>A field, a seedling, and the bowl beneath.</h3>
+            <h3>{{ $t('identity.colorTitle') }}</h3>
             <div class="palette-grid">
               <div class="color-swatch" style="--swatch-color: #365227; color: white;">
-                <span>Bezrah Forest</span>
+                <span>{{ $t('identity.colorForest') }}</span>
               </div>
               <div class="color-swatch" style="--swatch-color: #3D8740; color: white;">
-                <span>Leaf</span>
+                <span>{{ $t('identity.colorLeaf') }}</span>
               </div>
               <div class="color-swatch" style="--swatch-color: #7A4748; color: white;">
-                <span>Spring</span>
+                <span>{{ $t('identity.colorSpring') }}</span>
               </div>
               <div class="color-swatch" style="--swatch-color: #F5EDDE; color: var(--color-charcoal);">
-                <span>Cream</span>
+                <span>{{ $t('identity.colorCream') }}</span>
               </div>
               <div class="color-swatch" style="--swatch-color: #F4F1E8; color: var(--color-charcoal);">
-                <span>Bone</span>
+                <span>{{ $t('identity.colorBone') }}</span>
               </div>
               <div class="color-swatch" style="--swatch-color: #B8633A; color: white;">
-                <span>Terracotta</span>
+                <span>{{ $t('identity.colorTerracotta') }}</span>
               </div>
               <div class="color-swatch" style="--swatch-color: #D9A441; color: white;">
-                <span>Saffron</span>
+                <span>{{ $t('identity.colorSaffron') }}</span>
               </div>
             </div>
           </div>
