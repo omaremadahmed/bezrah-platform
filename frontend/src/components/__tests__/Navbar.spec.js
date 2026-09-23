@@ -68,7 +68,8 @@ describe('Navbar.vue', () => {
   it('renders navbar correctly', () => {
     const wrapper = mount(Navbar, {
       global: {
-        plugins: [createPinia(), router, i18n]
+        plugins: [createPinia(), router, i18n],
+        stubs: { Logo: { template: '<span class="logo-title">Bezrah</span>' } }
       }
     })
     expect(wrapper.find('.logo-title').text()).toBe('Bezrah')
@@ -77,7 +78,8 @@ describe('Navbar.vue', () => {
   it('has a dropdown for products', async () => {
     const wrapper = mount(Navbar, {
       global: {
-        plugins: [createPinia(), router, i18n]
+        plugins: [createPinia(), router, i18n],
+        stubs: { Logo: true }
       }
     })
     

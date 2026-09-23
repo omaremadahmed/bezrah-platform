@@ -5,8 +5,8 @@ const digitsOnly = (value) => clean(value).replace(/[^\d]/g, '')
 const normalizeTelegram = (value) => clean(value).replace(/^@/, '')
 
 const contactEmail = clean(import.meta.env.VITE_CONTACT_EMAIL)
-const contactPhone = clean(import.meta.env.VITE_CONTACT_PHONE)
-const whatsappNumber = clean(import.meta.env.VITE_WHATSAPP_NUMBER || contactPhone)
+const contactPhone = clean(import.meta.env.VITE_CONTACT_PHONE) || '+201036161617'
+const whatsappNumber = clean(import.meta.env.VITE_WHATSAPP_NUMBER) || contactPhone
 const telegramHandle = normalizeTelegram(import.meta.env.VITE_TELEGRAM_HANDLE)
 
 export const contactConfig = {

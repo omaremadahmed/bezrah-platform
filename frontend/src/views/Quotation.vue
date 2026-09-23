@@ -27,7 +27,7 @@
             </div>
             <div class="info-block">
               <h3>📞 {{ $t('quotation.callUs') }}</h3>
-              <p>+20 100 123 4567<br>+20 2 2345 6789</p>
+              <p><a href="tel:+201036161617" dir="ltr">+20 103 616 1617</a></p>
             </div>
           </div>
         </div>

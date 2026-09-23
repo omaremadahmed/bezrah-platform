@@ -49,8 +49,7 @@
         <div class="auth-brand-side">
           <div class="brand-content">
             <div class="brand-logo">
-              <span class="logo-icon">🌱</span>
-              <h1>{{ $t('title') }}</h1>
+              <Logo inverse />
             </div>
             <p class="brand-tagline">{{ $t('hero.title') }}</p>
           </div>
@@ -64,6 +63,7 @@
 <script setup>
 import { ref } from 'vue'
 import { authService } from '../services/authService'
+import Logo from '../components/Logo.vue'
 
 const email = ref('')
 const isLoading = ref(false)

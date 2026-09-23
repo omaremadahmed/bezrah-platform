@@ -77,8 +77,7 @@
         <div class="auth-brand-side">
           <div class="brand-content">
             <div class="brand-logo">
-              <span class="logo-icon">🌱</span>
-              <h1>{{ $t('title') }}</h1>
+              <Logo inverse />
             </div>
             <p class="brand-tagline">{{ $t('auth.tagline') }}</p>
             
@@ -108,6 +107,7 @@
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useAuthStore } from '../stores/auth'
+import Logo from '../components/Logo.vue'
 
 const router = useRouter()
 const authStore = useAuthStore()

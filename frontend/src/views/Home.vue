@@ -259,31 +259,24 @@
             <div class="palette-grid">
               <div class="color-swatch" style="--swatch-color: #365227; color: white;">
                 <span>Bezrah Forest</span>
-                <span>#365227</span>
               </div>
               <div class="color-swatch" style="--swatch-color: #3D8740; color: white;">
                 <span>Leaf</span>
-                <span>#3D8740</span>
               </div>
               <div class="color-swatch" style="--swatch-color: #7A4748; color: white;">
                 <span>Spring</span>
-                <span>#7A4748</span>
               </div>
               <div class="color-swatch" style="--swatch-color: #F5EDDE; color: var(--color-charcoal);">
                 <span>Cream</span>
-                <span>#F5EDDE</span>
               </div>
               <div class="color-swatch" style="--swatch-color: #F4F1E8; color: var(--color-charcoal);">
                 <span>Bone</span>
-                <span>#F4F1E8</span>
               </div>
               <div class="color-swatch" style="--swatch-color: #B8633A; color: white;">
                 <span>Terracotta</span>
-                <span>#B8633A</span>
               </div>
               <div class="color-swatch" style="--swatch-color: #D9A441; color: white;">
                 <span>Saffron</span>
-                <span>#D9A441</span>
               </div>
             </div>
           </div>
@@ -1110,7 +1103,7 @@ const packageCards = computed(() => [
 .home-identity {
   background: #F4F1E8;
   color: #365227;
-  padding-block: 82px;
+  padding-block: 48px;
 }
 
 .home-identity__head {
@@ -1136,12 +1129,13 @@ const packageCards = computed(() => [
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
+  align-items: start;
 }
 
 .identity-card {
   background: #fff;
   border: 1px solid rgba(54, 82, 39, 0.1);
-  padding: 38px;
+  padding: 32px;
   border-radius: 8px;
 }
 
@@ -1210,7 +1204,7 @@ const packageCards = computed(() => [
 
 .color-swatch {
   background: var(--swatch-color);
-  padding: 24px 16px;
+  padding: 16px 12px;
   border-radius: 6px;
   display: flex;
   flex-direction: column;
@@ -1218,11 +1212,9 @@ const packageCards = computed(() => [
   font-size: 0.85rem;
   font-weight: 700;
   border: 1px solid rgba(0,0,0,0.05);
-}
-
-.color-swatch span:last-child {
-  opacity: 0.7;
-  font-weight: 400;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 1020px) {

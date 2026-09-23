@@ -50,7 +50,7 @@
           <div class="info-card">
             <div class="info-icon">📞</div>
             <h3>Phone</h3>
-            <p>+966 12 345 6789</p>
+            <p><a href="tel:+201036161617" dir="ltr">+20 103 616 1617</a></p>
           </div>
           <div class="info-card">
             <div class="info-icon">🕐</div>
