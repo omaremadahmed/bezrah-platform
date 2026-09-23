@@ -10,8 +10,8 @@
     "env": {
       "VITE_API_URL": "https://bezrah-app-backend.vercel.app/api",
       "VITE_CONTACT_EMAIL": "info@bezrah.com",
-      "VITE_CONTACT_PHONE": "+201234567890",
-      "VITE_WHATSAPP_NUMBER": "+201234567890",
+      "VITE_CONTACT_PHONE": "+201036161617",
+      "VITE_WHATSAPP_NUMBER": "+201036161617",
       "VITE_TELEGRAM_HANDLE": "bezrah"
     }
   }
