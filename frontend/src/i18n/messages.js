@@ -217,7 +217,7 @@ const messages = {
       interRole: 'BODY · OPERATIONAL',
       interDesc: 'Use Inter for everything that has to be read carefully and quickly: ingredients lists, nutritional panels, regulatory copy, country-of-origin statements, e-commerce body, web UI, presentation footnotes. It is invisible by design, which is exactly what an export label needs. Set between 9 pt (minimum legal) and 16 pt (web body). Avoid weights above 600 in body settings.',
       amiriRole: 'ARABIC · DISPLAY',
-      amiriSample: 'بذرة صغيرة · مائدة كاملة',
+      amiriSample: 'A small seed · A whole table',
       amiriDesc1Label: 'ARABIC DISPLAY, PACKAGING',
       amiriDesc2Label: 'ARABIC BODY, INGREDIENT LISTS',
       amiriNote: 'ALWAYS SET ARABIC 2 pt larger THAN ITS LATIN COUNTERPART FOR OPTICAL BALANCE',
