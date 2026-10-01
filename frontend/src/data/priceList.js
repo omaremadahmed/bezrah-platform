@@ -9,7 +9,9 @@ export const productCategories = [
 ];
 
 export const priceListData = [
-  // A) صور الزيتون — Olives
+  // ========== A) Olives ==========
+
+  // product-5 — Whole Green Olives (needs confirmation)
   {
     id: 'whole-green-olives-unverified-5',
     name: 'Whole Green Olives',
@@ -29,6 +31,8 @@ export const priceListData = [
       { items: 24, cartons: 3200, packaging: 'Jars 200g', fobCarton: '$12.79' }
     ]
   },
+
+  // product-15 — Whole Black Olives (needs confirmation)
   {
     id: 'whole-black-olives-unverified-15',
     name: 'Whole Black Olives',
@@ -48,6 +52,8 @@ export const priceListData = [
       { items: 24, cartons: 3200, packaging: 'Jars 200g', fobCarton: '$11.63' }
     ]
   },
+
+  // product-17 — Whole Black Olives (verified)
   {
     id: 'whole-black-olives-17',
     name: 'Whole Black Olives',
@@ -67,9 +73,11 @@ export const priceListData = [
       { items: 24, cartons: 3200, packaging: 'Jars 200g', fobCarton: '$11.63' }
     ]
   },
+
+  // product-20 — Whole Green Olives (verified)
   {
-    id: 'pitted-green-olives-20',
-    name: 'pitted Green Olives',
+    id: 'whole-green-olives-20',
+    name: 'Whole Green Olives',
     category: 'olives',
     categoryName: 'Fresh / Pickled Olives',
     image: img(20),
@@ -86,6 +94,8 @@ export const priceListData = [
       { items: 24, cartons: 3200, packaging: 'Jars 200g', fobCarton: '$12.79' }
     ]
   },
+
+  // product-29 — Sliced Green Olives (verified)
   {
     id: 'sliced-green-olives-29',
     name: 'Sliced Green Olives',
@@ -105,6 +115,8 @@ export const priceListData = [
       { items: 24, cartons: 3200, packaging: 'Jars 200g', fobCarton: '$10.00' }
     ]
   },
+
+  // product-30 — Whole Green Olives (verified)
   {
     id: 'whole-green-olives-30',
     name: 'Whole Green Olives',
@@ -124,6 +136,8 @@ export const priceListData = [
       { items: 24, cartons: 3200, packaging: 'Jars 200g', fobCarton: '$12.79' }
     ]
   },
+
+  // product-35 — Pitted Black Olives (verified)
   {
     id: 'pitted-black-olives-35',
     name: 'Pitted Black Olives',
@@ -143,6 +157,8 @@ export const priceListData = [
       { items: 24, cartons: 3200, packaging: 'Jars 200g', fobCarton: '$12.79' }
     ]
   },
+
+  // product-43 — Sliced Black Olives (verified)
   {
     id: 'sliced-black-olives-43',
     name: 'Sliced Black Olives',
@@ -162,7 +178,10 @@ export const priceListData = [
       { items: 24, cartons: 3200, packaging: 'Jars 200g', fobCarton: '$10.00' }
     ]
   },
-  // B) صور الفلفل — Peppers
+
+  // ========== B) Peppers ==========
+
+  // product-6 — Green Jalapeño (needs confirmation)
   {
     id: 'green-jalapeno-unverified-6',
     name: 'Green Jalapeño',
@@ -179,6 +198,8 @@ export const priceListData = [
       { items: 4, cartons: 1070, packaging: 'PET Plastic', fobCarton: '$10.87' }
     ]
   },
+
+  // product-8 — Green Jalapeño / Pepper (needs confirmation)
   {
     id: 'green-jalapeno-unverified-8',
     name: 'Green Jalapeño / Pepper',
@@ -195,6 +216,8 @@ export const priceListData = [
       { items: 4, cartons: 1070, packaging: 'PET Plastic', fobCarton: '$10.87' }
     ]
   },
+
+  // product-10 — Green Jalapeño / Pepper (needs confirmation)
   {
     id: 'green-jalapeno-unverified-10',
     name: 'Green Jalapeño / Pepper',
@@ -211,6 +234,8 @@ export const priceListData = [
       { items: 4, cartons: 1070, packaging: 'PET Plastic', fobCarton: '$10.87' }
     ]
   },
+
+  // product-23 — Sliced Lombardi Pepper (verified)
   {
     id: 'sliced-lombardi-pepper-23',
     name: 'Sliced Lombardi Pepper',
@@ -223,6 +248,8 @@ export const priceListData = [
       { items: 3, cartons: 1500, packaging: 'Tins A12', fobCarton: '$18.61' }
     ]
   },
+
+  // product-26 — Banana Pepper (verified)
   {
     id: 'banana-pepper-26',
     name: 'Banana Pepper',
@@ -239,6 +266,8 @@ export const priceListData = [
       { items: 4, cartons: 1070, packaging: 'PET Plastic', fobCarton: '$9.63' }
     ]
   },
+
+  // product-27 — Sliced Green Jalapeño (verified)
   {
     id: 'sliced-green-jalapeno-27',
     name: 'Sliced Green Jalapeño',
@@ -255,6 +284,8 @@ export const priceListData = [
       { items: 4, cartons: 1070, packaging: 'PET Plastic', fobCarton: '$10.87' }
     ]
   },
+
+  // product-28 — Red Jalapeño (verified)
   {
     id: 'red-jalapeno-28',
     name: 'Red Jalapeño',
@@ -271,6 +302,8 @@ export const priceListData = [
       { items: 4, cartons: 1070, packaging: 'PET Plastic', fobCarton: '$11.63' }
     ]
   },
+
+  // product-32 — Sweet Kardola Pepper (verified)
   {
     id: 'sweet-kardola-pepper-32',
     name: 'Sweet Kardola Pepper',
@@ -285,6 +318,8 @@ export const priceListData = [
       { items: 12, cartons: 3600, packaging: 'Jars 370g', fobCarton: '$14.07' }
     ]
   },
+
+  // product-33 — Sweet Cherry Pepper (verified)
   {
     id: 'sweet-cherry-pepper-33',
     name: 'Sweet Cherry Pepper',
@@ -299,6 +334,8 @@ export const priceListData = [
       { items: 12, cartons: 3600, packaging: 'Jars 370g', fobCarton: '$14.07' }
     ]
   },
+
+  // product-36 — Green Pepper (needs confirmation)
   {
     id: 'green-pepper-unverified-36',
     name: 'Green Pepper',
@@ -315,6 +352,8 @@ export const priceListData = [
       { items: 4, cartons: 1070, packaging: 'PET Plastic', fobCarton: '$10.87' }
     ]
   },
+
+  // product-40 — Pepperoncini Pepper (verified)
   {
     id: 'pepperoncini-pepper-40',
     name: 'Pepperoncini Pepper',
@@ -331,7 +370,10 @@ export const priceListData = [
       { items: 4, cartons: 1070, packaging: 'PET Plastic', fobCarton: '$11.19' }
     ]
   },
-  // C) صور الخضروات والفاكهة المجمدة — Frozen IQF
+
+  // ========== C) Frozen IQF ==========
+
+  // product-2 — Molokhia (needs confirmation)
   {
     id: 'molokhia-unverified-2',
     name: 'Molokhia',
@@ -341,9 +383,11 @@ export const priceListData = [
     price_source: 'Bezrah Price List May 2026',
     verification_status: 'needs_manual_confirmation',
     variants: [
-      { items: '-', cartons: 2500, packaging: 'Carton bulk (10 kg)', fobCarton: '$1023.25' }
+      { items: 1, cartons: 2500, packaging: 'Carton bulk 10 kg', fobCarton: '$1,023.25' }
     ]
   },
+
+  // product-3 — Spinach (verified)
   {
     id: 'spinach-3',
     name: 'Spinach',
@@ -353,9 +397,11 @@ export const priceListData = [
     price_source: 'Bezrah Price List May 2026',
     verification_status: 'verified_from_visual_reference',
     variants: [
-      { items: '-', cartons: 2500, packaging: 'Carton bulk (10 kg)', fobCarton: 'On request' }
+      { items: 1, cartons: 2500, packaging: 'Carton bulk 10 kg', fobCarton: 'On request' }
     ]
   },
+
+  // product-7 — Cauliflower (verified)
   {
     id: 'cauliflower-7',
     name: 'Cauliflower',
@@ -365,9 +411,11 @@ export const priceListData = [
     price_source: 'Bezrah Price List May 2026',
     verification_status: 'verified_from_visual_reference',
     variants: [
-      { items: '-', cartons: 1800, packaging: 'Carton bulk (10 kg)', fobCarton: '$1087.21' }
+      { items: 1, cartons: 1800, packaging: 'Carton bulk 10 kg', fobCarton: '$1,087.21' }
     ]
   },
+
+  // product-9 — Peach (verified)
   {
     id: 'peach-9',
     name: 'Peach',
@@ -377,9 +425,11 @@ export const priceListData = [
     price_source: 'Bezrah Price List May 2026',
     verification_status: 'verified_from_visual_reference',
     variants: [
-      { items: '-', cartons: 2500, packaging: 'Carton bulk (10 kg)', fobCarton: 'On request' }
+      { items: 1, cartons: 2500, packaging: 'Carton bulk 10 kg', fobCarton: 'On request' }
     ]
   },
+
+  // product-11 — Sweet Corn (needs confirmation)
   {
     id: 'sweet-corn-unverified-11',
     name: 'Sweet Corn',
@@ -389,9 +439,11 @@ export const priceListData = [
     price_source: 'Bezrah Price List May 2026',
     verification_status: 'needs_manual_confirmation',
     variants: [
-      { items: '-', cartons: 2500, packaging: 'Carton bulk (10 kg)', fobCarton: '$1790.70' }
+      { items: 1, cartons: 2500, packaging: 'Carton bulk 10 kg', fobCarton: '$1,790.70' }
     ]
   },
+
+  // product-12 — Mango (verified)
   {
     id: 'mango-12',
     name: 'Mango',
@@ -401,9 +453,11 @@ export const priceListData = [
     price_source: 'Bezrah Price List May 2026',
     verification_status: 'verified_from_visual_reference',
     variants: [
-      { items: '-', cartons: 2500, packaging: 'Carton bulk (10 kg)', fobCarton: '$1918.61' }
+      { items: 1, cartons: 2500, packaging: 'Carton bulk 10 kg', fobCarton: '$1,918.61' }
     ]
   },
+
+  // product-13 — Broccoli (verified)
   {
     id: 'broccoli-13',
     name: 'Broccoli',
@@ -413,9 +467,11 @@ export const priceListData = [
     price_source: 'Bezrah Price List May 2026',
     verification_status: 'verified_from_visual_reference',
     variants: [
-      { items: '-', cartons: 1800, packaging: 'Carton bulk (10 kg)', fobCarton: '$1215.12' }
+      { items: 1, cartons: 1800, packaging: 'Carton bulk 10 kg', fobCarton: '$1,215.12' }
     ]
   },
+
+  // product-14 — Sweet Corn (verified)
   {
     id: 'sweet-corn-14',
     name: 'Sweet Corn',
@@ -425,9 +481,11 @@ export const priceListData = [
     price_source: 'Bezrah Price List May 2026',
     verification_status: 'verified_from_visual_reference',
     variants: [
-      { items: '-', cartons: 2500, packaging: 'Carton bulk (10 kg)', fobCarton: '$1790.70' }
+      { items: 1, cartons: 2500, packaging: 'Carton bulk 10 kg', fobCarton: '$1,790.70' }
     ]
   },
+
+  // product-16 — Strawberry (verified)
   {
     id: 'strawberry-16',
     name: 'Strawberry',
@@ -437,9 +495,25 @@ export const priceListData = [
     price_source: 'Bezrah Price List May 2026',
     verification_status: 'verified_from_visual_reference',
     variants: [
-      { items: '-', cartons: 2500, packaging: 'Carton bulk (10 kg)', fobCarton: '$1279.07' }
+      { items: 1, cartons: 2500, packaging: 'Carton bulk 10 kg', fobCarton: '$1,279.07' }
     ]
   },
+
+  // product-18 — Mango (verified)
+  {
+    id: 'mango-18',
+    name: 'Mango',
+    category: 'frozen',
+    categoryName: 'Frozen IQF',
+    image: img(18),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'verified_from_visual_reference',
+    variants: [
+      { items: 1, cartons: 2500, packaging: 'Carton bulk 10 kg', fobCarton: '$1,918.61' }
+    ]
+  },
+
+  // product-19 — Green Beans (verified)
   {
     id: 'green-beans-19',
     name: 'Green Beans',
@@ -449,9 +523,39 @@ export const priceListData = [
     price_source: 'Bezrah Price List May 2026',
     verification_status: 'verified_from_visual_reference',
     variants: [
-      { items: '-', cartons: 2500, packaging: 'Carton bulk (10 kg)', fobCarton: '$1151.16' }
+      { items: 1, cartons: 2500, packaging: 'Carton bulk 10 kg', fobCarton: '$1,151.16' }
     ]
   },
+
+  // product-21 — Spinach (verified)
+  {
+    id: 'spinach-21',
+    name: 'Spinach',
+    category: 'frozen',
+    categoryName: 'Frozen IQF',
+    image: img(21),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'verified_from_visual_reference',
+    variants: [
+      { items: 1, cartons: 2500, packaging: 'Carton bulk 10 kg', fobCarton: 'On request' }
+    ]
+  },
+
+  // product-22 — Cauliflower (verified)
+  {
+    id: 'cauliflower-22',
+    name: 'Cauliflower',
+    category: 'frozen',
+    categoryName: 'Frozen IQF',
+    image: img(22),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'verified_from_visual_reference',
+    variants: [
+      { items: 1, cartons: 1800, packaging: 'Carton bulk 10 kg', fobCarton: '$1,087.21' }
+    ]
+  },
+
+  // product-24 — Brussels Sprouts (unverified — not in price list)
   {
     id: 'brussels-sprouts-unverified-24',
     name: 'Brussels Sprouts',
@@ -461,9 +565,11 @@ export const priceListData = [
     price_source: 'Bezrah Price List May 2026',
     verification_status: 'needs_manual_confirmation',
     variants: [
-      { items: '-', cartons: 2500, packaging: 'Carton bulk (10 kg)', fobCarton: 'On request' }
+      { items: 1, cartons: 2500, packaging: 'Carton bulk 10 kg', fobCarton: 'On request' }
     ]
   },
+
+  // product-25 — Bell Peppers (verified)
   {
     id: 'bell-peppers-25',
     name: 'Bell Peppers',
@@ -473,9 +579,25 @@ export const priceListData = [
     price_source: 'Bezrah Price List May 2026',
     verification_status: 'verified_from_visual_reference',
     variants: [
-      { items: '-', cartons: 2500, packaging: 'Carton bulk (10 kg)', fobCarton: 'On request' }
+      { items: 1, cartons: 2500, packaging: 'Carton bulk 10 kg', fobCarton: 'On request' }
     ]
   },
+
+  // product-31 — Sweet Corn (verified)
+  {
+    id: 'sweet-corn-31',
+    name: 'Sweet Corn',
+    category: 'frozen',
+    categoryName: 'Frozen IQF',
+    image: img(31),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'verified_from_visual_reference',
+    variants: [
+      { items: 1, cartons: 2500, packaging: 'Carton bulk 10 kg', fobCarton: '$1,790.70' }
+    ]
+  },
+
+  // product-34 — Okra (verified)
   {
     id: 'okra-34',
     name: 'Okra',
@@ -485,9 +607,11 @@ export const priceListData = [
     price_source: 'Bezrah Price List May 2026',
     verification_status: 'verified_from_visual_reference',
     variants: [
-      { items: '-', cartons: 2500, packaging: 'Carton bulk (10 kg)', fobCarton: '$1279.07' }
+      { items: 1, cartons: 2500, packaging: 'Carton bulk 10 kg', fobCarton: '$1,279.07' }
     ]
   },
+
+  // product-37 — Peas (verified)
   {
     id: 'peas-37',
     name: 'Peas',
@@ -497,9 +621,25 @@ export const priceListData = [
     price_source: 'Bezrah Price List May 2026',
     verification_status: 'verified_from_visual_reference',
     variants: [
-      { items: '-', cartons: 2500, packaging: 'Carton bulk (10 kg)', fobCarton: 'On request' }
+      { items: 1, cartons: 2500, packaging: 'Carton bulk 10 kg', fobCarton: 'On request' }
     ]
   },
+
+  // product-38 — Peach (verified)
+  {
+    id: 'peach-38',
+    name: 'Peach',
+    category: 'frozen',
+    categoryName: 'Frozen IQF',
+    image: img(38),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'verified_from_visual_reference',
+    variants: [
+      { items: 1, cartons: 2500, packaging: 'Carton bulk 10 kg', fobCarton: 'On request' }
+    ]
+  },
+
+  // product-39 — Artichokes (verified)
   {
     id: 'artichokes-39',
     name: 'Artichokes',
@@ -509,41 +649,90 @@ export const priceListData = [
     price_source: 'Bezrah Price List May 2026',
     verification_status: 'verified_from_visual_reference',
     variants: [
-      { items: '-', cartons: 2500, packaging: 'Carton bulk (10 kg)', fobCarton: '$1087.21' }
+      { items: 1, cartons: 2500, packaging: 'Carton bulk 10 kg', fobCarton: '$1,087.21' }
     ]
   },
-  // D) صور تحتاج مراجعة يدوية (Extra unverified without clear matched names)
+
+  // product-41 — Strawberry (verified)
   {
-    id: 'product-1-unverified',
-    name: 'Unknown (Peas/Pepper like)',
+    id: 'strawberry-41',
+    name: 'Strawberry',
+    category: 'frozen',
+    categoryName: 'Frozen IQF',
+    image: img(41),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'verified_from_visual_reference',
+    variants: [
+      { items: 1, cartons: 2500, packaging: 'Carton bulk 10 kg', fobCarton: '$1,279.07' }
+    ]
+  },
+
+  // product-42 — Broccoli (verified)
+  {
+    id: 'broccoli-42',
+    name: 'Broccoli',
+    category: 'frozen',
+    categoryName: 'Frozen IQF',
+    image: img(42),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'verified_from_visual_reference',
+    variants: [
+      { items: 1, cartons: 1800, packaging: 'Carton bulk 10 kg', fobCarton: '$1,215.12' }
+    ]
+  },
+
+  // product-44 — Molokhia (verified)
+  {
+    id: 'molokhia-44',
+    name: 'Molokhia',
+    category: 'frozen',
+    categoryName: 'Frozen IQF',
+    image: img(44),
+    price_source: 'Bezrah Price List May 2026',
+    verification_status: 'verified_from_visual_reference',
+    variants: [
+      { items: 1, cartons: 2500, packaging: 'Carton bulk 10 kg', fobCarton: '$1,023.25' }
+    ]
+  },
+
+  // ========== D) Unverified ==========
+
+  // product-1 — Unknown (looks like peas/pepper pod)
+  {
+    id: 'unknown-unverified-1',
+    name: 'Peas / Pepper Pod',
     category: 'unverified',
     categoryName: 'Unverified / Needs Manual Confirmation',
     image: img(1),
     price_source: 'Bezrah Price List May 2026',
     verification_status: 'needs_manual_confirmation',
     variants: [
-      { items: '-', cartons: '-', packaging: 'Unknown', fobCarton: 'On request' }
+      { items: 1, cartons: 0, packaging: 'TBD', fobCarton: 'On request' }
     ]
   },
+
+  // product-4 — Unknown (looks like eggplant)
   {
-    id: 'product-4-unverified',
-    name: 'Unknown (Eggplant like)',
+    id: 'unknown-unverified-4',
+    name: 'Eggplant',
     category: 'unverified',
     categoryName: 'Unverified / Needs Manual Confirmation',
     image: img(4),
     price_source: 'Bezrah Price List May 2026',
     verification_status: 'needs_manual_confirmation',
     variants: [
-      { items: '-', cartons: '-', packaging: 'Unknown', fobCarton: 'On request' }
+      { items: 1, cartons: 0, packaging: 'TBD', fobCarton: 'On request' }
     ]
   }
 ];
+
+// ========== Helper functions ==========
 
 const defaultVariant = (group) => group.variants[0]
 
 const isListedPrice = (value) => {
   const text = String(value || '').trim()
-  return text !== '' && text !== '-'
+  return text !== '' && text !== '-' && text !== 'On request'
 }
 
 export const displayPrice = (product) => {
