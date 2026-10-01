@@ -53,8 +53,7 @@
     <section id="products" class="home-products">
       <div class="container">
         <div class="home-section-head">
-          <p class="section-kicker">{{ $t('hero.products') }}</p>
-          <h2>{{ $t('home.productsTitle') }}</h2>
+          <h2>{{ $t('hero.products') }}</h2>
           <p>{{ $t('home.productsIntro') }}</p>
         </div>
 
@@ -522,32 +521,49 @@ const packageCards = computed(() => [
   display: grid;
   max-width: 840px;
   grid-template-columns: repeat(4, minmax(120px, 1fr));
-  gap: 1px;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 8px;
+  gap: 16px;
   margin: 42px 0 0;
-  background: rgba(255, 255, 255, 0.14);
 }
 
 .home-hero__stat {
-  padding: 18px;
-  background: rgba(20, 45, 18, 0.38);
-  backdrop-filter: blur(12px);
+  padding: 24px 20px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.home-hero__stat:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-2px);
 }
 
 .home-hero__stat dt {
   color: #fff;
-  font-family: var(--font-display);
-  font-size: 1.65rem;
-  font-weight: 800;
-  line-height: 1;
+  font-family: var(--font-body);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+[dir='rtl'] .home-hero__stat dt {
+  font-family: var(--font-arBody);
 }
 
 .home-hero__stat dd {
-  margin: 8px 0 0;
-  color: rgba(255, 255, 255, 0.76);
-  font-size: 0.88rem;
+  margin: 6px 0 0;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+[dir='rtl'] .home-hero__stat dd {
+  font-family: var(--font-arBody);
 }
 
 .home-about,
