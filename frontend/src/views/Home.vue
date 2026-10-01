@@ -53,27 +53,24 @@
     <section id="products" class="home-products">
       <div class="container">
         <div class="home-section-head">
-          <p class="section-kicker">{{ $t('hero.products') }}</p>
-          <h2>{{ $t('home.productsTitle') }}</h2>
+          <h2 class="products-main-title">{{ $t('hero.products') || 'Our Products' }}</h2>
           <p>{{ $t('home.productsIntro') }}</p>
         </div>
 
-        <div class="category-grid">
-          <router-link
-            v-for="category in categoryCards"
-            :key="category.to"
-            :to="category.to"
-            class="category-card"
-            :style="{ '--category-accent': category.accent }"
+        <div class="all-products-grid">
+          <div
+            v-for="product in allUniqueImages"
+            :key="product.image"
+            class="product-item-card"
           >
-            <img :src="category.image" :alt="category.title" loading="lazy" />
-            <span class="category-card__shade" aria-hidden="true"></span>
-            <span class="category-card__content">
-              <span class="category-card__count">{{ category.count }} {{ $t('home.productCount') }}</span>
-              <span class="category-card__title">{{ category.title }}</span>
-              <span class="category-card__text">{{ category.description }}</span>
-            </span>
-          </router-link>
+            <div class="product-item-img-wrapper">
+              <img :src="product.image" :alt="product.name" loading="lazy" />
+            </div>
+            <div class="product-item-info">
+              <h3 class="product-item-name">{{ product.name }}</h3>
+              <p class="product-item-price">{{ product.price }}</p>
+            </div>
+          </div>
         </div>
 
         <div class="home-products__footer">
@@ -285,18 +282,11 @@
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { brandPdfConfig } from '../config/contact'
-import { catalogProducts } from '../data/priceList'
+import { catalogProducts, displayPrice } from '../data/priceList'
 
 const { t } = useI18n()
 
 const showBrandBrief = computed(() => brandPdfConfig.isExplicitlyConfigured)
-
-const productCounts = computed(() =>
-  catalogProducts.reduce((counts, product) => {
-    counts[product.category] = (counts[product.category] || 0) + 1
-    return counts
-  }, {})
-)
 
 const heroStats = computed(() => [
   { value: '2022', label: t('home.estab') },
@@ -311,40 +301,50 @@ const aboutPoints = computed(() => [
   t('home.aboutPointThree'),
 ])
 
-const categoryCards = computed(() => [
-  {
-    to: '/products/pickles',
-    title: t('home.picklesTitle'),
-    description: t('home.picklesDesc'),
-    image: '/images/products/product-28.jpeg',
-    accent: '#A63F2F',
-    count: productCounts.value.pickles || 0,
-  },
-  {
-    to: '/products/olives',
-    title: t('home.olivesTitle'),
-    description: t('home.olivesDesc'),
-    image: '/images/products/product-30.jpeg',
-    accent: '#657A22',
-    count: productCounts.value.olives || 0,
-  },
-  {
-    to: '/products/iqf-vegetables',
-    title: t('home.vegetablesTitle'),
-    description: t('home.vegetablesDesc'),
-    image: '/images/products/product-34.jpeg',
-    accent: '#2B7C69',
-    count: productCounts.value.vegetables || 0,
-  },
-  {
-    to: '/products/iqf-fruits',
-    title: t('home.fruitsTitle'),
-    description: t('home.fruitsDesc'),
-    image: '/images/products/product-41.jpeg',
-    accent: '#B33D58',
-    count: productCounts.value.fruits || 0,
-  },
-])
+const allUniqueImages = computed(() => {
+  const imagesSet = new Set();
+  const productsList = [];
+  
+  catalogProducts.forEach(p => {
+    if (!imagesSet.has(p.image)) {
+      imagesSet.add(p.image);
+      const priceObj = displayPrice(p);
+      const priceStr = priceObj.amount !== 'On request' 
+        ? `${priceObj.amount} ${priceObj.unit}` 
+        : 'On request';
+        
+      productsList.push({
+        image: p.image,
+        name: p.name,
+        price: priceStr
+      });
+    }
+  });
+
+  const missingNames = {
+    18: 'Mango Cubes',
+    21: 'Frozen Minced Spinach',
+    22: 'Frozen Cauliflower',
+    31: 'Sweet Corn Kernels',
+    38: 'Frozen Peach Halves',
+    41: 'Frozen Strawberries',
+    42: 'Frozen Broccoli',
+    44: 'Frozen Minced Molokhia'
+  };
+
+  for(let i = 1; i <= 44; i++) {
+    const imgPath = `/images/products/product-${i}.jpeg`;
+    if (!imagesSet.has(imgPath)) {
+      productsList.push({
+        image: imgPath,
+        name: missingNames[i] || `Product ${i}`,
+        price: 'On request'
+      });
+    }
+  }
+
+  return productsList;
+});
 
 const capabilities = computed(() => [
   t('home.plCapab1'),
@@ -677,88 +677,77 @@ const packageCards = computed(() => [
   font-size: 1.05rem;
 }
 
-.category-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
-}
-
-.category-card {
-  position: relative;
-  display: flex;
-  min-height: 330px;
-  overflow: hidden;
-  align-items: flex-end;
-  border-radius: 8px;
-  color: #fff;
-  isolation: isolate;
-}
-
-.category-card img,
-.category-card__shade {
-  position: absolute;
-  inset: 0;
-}
-
-.category-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 480ms ease;
-}
-
-.category-card__shade {
-  z-index: 1;
-  background: rgba(23, 47, 18, 0.42);
-}
-
-.category-card::before {
-  position: absolute;
-  inset-inline: 0;
-  inset-block-end: 0;
-  z-index: 2;
-  height: 7px;
-  background: var(--category-accent);
-  content: '';
-}
-
-.category-card__content {
-  position: relative;
-  z-index: 3;
-  display: grid;
-  gap: 10px;
-  padding: 24px;
-}
-
-.category-card__count {
-  width: max-content;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.9);
-  color: var(--color-forest);
-  padding: 6px 10px;
-  font-size: 0.82rem;
-  font-weight: 800;
-}
-
-.category-card__title {
+.products-main-title {
   font-family: var(--font-display);
-  font-size: 1.55rem;
-  font-weight: 800;
+  font-size: 3.2rem;
+  color: var(--color-forest);
+  margin: 0 0 16px;
   line-height: 1.1;
 }
 
-[dir='rtl'] .category-card__title {
+[dir='rtl'] .products-main-title {
   font-family: var(--font-ar-display);
 }
 
-.category-card__text {
-  color: rgba(255, 255, 255, 0.84);
-  font-size: 0.95rem;
-  line-height: 1.55;
+.all-products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
 }
 
-.category-card:hover img {
-  transform: scale(1.06);
+.product-item-card {
+  background: #fff;
+  border: 1px solid rgba(54, 82, 39, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.product-item-img-wrapper {
+  height: 160px;
+  overflow: hidden;
+  background: var(--color-cream);
+}
+
+.product-item-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-item-card:hover .product-item-img-wrapper img {
+  transform: scale(1.08);
+}
+
+.product-item-info {
+  padding: 16px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-item-name {
+  font-size: 1rem;
+  margin: 0 0 8px;
+  color: var(--color-forest);
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.product-item-price {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--color-leaf);
+  margin: 0;
 }
 
 .home-products__footer {
@@ -1155,7 +1144,7 @@ const packageCards = computed(() => [
     grid-template-columns: 1fr;
   }
 
-  .category-grid {
+  .all-products-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1239,7 +1228,7 @@ const packageCards = computed(() => [
     width: 100%;
   }
 
-  .category-grid,
+  .all-products-grid,
   .markets-grid,
   .markets-stats,
   .identity-grid {
@@ -1249,20 +1238,16 @@ const packageCards = computed(() => [
   .identity-card--full {
     grid-column: auto;
   }
-
-  .category-card {
-    min-height: 290px;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .action-link,
-  .category-card img {
+  .product-item-img-wrapper img {
     transition: none;
   }
 
   .action-link:hover,
-  .category-card:hover img {
+  .product-item-card:hover .product-item-img-wrapper img {
     transform: none;
   }
 }
