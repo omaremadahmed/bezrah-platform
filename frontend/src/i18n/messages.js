@@ -36,7 +36,7 @@ const messages = {
       unavailable: 'Not configured yet',
     },
     hero: {
-      title: 'Mediterranean agriculture, prepared for global markets.',
+      title: 'From Mediterranean farms to global markets.',
       subtitle:
         'Bezrah grows, sources, prepares, and exports olives, pickles, IQF vegetables, and IQF fruits with a clear focus on quality, traceability, and reliable supply.',
       eyebrow: 'Bezrah Food Industries',

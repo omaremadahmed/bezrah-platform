@@ -441,18 +441,6 @@ export const priceListData = [
     ]
   },
   {
-    id: 'mango-18',
-    name: 'Mango',
-    category: 'frozen',
-    categoryName: 'Frozen IQF',
-    image: img(18),
-    price_source: 'Bezrah Price List May 2026',
-    verification_status: 'verified_from_visual_reference',
-    variants: [
-      { items: '-', cartons: 2500, packaging: 'Carton bulk (10 kg)', fobCarton: '$1918.61' }
-    ]
-  },
-  {
     id: 'green-beans-19',
     name: 'Green Beans',
     category: 'frozen',
@@ -462,30 +450,6 @@ export const priceListData = [
     verification_status: 'verified_from_visual_reference',
     variants: [
       { items: '-', cartons: 2500, packaging: 'Carton bulk (10 kg)', fobCarton: '$1151.16' }
-    ]
-  },
-  {
-    id: 'spinach-21',
-    name: 'Spinach',
-    category: 'frozen',
-    categoryName: 'Frozen IQF',
-    image: img(21),
-    price_source: 'Bezrah Price List May 2026',
-    verification_status: 'verified_from_visual_reference',
-    variants: [
-      { items: '-', cartons: 2500, packaging: 'Carton bulk (10 kg)', fobCarton: 'On request' }
-    ]
-  },
-  {
-    id: 'cauliflower-22',
-    name: 'Cauliflower',
-    category: 'frozen',
-    categoryName: 'Frozen IQF',
-    image: img(22),
-    price_source: 'Bezrah Price List May 2026',
-    verification_status: 'verified_from_visual_reference',
-    variants: [
-      { items: '-', cartons: 1800, packaging: 'Carton bulk (10 kg)', fobCarton: '$1087.21' }
     ]
   },
   {
@@ -513,18 +477,6 @@ export const priceListData = [
     ]
   },
   {
-    id: 'sweet-corn-31',
-    name: 'Sweet Corn',
-    category: 'frozen',
-    categoryName: 'Frozen IQF',
-    image: img(31),
-    price_source: 'Bezrah Price List May 2026',
-    verification_status: 'verified_from_visual_reference',
-    variants: [
-      { items: '-', cartons: 2500, packaging: 'Carton bulk (10 kg)', fobCarton: '$1790.70' }
-    ]
-  },
-  {
     id: 'okra-34',
     name: 'Okra',
     category: 'frozen',
@@ -549,18 +501,6 @@ export const priceListData = [
     ]
   },
   {
-    id: 'peach-38',
-    name: 'Peach',
-    category: 'frozen',
-    categoryName: 'Frozen IQF',
-    image: img(38),
-    price_source: 'Bezrah Price List May 2026',
-    verification_status: 'verified_from_visual_reference',
-    variants: [
-      { items: '-', cartons: 2500, packaging: 'Carton bulk (10 kg)', fobCarton: 'On request' }
-    ]
-  },
-  {
     id: 'artichokes-39',
     name: 'Artichokes',
     category: 'frozen',
@@ -570,42 +510,6 @@ export const priceListData = [
     verification_status: 'verified_from_visual_reference',
     variants: [
       { items: '-', cartons: 2500, packaging: 'Carton bulk (10 kg)', fobCarton: '$1087.21' }
-    ]
-  },
-  {
-    id: 'strawberry-41',
-    name: 'Strawberry',
-    category: 'frozen',
-    categoryName: 'Frozen IQF',
-    image: img(41),
-    price_source: 'Bezrah Price List May 2026',
-    verification_status: 'verified_from_visual_reference',
-    variants: [
-      { items: '-', cartons: 2500, packaging: 'Carton bulk (10 kg)', fobCarton: '$1279.07' }
-    ]
-  },
-  {
-    id: 'broccoli-42',
-    name: 'Broccoli',
-    category: 'frozen',
-    categoryName: 'Frozen IQF',
-    image: img(42),
-    price_source: 'Bezrah Price List May 2026',
-    verification_status: 'verified_from_visual_reference',
-    variants: [
-      { items: '-', cartons: 1800, packaging: 'Carton bulk (10 kg)', fobCarton: '$1215.12' }
-    ]
-  },
-  {
-    id: 'molokhia-44',
-    name: 'Molokhia',
-    category: 'frozen',
-    categoryName: 'Frozen IQF',
-    image: img(44),
-    price_source: 'Bezrah Price List May 2026',
-    verification_status: 'verified_from_visual_reference',
-    variants: [
-      { items: '-', cartons: 2500, packaging: 'Carton bulk (10 kg)', fobCarton: '$1023.25' }
     ]
   },
   // D) صور تحتاج مراجعة يدوية (Extra unverified without clear matched names)
