@@ -1,14 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from './views/Home.vue'
-import Login from './views/Login.vue'
-import Register from './views/Register.vue'
 import Products from './views/Products.vue'
 import About from './views/About.vue'
 import Contact from './views/Contact.vue'
 import Export from './views/Export.vue'
 import Quotation from './views/Quotation.vue'
 import Checkout from './views/Checkout.vue'
-import Profile from './views/Profile.vue'
+
 
 const routes = [
   {
@@ -111,22 +109,7 @@ const routes = [
       },
     },
   },
-  {
-    path: '/login',
-    name: 'Login',
-    component: Login,
-    meta: {
-      title: { en: 'Login', ar: 'تسجيل الدخول' },
-    },
-  },
-  {
-    path: '/register',
-    name: 'Register',
-    component: Register,
-    meta: {
-      title: { en: 'Register', ar: 'إنشاء حساب' },
-    },
-  },
+
   {
     path: '/checkout',
     name: 'Checkout',
@@ -153,31 +136,7 @@ const routes = [
       title: { en: 'Terms', ar: 'الشروط' },
     },
   },
-  {
-    path: '/forgot-password',
-    name: 'ForgotPassword',
-    component: () => import('./views/ForgotPassword.vue'),
-    meta: {
-      title: { en: 'Forgot Password', ar: 'استعادة كلمة المرور' },
-    },
-  },
-  {
-    path: '/reset-password',
-    name: 'ResetPassword',
-    component: () => import('./views/ResetPassword.vue'),
-    meta: {
-      title: { en: 'Reset Password', ar: 'إعادة تعيين كلمة المرور' },
-    },
-  },
-  {
-    path: '/profile',
-    name: 'Profile',
-    component: Profile,
-    meta: {
-      requiresAuth: true,
-      title: { en: 'Profile', ar: 'الملف الشخصي' },
-    },
-  }
+
 ]
 
 const router = createRouter({
@@ -188,14 +147,6 @@ const router = createRouter({
   }
 })
 
-// Navigation guard for protected routes
-router.beforeEach((to, from) => {
-  if (to.meta.requiresAuth) {
-    const token = localStorage.getItem('token')
-    if (!token) {
-      return { name: 'Login', query: { redirect: to.fullPath } }
-    }
-  }
-})
+
 
 export default router

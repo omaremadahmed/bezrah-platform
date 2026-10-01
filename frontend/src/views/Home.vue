@@ -43,90 +43,12 @@
           <p>
             {{ $t('brand.body') }}
           </p>
-          <p>
-            {{ $t('brand.brief') }}
-          </p>
-          <ul class="check-list" style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
-            <li>
-              <span aria-hidden="true"></span>
-              <strong>{{ $t('brand.originLabel') }}</strong> {{ $t('brand.originText') }}
-            </li>
-            <li>
-              <span aria-hidden="true"></span>
-              <strong>{{ $t('brand.craftLabel') }}</strong> {{ $t('brand.craftText') }}
-            </li>
-            <li>
-              <span aria-hidden="true"></span>
-              <strong>{{ $t('brand.reachLabel') }}</strong> {{ $t('brand.reachText') }}
-            </li>
-            <li>
-              <span aria-hidden="true"></span>
-              <strong>{{ $t('brand.restraintLabel') }}</strong> {{ $t('brand.restraintText') }}
-            </li>
-          </ul>
+
         </div>
       </div>
     </section>
 
-    <section class="home-philosophy">
-      <div class="container home-philosophy__grid">
-        <div class="home-philosophy__copy" data-aos="fade-up">
-          <p class="section-kicker">{{ $t('philosophy.kicker') }}</p>
-          <h2>{{ $t('philosophy.heading') }}</h2>
-          <p class="home-section-lead">
-            {{ $t('philosophy.lead') }}
-          </p>
-          <div style="margin-top: 32px; display: grid; gap: 24px;">
-            <div>
-              <h4 style="font-size: 0.85rem; letter-spacing: 0.05em; margin: 0 0 8px; color: #3D8740;">{{ $t('philosophy.sentenceShapeTitle') }}</h4>
-              <p style="margin: 0; font-size: 0.95rem;">{{ $t('philosophy.sentenceShapeText') }}</p>
-            </div>
-            <div>
-              <h4 style="font-size: 0.85rem; letter-spacing: 0.05em; margin: 0 0 8px; color: #3D8740;">{{ $t('philosophy.vocabularyTitle') }}</h4>
-              <p style="margin: 0; font-size: 0.95rem;">{{ $t('philosophy.vocabularyText') }}</p>
-            </div>
-            <div>
-              <h4 style="font-size: 0.85rem; letter-spacing: 0.05em; margin: 0 0 8px; color: #3D8740;">{{ $t('philosophy.punctuationTitle') }}</h4>
-              <p style="margin: 0; font-size: 0.95rem;">{{ $t('philosophy.punctuationText') }}</p>
-            </div>
-          </div>
-        </div>
-        <div class="home-philosophy__values" data-aos="fade-up" data-aos-delay="100">
-          <div style="display: grid; gap: 24px;">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding-bottom: 24px; border-bottom: 1px solid rgba(54, 82, 39, 0.1);">
-              <div>
-                <h4 style="font-size: 0.8rem; letter-spacing: 0.05em; margin: 0 0 8px; color: #3D8740;">{{ $t('philosophy.weSoundLike') }}</h4>
-                <p style="margin: 0; font-size: 0.95rem; font-style: italic;">{{ $t('philosophy.example1Good') }}</p>
-              </div>
-              <div>
-                <h4 style="font-size: 0.8rem; letter-spacing: 0.05em; margin: 0 0 8px; color: #A63F2F;">{{ $t('philosophy.notLike') }}</h4>
-                <p style="margin: 0; font-size: 0.95rem; font-style: italic;">{{ $t('philosophy.example1Bad') }}</p>
-              </div>
-            </div>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding-bottom: 24px; border-bottom: 1px solid rgba(54, 82, 39, 0.1);">
-              <div>
-                <h4 style="font-size: 0.8rem; letter-spacing: 0.05em; margin: 0 0 8px; color: #3D8740;">{{ $t('philosophy.weSoundLike') }}</h4>
-                <p style="margin: 0; font-size: 0.95rem; font-style: italic;">{{ $t('philosophy.example2Good') }}</p>
-              </div>
-              <div>
-                <h4 style="font-size: 0.8rem; letter-spacing: 0.05em; margin: 0 0 8px; color: #A63F2F;">{{ $t('philosophy.notLike') }}</h4>
-                <p style="margin: 0; font-size: 0.95rem; font-style: italic;">{{ $t('philosophy.example2Bad') }}</p>
-              </div>
-            </div>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
-              <div>
-                <h4 style="font-size: 0.8rem; letter-spacing: 0.05em; margin: 0 0 8px; color: #3D8740;">{{ $t('philosophy.weSoundLike') }}</h4>
-                <p style="margin: 0; font-size: 0.95rem; font-style: italic;">{{ $t('philosophy.example3Good') }}</p>
-              </div>
-              <div>
-                <h4 style="font-size: 0.8rem; letter-spacing: 0.05em; margin: 0 0 8px; color: #A63F2F;">{{ $t('philosophy.notLike') }}</h4>
-                <p style="margin: 0; font-size: 0.95rem; font-style: italic;">{{ $t('philosophy.example3Bad') }}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+
 
     <section id="products" class="home-products">
       <div class="container">

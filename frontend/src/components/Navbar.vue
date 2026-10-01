@@ -58,14 +58,7 @@
           <span v-if="cartStore.itemCount" class="cart-button__count">{{ cartStore.itemCount }}</span>
         </button>
 
-        <template v-if="!authStore.isAuthenticated">
-          <router-link to="/login" class="nav-link">{{ $t('nav.login') }}</router-link>
-          <router-link to="/register" class="nav-link">{{ $t('nav.register') }}</router-link>
-        </template>
-        <template v-else>
-          <router-link to="/profile" class="nav-link">{{ authStore.user?.full_name || authStore.user?.name || $t('nav.profile') }}</router-link>
-          <button type="button" @click="handleLogout" class="nav-link" style="border: none; background: none; cursor: pointer;">{{ $t('nav.logout') }}</button>
-        </template>
+
         <router-link to="/quotation" class="quote-link">
           {{ $t('nav.requestQuote') }}
         </router-link>
@@ -122,14 +115,7 @@
             {{ cartLabel }} ({{ cartStore.itemCount }})
           </button>
 
-          <template v-if="!authStore.isAuthenticated">
-            <router-link to="/login" class="mobile-nav-link">{{ $t('nav.login') }}</router-link>
-            <router-link to="/register" class="mobile-nav-link">{{ $t('nav.register') }}</router-link>
-          </template>
-          <template v-else>
-            <router-link to="/profile" class="mobile-nav-link">{{ authStore.user?.full_name || authStore.user?.name || $t('nav.profile') }}</router-link>
-            <button type="button" @click="handleLogout" class="mobile-nav-link" style="border: none; background: none; cursor: pointer; text-align: start; width: 100%;">{{ $t('nav.logout') }}</button>
-          </template>
+
         </div>
 
         <router-link to="/quotation" class="mobile-quote-link">
