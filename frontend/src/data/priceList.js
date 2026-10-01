@@ -443,19 +443,6 @@ export const priceListData = [
     ]
   },
 
-  // product-12 — Mango (verified)
-  {
-    id: 'mango-12',
-    name: 'Mango',
-    category: 'frozen',
-    categoryName: 'Frozen IQF',
-    image: img(12),
-    price_source: 'Bezrah Price List May 2026',
-    verification_status: 'verified_from_visual_reference',
-    variants: [
-      { items: 1, cartons: 2500, packaging: 'Carton bulk 10 kg', fobCarton: '$1,918.61' }
-    ]
-  },
 
   // product-13 — Broccoli (verified)
   {
@@ -485,19 +472,6 @@ export const priceListData = [
     ]
   },
 
-  // product-16 — Strawberry (verified)
-  {
-    id: 'strawberry-16',
-    name: 'Strawberry',
-    category: 'frozen',
-    categoryName: 'Frozen IQF',
-    image: img(16),
-    price_source: 'Bezrah Price List May 2026',
-    verification_status: 'verified_from_visual_reference',
-    variants: [
-      { items: 1, cartons: 2500, packaging: 'Carton bulk 10 kg', fobCarton: '$1,279.07' }
-    ]
-  },
 
   // product-18 — Mango (verified)
   {
