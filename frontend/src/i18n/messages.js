@@ -37,6 +37,7 @@ const messages = {
     },
     hero: {
       title: 'From Mediterranean farms to global markets.',
+      tagline: 'From our farms begins quality and reliable supply',
       subtitle:
         'Bezrah grows, sources, prepares, and exports olives, pickles, IQF vegetables, and IQF fruits with a clear focus on quality, traceability, and reliable supply.',
       eyebrow: 'Bezrah Food Industries',
@@ -46,6 +47,14 @@ const messages = {
       offerSubtitle: 'Premium Mediterranean Produce',
       offerDesc:
         'A focused portfolio of farm-origin products prepared for importers, distributors, and private-label partners.',
+    },
+    categories: {
+      all: 'All',
+      'frozen-vegetables': 'Frozen Vegetables',
+      'frozen-fruits': 'Frozen Fruits',
+      olives: 'Olives',
+      peppers: 'Peppers',
+      pickles: 'Pickles',
     },
     home: {
       heroStatOne: 'Established in 2022',
@@ -71,6 +80,8 @@ const messages = {
       vegetablesDesc: 'Frozen vegetables selected for stable quality and consistent handling.',
       fruitsTitle: 'IQF Fruits',
       fruitsDesc: 'Frozen fruit formats for distribution, processing, and private label.',
+      peppersTitle: 'Peppers',
+      peppersDesc: 'Hot and sweet peppers for food-service and retail markets.',
       pdfTitle: 'Bezrah Brand / Company Brief',
       pdfDescription:
         'A concise company and brand reference for partners, distributors, and buyers.',
@@ -146,7 +157,7 @@ const messages = {
       qualityCert: 'Quality Focused',
     },
     brand: {
-      kicker: 'A seed, and a standard.',
+      kicker: '',
       heading: 'From a seed, a whole table.',
       lead: '"Bezrah" — بذرة — is the Arabic word for seed. Everything we make begins there: a single seed, the soil it knew, the hands that picked it, the jar or pack it ends in.',
       body: 'We are a Mediterranean food house exporting frozen vegetables, frozen prepared foods, and traditional pickles to households and food-service kitchens across the United States, the European Union, and Latin America. Our shelves sit between the commodity freezer aisle and the specialty deli.',
@@ -302,6 +313,20 @@ const messages = {
       address: 'Address',
       businessHours: 'Business Hours',
     },
+    about: {
+      heroSubtitle: 'Learn more about our journey, mission, and agricultural excellence.',
+      whoWeAreTitle: 'Who We Are',
+      whoWeAreP1: 'Bezrah\'s story began in 2014, driven by a genuine passion for agriculture and a clear vision to build an integrated system for agricultural products. The journey started with growing casuarina, broccoli, and strawberries and distributing them to factories, committed from day one to sustainable farming practices and development according to the highest quality and specification standards.',
+      whoWeAreP2: 'Because we believe that product quality starts from the seed, we invested years in developing our expertise and understanding modern farming methods, applying them in harmony with our country\'s nature and capabilities to produce crops that combine high quality and sustainability.',
+      whoWeAreP3: 'As our expertise grew, we moved to the manufacturing stage through third-party facilities, under the supervision of a team of specialized engineers, with intensive training and careful monitoring of market requirements, specifications, and international standards.',
+      whoWeAreP4: 'In 2022, a new phase began in our journey with steps into the world of export, moving from raw crop production to offering agricultural and food products prepared and packaged according to the highest global standards, meeting the needs of our clients in local and international markets.',
+      whoWeAreP5: 'Today, we manage over 4,200 acres of fertile farmland, with an annual production capacity of up to 25,000 tons, working through an integrated system that combines modern agriculture, quality, manufacturing, packaging, and export.',
+      whoWeAreP6: 'At Bezrah, we take pride in our commitment to sustainability, quality assurance, continuous development, and supporting agricultural communities. We strive to make every step in our journey an extension of one promise: a trusted product that begins from new land and reaches the world with quality worthy of trust.',
+      missionTitle: 'Our Mission',
+      missionP1: 'We believe that export success depends not only on product quality, but on mastering the entire supply chain. That\'s why we built a specialized system for managing logistics and supply chains that combines specialized expertise and best practices, ensuring operational continuity from farm to final destination, and maintaining product quality and safety at every stage until it reaches our clients around the world efficiently, reliably, and on time.',
+      afterSalesTitle: 'After-Sales Services',
+      afterSalesP1: 'Our responsibility doesn\'t end when our products reach the client. Rather, a new phase of partnership begins, where we commit to providing after-sales services through careful follow-up, quick response, and continuous support, ensuring an integrated experience and a high level of customer satisfaction, building long-term relationships based on trust, quality, and commitment.',
+    },
     legal: {
       privacyTitle: 'Privacy',
       termsTitle: 'Terms',
@@ -383,8 +408,9 @@ const messages = {
     },
     hero: {
       title: 'زراعة متوسطية جاهزة للأسواق العالمية.',
+      tagline: 'من مزارعنا تبدأ الجودة والتوريد الموثوق',
       subtitle:
-        'تعمل بذرة على زراعة وتوريد وتجهيز وتصدير الزيتون والمخللات والخضروات والفواكه المجمدة مع تركيز واضح على الجودة والتتبع واستقرار الإمداد.',
+        'تعمل بذرة على زراعة وتوريد وتجهيز وتصدير الخضروات والفواكه المجمدة والزيتون والمخللات والفلفل مع تركيز دائم على معايير الجودة والاستدامة.',
       eyebrow: 'بذرة للصناعات الغذائية',
       about: 'عن بذرة',
       products: 'منتجاتنا',
@@ -392,6 +418,14 @@ const messages = {
       offerSubtitle: 'منتجات متوسطية مميزة',
       offerDesc:
         'محفظة مركزة من منتجات ذات أصل زراعي مجهزة للمستوردين والموزعين وشركاء العلامات الخاصة.',
+    },
+    categories: {
+      all: 'الجميع',
+      'frozen-vegetables': 'فروزن خضار',
+      'frozen-fruits': 'فروزن فواكه',
+      olives: 'زيتون',
+      peppers: 'فلفل',
+      pickles: 'مخللات',
     },
     home: {
       heroStatOne: 'تأسست عام 2022',
@@ -407,16 +441,18 @@ const messages = {
       aboutPointThree: 'اهتمام بالجودة والتتبع على مستوى الدفعات',
       productsTitle: 'منتجات مهيأة للتجارة.',
       productsIntro:
-        'استكشف الفئات الأربع الأساسية المتاحة من خلال كتالوج بذرة الحالي ومسار طلب عرض السعر.',
+        'استكشف الفئات الخمس الأساسية المتاحة من خلال كتالوج بذرة الحالي ومسار طلب عرض السعر.',
       productCount: 'عنصر في الكتالوج',
-      picklesTitle: 'المخللات',
-      picklesDesc: 'فلفل وخضروات محفوظة بصيغ مناسبة للجملة والتجزئة.',
-      olivesTitle: 'الزيتون',
+      picklesTitle: 'مخللات',
+      picklesDesc: 'فلفل وخضروات محفوظة ومخللة بصيغ مناسبة للجملة والتجزئة.',
+      olivesTitle: 'زيتون',
       olivesDesc: 'زيتون أخضر وأسود وكامل ومخلي ومقطع لخدمات الغذاء والتجزئة.',
-      vegetablesTitle: 'الخضروات المجمدة',
+      vegetablesTitle: 'فروزن خضار',
       vegetablesDesc: 'خضروات مجمدة مختارة لجودة مستقرة وتداول متسق.',
-      fruitsTitle: 'الفواكه المجمدة',
+      fruitsTitle: 'فروزن فواكه',
       fruitsDesc: 'صيغ فواكه مجمدة للتوزيع والتصنيع والعلامات الخاصة.',
+      peppersTitle: 'فلفل',
+      peppersDesc: 'فلفل حار وحلو لأسواق خدمات الغذاء والتجزئة.',
       pdfTitle: 'ملف بذرة التعريفي وهوية الشركة',
       pdfDescription:
         'مرجع موجز للشركة والعلامة التجارية مخصص للشركاء والموزعين والمشترين.',
@@ -491,7 +527,7 @@ const messages = {
       qualityCert: 'تركيز على الجودة',
     },
     brand: {
-      kicker: 'بذرة ومعيار.',
+      kicker: '',
       heading: 'من بذرة، مائدة كاملة.',
       lead: '"بذرة" (Bezrah) هي الكلمة العربية التي تعني بداية الحياة والنمو. ومن هذا المعنى استوحينا اسمنا، لأن كل منتج نقدمه يبدأ ببذرة صغيرة، تنمو في تربة خصبة، ويعتني بها مزارعون بخبرة وشغف، حتى تصل إليكم في أفضل صورة وجودة.',
       body: 'نحن شركة متخصصة في الصناعات الغذائية المتوسطية، ونركز على تصدير الخضروات المجمدة، والأطعمة المجمدة الجاهزة، والمخللات التقليدية. نقدم منتجات تجمع بين أصالة المذاق المتوسطي ومعايير الجودة الحديثة، لنشكل حلقة وصل بين المنتجات التجارية واسعة الانتشار والمنتجات المتخصصة عالية الجودة.\n\nفي "بذرة"، نؤمن بأن الجودة تبدأ من المصدر، ولذلك نحرص على متابعة كل مرحلة من مراحل الإنتاج بعناية، بدايةً من اختيار المواد الخام وحتى وصول المنتج النهائي إلى عملائنا. والنتيجة هي منتجات موثوقة، غنية بالنكهة، وتعكس التراث الغذائي المتوسطي بأفضل صورة.',
@@ -523,6 +559,20 @@ const messages = {
       example2Bad: 'محفوظ في ذروة الطزاجة بعمليتنا الخاصة للتجميد السريع!',
       example3Good: 'مازة. أو طبق جانبي. أو فطور — لسنا متشددين.',
       example3Bad: 'متعدد الاستخدامات ومناسب للعائلة — مثالي لكل مناسبة!',
+    },
+    about: {
+      heroSubtitle: 'تعرف على رحلتنا ومهمتنا وتميزنا الزراعي.',
+      whoWeAreTitle: 'من نحن',
+      whoWeAreP1: 'بدأت حكاية بذرة في عام 2014، من شغف حقيقي بالزراعة وروح واضحة لبناء منظومة متكاملة للمنتجات الزراعية. انطلقت رحلتها بزراعة القاصورينا والبروكلي والفراولة وتوزيعها إلى المصانع، مع الالتزام منذ اليوم الأول بممارسات الزراعة المستدامة وتطويرها وفق أعلى معايير الجودة وأحر المواصفات.',
+      whoWeAreP2: 'ولأننا نؤمن بأن جودة المنتج تبدأ من البذرة، استثمرنا سنوات في تطوير خبراتنا وفهم أساليب الزراعة الحديثة وتطبيقها بما يتناسب مع طبيعة وإمكانات بلدنا، لننتج محاصيل تجمع بين الجودة العالية والاستدامة.',
+      whoWeAreP3: 'ومع تطور خبراتنا انتقلنا إلى مرحلة التصنيع لدى الغير، تحت إشراف فريق من المهندسين المتخصصين، خصوصاً في التدريب مكثف مع متابعة دقيقة لمتطلبات الأسواق والمواصفات والمعايير الدولية.',
+      whoWeAreP4: 'وفي عام 2022، بدأت مرحلة جديدة في مسيرتنا مع خطوات عالم التصدير، للانتقال من إنتاج المحاصيل الخام إلى تقديم منتجات زراعية وغذائية محضرة ومجهزة وفق أعلى المعايير العالمية، على احتياجات عملائنا في الأسواق المحلية والدولية.',
+      whoWeAreP5: 'واليوم، ندير أكثر من 4,200 فدان من الأراضي الزراعية الخصبة، بطاقة إنتاجية سنوية تصل إلى 25,000 طن، ونعمل من خلال منظومة متكاملة تجمع بين الزراعة الحديثة، والجودة، والتصنيع، والتعبئة، والتصدير.',
+      whoWeAreP6: 'في بذرة، نفخر بالتزامنا بالاستدامة، ونضمان للجودة، والتطوير المستمر، ودعم المجتمعات الزراعية. ونسعى أن تكون كل خطوة في رحلتنا امتداداً لوعد واحد: منتج موثوق يبدأ من أرض جديدة ويصل إلى العالم بجودة تستحق الثقة.',
+      missionTitle: 'مهمتنا',
+      missionP1: 'نحن نؤمن أن نجاح التصدير لا يعتمد على جودة المنتج فحسب، بل على إتقان سلسلة التوريد بالكامل. ومن هنا، أنشأنا منظومة متخصصة لإدارة الخدمات اللوجستية وسلاسل الإمداد تجمع بين الخبرات المتخصصة وأفضل الأساليب، لضمان استمرارية العمليات من المزرعة إلى وجهتها النهائية، والحفاظ على جودة المنتج وسلامته في كل مرحلة وصولاً إلى عملائنا في مختلف أنحاء العالم بكفاءة وموثوقية وفي الوقت المناسب.',
+      afterSalesTitle: 'خدمات ما بعد البيع',
+      afterSalesP1: 'لا تنتهي مسؤوليتنا عند وصول منتجاتنا إلى العميل. بل تبدأ مرحلة جديدة من الشراكة، نلتزم بتقديم خدمات ما بعد البيع من خلال متابعة دقيقة، واستجابة سريعة، ودعم مستمر، لضمان تجربة متكاملة ومستوى عالٍ من رضا العملاء، وبناء علاقات طويلة الأمد تقوم على الثقة والجودة والالتزام.',
     },
     markets: {
       kicker: 'الأسواق',

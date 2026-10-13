@@ -42,7 +42,7 @@
             @click="activeCategory = cat.id"
           >
             <span class="filter-icon">{{ cat.icon }}</span>
-            {{ cat.name }}
+            {{ $t('categories.' + cat.id) }}
           </button>
         </div>
 
@@ -57,11 +57,11 @@
           >
             <div class="grid-card-img">
               <img :src="product.image" :alt="product.name" @error.once="$event.target.src = '/images/products/product-1.jpeg'" loading="lazy" />
-              <span class="cat-badge">{{ product.categoryName }}</span>
+              <span class="cat-badge">{{ $te('categories.' + product.category) ? $t('categories.' + product.category) : product.categoryName }}</span>
             </div>
             <div class="grid-card-body">
               <h3>{{ product.name }}</h3>
-              <p class="card-category">{{ product.categoryName }}</p>
+              <p class="card-category">{{ $te('categories.' + product.category) ? $t('categories.' + product.category) : product.categoryName }}</p>
               <div class="card-meta">
                 <span class="card-price">{{ displayPrice(product).amount }}</span>
                 <span class="card-pack">{{ product.packaging }}</span>
@@ -98,7 +98,7 @@
             @click="activePriceCategory = cat.id"
           >
             <span class="filter-icon">{{ cat.icon }}</span>
-            {{ cat.name }}
+            {{ $t('categories.' + cat.id) }}
           </button>
         </div>
 
@@ -127,7 +127,7 @@
                     <button type="button" class="table-add-btn" @click.stop="addPriceGroupToCart(group)">Add to Cart</button>
                   </td>
                   <td v-if="vIndex === 0" :rowspan="group.variants.length" class="category-cell">
-                    <span class="table-cat-badge">{{ group.categoryName }}</span>
+                    <span class="table-cat-badge">{{ $te('categories.' + group.category) ? $t('categories.' + group.category) : group.categoryName }}</span>
                   </td>
                   
                   <!-- Variant Data -->
@@ -172,11 +172,14 @@ const categories = productCategories;
 const categorySlugAliases = {
   all: 'all',
   olives: 'olives',
+  peppers: 'peppers',
   pickles: 'pickles',
-  fruits: 'fruits',
-  'iqf-fruits': 'fruits',
-  vegetables: 'vegetables',
-  'iqf-vegetables': 'vegetables',
+  'frozen-vegetables': 'frozen-vegetables',
+  'frozen-fruits': 'frozen-fruits',
+  fruits: 'frozen-fruits',
+  vegetables: 'frozen-vegetables',
+  'iqf-fruits': 'frozen-fruits',
+  'iqf-vegetables': 'frozen-vegetables',
 };
 
 const resolveRouteCategory = () => {

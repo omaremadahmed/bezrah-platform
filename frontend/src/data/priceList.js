@@ -2,10 +2,11 @@ const img = (n) => `/images/products/product-${n}.jpeg`;
 
 export const productCategories = [
   { id: 'all', name: 'All', icon: '🌿' },
-  { id: 'olives', name: 'Fresh / Pickled Olives', icon: '🫒' },
-  { id: 'peppers', name: 'Fresh / Pickled Peppers', icon: '🌶️' },
-  { id: 'frozen', name: 'Frozen IQF', icon: '❄️' },
-  { id: 'unverified', name: 'Unverified / Needs Manual Confirmation', icon: '⚠️' }
+  { id: 'frozen-vegetables', name: 'Frozen Vegetables', icon: '🥦' },
+  { id: 'frozen-fruits', name: 'Frozen Fruits', icon: '🍓' },
+  { id: 'olives', name: 'Olives', icon: '🫒' },
+  { id: 'peppers', name: 'Peppers', icon: '🌶️' },
+  { id: 'pickles', name: 'Pickles', icon: '🥒' }
 ];
 
 export const priceListData = [
@@ -239,8 +240,8 @@ export const priceListData = [
   {
     id: 'sliced-lombardi-pepper-23',
     name: 'Sliced Lombardi Pepper',
-    category: 'peppers',
-    categoryName: 'Fresh / Pickled Peppers',
+    category: 'pickles',
+    categoryName: 'Pickles',
     image: img(23),
     price_source: 'Bezrah Price List May 2026',
     verification_status: 'verified_from_visual_reference',
@@ -254,7 +255,7 @@ export const priceListData = [
     id: 'banana-pepper-26',
     name: 'Banana Pepper',
     category: 'peppers',
-    categoryName: 'Fresh / Pickled Peppers',
+    categoryName: 'Peppers',
     image: img(26),
     price_source: 'Bezrah Price List May 2026',
     verification_status: 'verified_from_visual_reference',
@@ -271,8 +272,8 @@ export const priceListData = [
   {
     id: 'sliced-green-jalapeno-27',
     name: 'Sliced Green Jalapeño',
-    category: 'peppers',
-    categoryName: 'Fresh / Pickled Peppers',
+    category: 'pickles',
+    categoryName: 'Pickles',
     image: img(27),
     price_source: 'Bezrah Price List May 2026',
     verification_status: 'verified_from_visual_reference',
@@ -391,8 +392,8 @@ export const priceListData = [
   {
     id: 'spinach-3',
     name: 'Spinach',
-    category: 'frozen',
-    categoryName: 'Frozen IQF',
+    category: 'frozen-vegetables',
+    categoryName: 'Frozen Vegetables',
     image: img(3),
     price_source: 'Bezrah Price List May 2026',
     verification_status: 'verified_from_visual_reference',
@@ -405,8 +406,8 @@ export const priceListData = [
   {
     id: 'cauliflower-7',
     name: 'Cauliflower',
-    category: 'frozen',
-    categoryName: 'Frozen IQF',
+    category: 'frozen-vegetables',
+    categoryName: 'Frozen Vegetables',
     image: img(7),
     price_source: 'Bezrah Price List May 2026',
     verification_status: 'verified_from_visual_reference',
@@ -419,8 +420,8 @@ export const priceListData = [
   {
     id: 'peach-9',
     name: 'Peach',
-    category: 'frozen',
-    categoryName: 'Frozen IQF',
+    category: 'frozen-fruits',
+    categoryName: 'Frozen Fruits',
     image: img(9),
     price_source: 'Bezrah Price List May 2026',
     verification_status: 'verified_from_visual_reference',
@@ -448,8 +449,8 @@ export const priceListData = [
   {
     id: 'broccoli-13',
     name: 'Broccoli',
-    category: 'frozen',
-    categoryName: 'Frozen IQF',
+    category: 'frozen-vegetables',
+    categoryName: 'Frozen Vegetables',
     image: img(13),
     price_source: 'Bezrah Price List May 2026',
     verification_status: 'verified_from_visual_reference',
@@ -462,8 +463,8 @@ export const priceListData = [
   {
     id: 'sweet-corn-14',
     name: 'Sweet Corn',
-    category: 'frozen',
-    categoryName: 'Frozen IQF',
+    category: 'frozen-vegetables',
+    categoryName: 'Frozen Vegetables',
     image: img(14),
     price_source: 'Bezrah Price List May 2026',
     verification_status: 'verified_from_visual_reference',
@@ -477,8 +478,8 @@ export const priceListData = [
   {
     id: 'mango-18',
     name: 'Mango',
-    category: 'frozen',
-    categoryName: 'Frozen IQF',
+    category: 'frozen-fruits',
+    categoryName: 'Frozen Fruits',
     image: img(18),
     price_source: 'Bezrah Price List May 2026',
     verification_status: 'verified_from_visual_reference',
@@ -491,8 +492,8 @@ export const priceListData = [
   {
     id: 'green-beans-19',
     name: 'Green Beans',
-    category: 'frozen',
-    categoryName: 'Frozen IQF',
+    category: 'frozen-vegetables',
+    categoryName: 'Frozen Vegetables',
     image: img(19),
     price_source: 'Bezrah Price List May 2026',
     verification_status: 'verified_from_visual_reference',
@@ -505,8 +506,8 @@ export const priceListData = [
   {
     id: 'spinach-21',
     name: 'Spinach',
-    category: 'frozen',
-    categoryName: 'Frozen IQF',
+    category: 'frozen-vegetables',
+    categoryName: 'Frozen Vegetables',
     image: img(21),
     price_source: 'Bezrah Price List May 2026',
     verification_status: 'verified_from_visual_reference',
@@ -519,8 +520,8 @@ export const priceListData = [
   {
     id: 'cauliflower-22',
     name: 'Cauliflower',
-    category: 'frozen',
-    categoryName: 'Frozen IQF',
+    category: 'frozen-vegetables',
+    categoryName: 'Frozen Vegetables',
     image: img(22),
     price_source: 'Bezrah Price List May 2026',
     verification_status: 'verified_from_visual_reference',
@@ -547,8 +548,8 @@ export const priceListData = [
   {
     id: 'bell-peppers-25',
     name: 'Bell Peppers',
-    category: 'frozen',
-    categoryName: 'Frozen IQF',
+    category: 'frozen-vegetables',
+    categoryName: 'Frozen Vegetables',
     image: img(25),
     price_source: 'Bezrah Price List May 2026',
     verification_status: 'verified_from_visual_reference',
@@ -561,8 +562,8 @@ export const priceListData = [
   {
     id: 'sweet-corn-31',
     name: 'Sweet Corn',
-    category: 'frozen',
-    categoryName: 'Frozen IQF',
+    category: 'frozen-vegetables',
+    categoryName: 'Frozen Vegetables',
     image: img(31),
     price_source: 'Bezrah Price List May 2026',
     verification_status: 'verified_from_visual_reference',
@@ -575,8 +576,8 @@ export const priceListData = [
   {
     id: 'okra-34',
     name: 'Okra',
-    category: 'frozen',
-    categoryName: 'Frozen IQF',
+    category: 'frozen-vegetables',
+    categoryName: 'Frozen Vegetables',
     image: img(34),
     price_source: 'Bezrah Price List May 2026',
     verification_status: 'verified_from_visual_reference',
@@ -589,8 +590,8 @@ export const priceListData = [
   {
     id: 'peas-37',
     name: 'Peas',
-    category: 'frozen',
-    categoryName: 'Frozen IQF',
+    category: 'frozen-vegetables',
+    categoryName: 'Frozen Vegetables',
     image: img(37),
     price_source: 'Bezrah Price List May 2026',
     verification_status: 'verified_from_visual_reference',
@@ -603,8 +604,8 @@ export const priceListData = [
   {
     id: 'peach-38',
     name: 'Peach',
-    category: 'frozen',
-    categoryName: 'Frozen IQF',
+    category: 'frozen-fruits',
+    categoryName: 'Frozen Fruits',
     image: img(38),
     price_source: 'Bezrah Price List May 2026',
     verification_status: 'verified_from_visual_reference',
@@ -617,8 +618,8 @@ export const priceListData = [
   {
     id: 'artichokes-39',
     name: 'Artichokes',
-    category: 'frozen',
-    categoryName: 'Frozen IQF',
+    category: 'frozen-vegetables',
+    categoryName: 'Frozen Vegetables',
     image: img(39),
     price_source: 'Bezrah Price List May 2026',
     verification_status: 'verified_from_visual_reference',
@@ -631,8 +632,8 @@ export const priceListData = [
   {
     id: 'strawberry-41',
     name: 'Strawberry',
-    category: 'frozen',
-    categoryName: 'Frozen IQF',
+    category: 'frozen-fruits',
+    categoryName: 'Frozen Fruits',
     image: img(41),
     price_source: 'Bezrah Price List May 2026',
     verification_status: 'verified_from_visual_reference',
@@ -645,8 +646,8 @@ export const priceListData = [
   {
     id: 'broccoli-42',
     name: 'Broccoli',
-    category: 'frozen',
-    categoryName: 'Frozen IQF',
+    category: 'frozen-vegetables',
+    categoryName: 'Frozen Vegetables',
     image: img(42),
     price_source: 'Bezrah Price List May 2026',
     verification_status: 'verified_from_visual_reference',
@@ -659,8 +660,8 @@ export const priceListData = [
   {
     id: 'molokhia-44',
     name: 'Molokhia',
-    category: 'frozen',
-    categoryName: 'Frozen IQF',
+    category: 'frozen-vegetables',
+    categoryName: 'Frozen Vegetables',
     image: img(44),
     price_source: 'Bezrah Price List May 2026',
     verification_status: 'verified_from_visual_reference',

@@ -48,16 +48,6 @@
         <button class="language-toggle" type="button" @click="toggleLocale">
           {{ $t('common.switchLanguage') }}
         </button>
-        <button class="cart-button" type="button" :aria-label="cartAriaLabel" @click="cartStore.toggleCart">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M6 6h15l-1.7 8.5H8L6 3H3" />
-            <circle cx="9" cy="20" r="1.6" />
-            <circle cx="18" cy="20" r="1.6" />
-          </svg>
-          <span class="cart-button__label">{{ cartLabel }}</span>
-          <span v-if="cartStore.itemCount" class="cart-button__count">{{ cartStore.itemCount }}</span>
-        </button>
-
 
         <router-link to="/quotation" class="quote-link">
           {{ $t('nav.requestQuote') }}
@@ -65,14 +55,6 @@
       </div>
 
       <div class="site-header__mobile-actions">
-        <button class="cart-icon-button" type="button" :aria-label="cartAriaLabel" @click="cartStore.toggleCart">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M6 6h15l-1.7 8.5H8L6 3H3" />
-            <circle cx="9" cy="20" r="1.6" />
-            <circle cx="18" cy="20" r="1.6" />
-          </svg>
-          <span v-if="cartStore.itemCount" class="cart-icon-button__count">{{ cartStore.itemCount }}</span>
-        </button>
         <button class="language-toggle language-toggle--mobile" type="button" @click="toggleLocale">
           {{ locale === 'en' ? 'AR' : 'EN' }}
         </button>
@@ -161,10 +143,11 @@ const navLinks = computed(() => [
 ])
 
 const productLinks = computed(() => [
-  { to: '/products/pickles', label: t('home.picklesTitle') },
+  { to: '/products/frozen-vegetables', label: t('home.vegetablesTitle') },
+  { to: '/products/frozen-fruits', label: t('home.fruitsTitle') },
   { to: '/products/olives', label: t('home.olivesTitle') },
-  { to: '/products/iqf-vegetables', label: t('home.vegetablesTitle') },
-  { to: '/products/iqf-fruits', label: t('home.fruitsTitle') },
+  { to: '/products/peppers', label: t('home.peppersTitle') },
+  { to: '/products/pickles', label: t('home.picklesTitle') },
 ])
 
 const drawerLinks = computed(() => [

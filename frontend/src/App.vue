@@ -89,10 +89,11 @@ const contactLinks = getContactLinks()
 const hasConfiguredContact = hasAnyContactMethod()
 
 const categoryLinks = computed(() => [
-  { to: '/products/pickles', label: t('home.picklesTitle') },
+  { to: '/products/frozen-vegetables', label: t('home.vegetablesTitle') },
+  { to: '/products/frozen-fruits', label: t('home.fruitsTitle') },
   { to: '/products/olives', label: t('home.olivesTitle') },
-  { to: '/products/iqf-vegetables', label: t('home.vegetablesTitle') },
-  { to: '/products/iqf-fruits', label: t('home.fruitsTitle') },
+  { to: '/products/peppers', label: t('home.peppersTitle') },
+  { to: '/products/pickles', label: t('home.picklesTitle') },
 ])
 
 const upsertMeta = (selector, attrs) => {

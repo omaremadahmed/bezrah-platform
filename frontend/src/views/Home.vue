@@ -1,41 +1,25 @@
 <template>
   <div class="home-page">
     <section class="home-hero" aria-labelledby="home-hero-title">
-      <img class="home-hero__image" src="/images/products/product-33.jpeg" alt="" />
+      <img class="home-hero__image" src="/images/banners/hero-manufacturing.jpg" alt="" />
       <div class="home-hero__veil" aria-hidden="true"></div>
 
       <div class="container home-hero__content">
-        <p class="section-kicker section-kicker--light">{{ $t('hero.eyebrow') }}</p>
         <h1 id="home-hero-title">{{ $t('hero.title') }}</h1>
+        <p class="home-hero__tagline">{{ $t('hero.tagline') }}</p>
         <p class="home-hero__lead">{{ $t('hero.subtitle') }}</p>
-
-        <div class="home-hero__actions">
-          <router-link to="/quotation" class="action-link action-link--primary">
-            {{ $t('nav.requestQuote') }}
-          </router-link>
-          <router-link to="/products" class="action-link action-link--ghost">
-            {{ $t('common.viewProducts') }}
-          </router-link>
-        </div>
-
-        <dl class="home-hero__stats" aria-label="Bezrah highlights">
-          <div v-for="stat in heroStats" :key="stat.label" class="home-hero__stat">
-            <dt>{{ stat.value }}</dt>
-            <dd>{{ stat.label }}</dd>
-          </div>
-        </dl>
       </div>
     </section>
 
     <section id="about" class="home-about">
       <div class="container home-about__grid">
         <div class="home-about__media" data-aos="fade-up">
-          <img class="home-about__image home-about__image--main" src="/images/products/product-30.jpeg" alt="" />
-          <img class="home-about__image home-about__image--small" src="/images/products/product-23.jpeg" alt="" />
+          <img class="home-about__image home-about__image--main" src="/images/products/about-olives.jpg" alt="" />
+          <img class="home-about__image home-about__image--small" src="/images/products/about-broccoli.jpg" alt="" />
         </div>
 
         <div class="home-about__copy" data-aos="fade-up" data-aos-delay="100">
-          <p class="section-kicker">{{ $t('brand.kicker') }}</p>
+
           <h2>{{ $t('brand.heading') }}</h2>
           <p class="home-section-lead">
             {{ $t('brand.lead') }}
@@ -83,128 +67,7 @@
       </div>
     </section>
 
-    <section class="home-markets">
-      <div class="container">
-        <div class="home-section-head home-markets__head" data-aos="fade-up">
-          <p class="section-kicker">{{ $t('markets.kicker') }}</p>
-          <h2>{{ $t('markets.heading') }}</h2>
-          <p>{{ $t('markets.intro') }}</p>
-        </div>
-        <div class="markets-grid">
-          <div class="market-card" data-aos="fade-up" data-aos-delay="100">
-            <h3>{{ $t('markets.usTitle') }}</h3>
-            <p class="market-card__subtitle">{{ $t('markets.usSubtitle') }}</p>
-            <p class="market-card__desc">{{ $t('markets.usDesc') }}</p>
-          </div>
-          <div class="market-card" data-aos="fade-up" data-aos-delay="200">
-            <h3>{{ $t('markets.euTitle') }}</h3>
-            <p class="market-card__subtitle">{{ $t('markets.euSubtitle') }}</p>
-            <p class="market-card__desc">{{ $t('markets.euDesc') }}</p>
-          </div>
-          <div class="market-card" data-aos="fade-up" data-aos-delay="300">
-            <h3>{{ $t('markets.latamTitle') }}</h3>
-            <p class="market-card__subtitle">{{ $t('markets.latamSubtitle') }}</p>
-            <p class="market-card__desc">{{ $t('markets.latamDesc') }}</p>
-          </div>
-        </div>
 
-        <div class="markets-stats" data-aos="fade-up" data-aos-delay="400">
-          <div class="market-stat">
-            <h4>{{ $t('markets.stat1Value') }}</h4>
-            <p><strong>{{ $t('markets.stat1Title') }}</strong><br/>{{ $t('markets.stat1Desc') }}</p>
-          </div>
-          <div class="market-stat">
-            <h4>{{ $t('markets.stat2Value') }}</h4>
-            <p><strong>{{ $t('markets.stat2Title') }}</strong><br/>{{ $t('markets.stat2Desc') }}</p>
-          </div>
-          <div class="market-stat">
-            <h4>{{ $t('markets.stat3Value') }}</h4>
-            <p><strong>{{ $t('markets.stat3Title') }}</strong><br/>{{ $t('markets.stat3Desc') }}</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="home-identity">
-      <div class="container">
-        <div class="home-section-head home-identity__head" data-aos="fade-up" style="max-width: 800px;">
-          <p class="section-kicker">{{ $t('identity.kicker') }}</p>
-          <h2>{{ $t('identity.heading') }}</h2>
-          <p>{{ $t('identity.intro') }}</p>
-        </div>
-
-        <div class="identity-grid">
-          <div class="identity-card" data-aos="fade-up" data-aos-delay="100">
-            <h3>{{ $t('identity.logoTitle') }}</h3>
-            <p>{{ $t('identity.logoDesc') }}</p>
-            <div class="identity-card__note">
-              <strong>{{ $t('identity.logoNote') }}</strong> {{ $t('identity.logoNoteText') }}
-            </div>
-          </div>
-
-          <div class="identity-card" data-aos="fade-up" data-aos-delay="200">
-            <h3>{{ $t('identity.typoTitle') }}</h3>
-            <ul class="typography-list">
-              <li>
-                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px;">
-                  <strong style="margin: 0;">Cormorant Garamond</strong>
-                  <span style="font-size: 0.7rem; color: #7A4748; letter-spacing: 0.05em; font-weight: 700;">{{ $t('identity.freeGoogleFonts') }}</span>
-                </div>
-                <div style="font-size: 0.75rem; letter-spacing: 0.05em; font-weight: 700; color: #3D8740; margin-bottom: 12px;">{{ $t('identity.cormorantRole') }}</div>
-                <div style="font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: #365227; line-height: 1.2; margin-bottom: 8px;">{{ $t('identity.cormorantSample') }}</div>
-              </li>
-              <li>
-                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px;">
-                  <strong style="margin: 0;">Inter</strong>
-                  <span style="font-size: 0.7rem; color: #7A4748; letter-spacing: 0.05em; font-weight: 700;">{{ $t('identity.freeGoogleFonts') }}</span>
-                </div>
-                <div style="font-size: 0.75rem; letter-spacing: 0.05em; font-weight: 700; color: #3D8740; margin-bottom: 12px;">{{ $t('identity.interRole') }}</div>
-                <p style="font-size: 0.9rem; margin-bottom: 12px; color: rgba(54, 82, 39, 0.85); line-height: 1.5;">{{ $t('identity.interDesc') }}</p>
-              </li>
-              <li>
-                <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px;">
-                  <strong style="margin: 0;">Amiri</strong>
-                  <span style="font-size: 0.7rem; color: #7A4748; letter-spacing: 0.05em; font-weight: 700;">{{ $t('identity.freeGoogleFonts') }}</span>
-                </div>
-                <div style="font-size: 0.75rem; letter-spacing: 0.05em; font-weight: 700; color: #3D8740; margin-bottom: 12px;">{{ $t('identity.amiriRole') }}</div>
-                <div style="font-family: 'Amiri', serif; font-size: 1.8rem; color: #365227; line-height: 1.4; margin-bottom: 12px;" dir="rtl">{{ $t('identity.amiriSample') }}</div>
-                <p style="font-size: 0.85rem; margin-bottom: 12px; color: rgba(54, 82, 39, 0.85); line-height: 1.5;">Amiri Regular: <span style="font-size: 0.7rem; letter-spacing: 0.05em; font-weight: 700; color: #365227;">{{ $t('identity.amiriDesc1Label') }}</span> &nbsp;&nbsp; Noto Naskh Arabic: <span style="font-size: 0.7rem; letter-spacing: 0.05em; font-weight: 700; color: #365227;">{{ $t('identity.amiriDesc2Label') }}</span><br/><br/>
-                <span style="font-size: 0.7rem; letter-spacing: 0.05em; font-weight: 700; color: #365227;">{{ $t('identity.amiriNote') }}</span></p>
-              </li>
-            </ul>
-            <p style="margin-top: 16px; font-size: 0.85rem; color: rgba(54, 82, 39, 0.7); font-style: italic;">{{ $t('identity.typoFootnote') }}</p>
-          </div>
-
-          <div class="identity-card identity-card--full" data-aos="fade-up" data-aos-delay="300">
-            <h3>{{ $t('identity.colorTitle') }}</h3>
-            <div class="palette-grid">
-              <div class="color-swatch" style="--swatch-color: #365227; color: white;">
-                <span>{{ $t('identity.colorForest') }}</span>
-              </div>
-              <div class="color-swatch" style="--swatch-color: #3D8740; color: white;">
-                <span>{{ $t('identity.colorLeaf') }}</span>
-              </div>
-              <div class="color-swatch" style="--swatch-color: #7A4748; color: white;">
-                <span>{{ $t('identity.colorSpring') }}</span>
-              </div>
-              <div class="color-swatch" style="--swatch-color: #F5EDDE; color: var(--color-charcoal);">
-                <span>{{ $t('identity.colorCream') }}</span>
-              </div>
-              <div class="color-swatch" style="--swatch-color: #F4F1E8; color: var(--color-charcoal);">
-                <span>{{ $t('identity.colorBone') }}</span>
-              </div>
-              <div class="color-swatch" style="--swatch-color: #B8633A; color: white;">
-                <span>{{ $t('identity.colorTerracotta') }}</span>
-              </div>
-              <div class="color-swatch" style="--swatch-color: #D9A441; color: white;">
-                <span>{{ $t('identity.colorSaffron') }}</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <section class="home-trade">
       <div class="container home-trade__grid">
@@ -297,12 +160,7 @@ const productCounts = computed(() =>
   }, {})
 )
 
-const heroStats = computed(() => [
-  { value: '2022', label: t('home.estab') },
-  { value: '4', label: t('home.heroStatTwo') },
-  { value: String(catalogProducts.length), label: t('home.productCount') },
-  { value: 'EU / JP', label: t('home.qualityCert') },
-])
+
 
 const aboutPoints = computed(() => [
   t('home.aboutPointOne'),
@@ -312,15 +170,23 @@ const aboutPoints = computed(() => [
 
 const categoryCards = computed(() => [
   {
-    to: '/products',
-    title: t('home.picklesTitle'),
-    description: t('home.picklesDesc'),
-    image: '/images/products/product-28.jpeg',
-    accent: '#A63F2F',
-    count: productCounts.value.peppers || 0,
+    to: '/products/frozen-vegetables',
+    title: t('home.vegetablesTitle'),
+    description: t('home.vegetablesDesc'),
+    image: '/images/products/product-13.jpeg',
+    accent: '#2B7C69',
+    count: productCounts.value['frozen-vegetables'] || 0,
   },
   {
-    to: '/products',
+    to: '/products/frozen-fruits',
+    title: t('home.fruitsTitle'),
+    description: t('home.fruitsDesc'),
+    image: '/images/products/product-41.jpeg',
+    accent: '#B33D58',
+    count: productCounts.value['frozen-fruits'] || 0,
+  },
+  {
+    to: '/products/olives',
     title: t('home.olivesTitle'),
     description: t('home.olivesDesc'),
     image: '/images/products/product-30.jpeg',
@@ -328,20 +194,20 @@ const categoryCards = computed(() => [
     count: productCounts.value.olives || 0,
   },
   {
-    to: '/products',
-    title: t('home.vegetablesTitle'),
-    description: t('home.vegetablesDesc'),
-    image: '/images/products/product-34.jpeg',
-    accent: '#2B7C69',
-    count: productCounts.value.frozen || 0,
+    to: '/products/peppers',
+    title: t('home.peppersTitle'),
+    description: t('home.peppersDesc'),
+    image: '/images/products/product-28.jpeg',
+    accent: '#A63F2F',
+    count: productCounts.value.peppers || 0,
   },
   {
-    to: '/products',
-    title: t('home.fruitsTitle'),
-    description: t('home.fruitsDesc'),
-    image: '/images/products/product-41.jpeg',
-    accent: '#B33D58',
-    count: productCounts.value.frozen || 0,
+    to: '/products/pickles',
+    title: t('home.picklesTitle'),
+    description: t('home.picklesDesc'),
+    image: '/images/products/product-27.jpeg',
+    accent: '#6B8E23',
+    count: productCounts.value.pickles || 0,
   },
 ])
 
@@ -439,11 +305,27 @@ const packageCards = computed(() => [
   font-family: var(--font-ar-display);
 }
 
+.home-hero__tagline {
+  max-width: 750px;
+  margin: 18px 0 0;
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #a3e635;
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+}
+
+[dir='rtl'] .home-hero__tagline {
+  font-family: var(--font-ar-display);
+  font-size: 1.75rem;
+}
+
 .home-hero__lead {
   max-width: 690px;
-  margin: 22px 0 0;
-  color: rgba(255, 255, 255, 0.88);
+  margin: 16px 0 0;
+  color: rgba(255, 255, 255, 0.9);
   font-size: 1.18rem;
+  line-height: 1.6;
 }
 
 .section-kicker {

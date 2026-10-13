@@ -4,55 +4,106 @@
       <div class="page-hero-overlay"></div>
       <div class="page-hero-content container">
         <h1>{{ $t('nav.about') }}</h1>
-        <p>Learn more about our journey, mission, and agricultural excellence.</p>
+        <p>{{ $t('about.heroSubtitle') }}</p>
       </div>
     </div>
 
+    <!-- Who We Are -->
     <section class="container section-padding">
-      <div class="about-grid">
-        <div class="about-text">
-          <h2>Who We Are</h2>
-          <p>Bezrah is a leading global player in agricultural production, specializing in transforming raw crops into premium packaged goods that meet the highest global standards.</p>
-          <p>Established in 2026, we manage over 4,200 acres of fertile farmland and have an annual production capacity of 25,000 tons. We pride ourselves on sustainable practices, quality assurance, and community impact.</p>
+      <div class="about-section">
+        <h2 class="section-title">{{ $t('about.whoWeAreTitle') }}</h2>
+        <div class="about-text-block">
+          <p>{{ $t('about.whoWeAreP1') }}</p>
+          <p>{{ $t('about.whoWeAreP2') }}</p>
+          <p>{{ $t('about.whoWeAreP3') }}</p>
+          <p>{{ $t('about.whoWeAreP4') }}</p>
+          <p>{{ $t('about.whoWeAreP5') }}</p>
+          <p>{{ $t('about.whoWeAreP6') }}</p>
         </div>
-        <div class="about-stats">
-          <div class="about-stat-card">
-            <span class="stat-num">4,200</span>
-            <span class="stat-lbl">Acres Farm</span>
+      </div>
+    </section>
+
+    <!-- Stats strip -->
+    <section class="stats-strip">
+      <div class="container stats-strip__grid">
+        <div class="stats-strip__item">
+          <span class="stats-strip__value">2014</span>
+          <span class="stats-strip__label">{{ $t('home.estab') }}</span>
+        </div>
+        <div class="stats-strip__item">
+          <span class="stats-strip__value">4,200+</span>
+          <span class="stats-strip__label">{{ $t('home.acresFarm') }}</span>
+        </div>
+        <div class="stats-strip__item">
+          <span class="stats-strip__value">25,000</span>
+          <span class="stats-strip__label">{{ $t('home.annualCap') }}</span>
+        </div>
+        <div class="stats-strip__item">
+          <span class="stats-strip__value">20+</span>
+          <span class="stats-strip__label">{{ $t('home.reachTitle') }}</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission -->
+    <section class="container section-padding">
+      <div class="about-section">
+        <div class="mission-grid">
+          <div class="mission-card" data-aos="fade-up">
+            <div class="mission-icon">🎯</div>
+            <h2>{{ $t('about.missionTitle') }}</h2>
+            <p>{{ $t('about.missionP1') }}</p>
           </div>
-          <div class="about-stat-card">
-            <span class="stat-num">25K</span>
-            <span class="stat-lbl">Tons / Year</span>
-          </div>
-          <div class="about-stat-card">
-            <span class="stat-num">20+</span>
-            <span class="stat-lbl">Export Markets</span>
-          </div>
-          <div class="about-stat-card">
-            <span class="stat-num">ISO</span>
-            <span class="stat-lbl">Certified</span>
+          <div class="mission-card" data-aos="fade-up" data-aos-delay="150">
+            <div class="mission-icon">🤝</div>
+            <h2>{{ $t('about.afterSalesTitle') }}</h2>
+            <p>{{ $t('about.afterSalesP1') }}</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="values-section container">
-      <h2 class="section-title">Our Values</h2>
-      <div class="values-grid">
-        <div class="value-card">
-          <div class="value-icon">🌱</div>
-          <h3>Sustainability</h3>
-          <p>We are committed to environmentally responsible farming and manufacturing practices.</p>
-        </div>
-        <div class="value-card">
-          <div class="value-icon">✅</div>
-          <h3>Quality First</h3>
-          <p>Every product undergoes rigorous quality control from farm to final packaging.</p>
-        </div>
-        <div class="value-card">
-          <div class="value-icon">🌍</div>
-          <h3>Global Impact</h3>
-          <p>We export to over 20 markets worldwide, bringing premium food to every table.</p>
+    <!-- Certifications -->
+    <section class="certifications-section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">{{ $t('home.qualityCert') }}</h2>
+        <div class="cert-grid" data-aos="fade-up" data-aos-delay="100">
+          <div class="cert-badge">
+            <div class="cert-badge__icon">
+              <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="28" stroke="#365227" stroke-width="3"/><text x="32" y="36" text-anchor="middle" fill="#365227" font-size="14" font-weight="700">ISO</text></svg>
+            </div>
+            <span>ISO 22000</span>
+          </div>
+          <div class="cert-badge">
+            <div class="cert-badge__icon">
+              <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="28" stroke="#365227" stroke-width="3"/><text x="32" y="36" text-anchor="middle" fill="#365227" font-size="11" font-weight="700">FSSC</text></svg>
+            </div>
+            <span>FSSC 22000</span>
+          </div>
+          <div class="cert-badge">
+            <div class="cert-badge__icon">
+              <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="28" stroke="#365227" stroke-width="3"/><text x="32" y="30" text-anchor="middle" fill="#365227" font-size="8" font-weight="700">GLOBAL</text><text x="32" y="42" text-anchor="middle" fill="#3D8740" font-size="8" font-weight="700">G.A.P</text></svg>
+            </div>
+            <span>GLOBALG.A.P</span>
+          </div>
+          <div class="cert-badge">
+            <div class="cert-badge__icon">
+              <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="28" stroke="#365227" stroke-width="3"/><text x="32" y="36" text-anchor="middle" fill="#365227" font-size="20" font-weight="700">K</text></svg>
+            </div>
+            <span>Kosher</span>
+          </div>
+          <div class="cert-badge">
+            <div class="cert-badge__icon">
+              <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="28" stroke="#365227" stroke-width="3"/><text x="32" y="36" text-anchor="middle" fill="#365227" font-size="10" font-weight="700">HALAL</text></svg>
+            </div>
+            <span>Halal</span>
+          </div>
+          <div class="cert-badge">
+            <div class="cert-badge__icon">
+              <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="28" stroke="#365227" stroke-width="3"/><text x="32" y="36" text-anchor="middle" fill="#365227" font-size="10" font-weight="700">BRC&amp;S</text></svg>
+            </div>
+            <span>BRC&amp;S</span>
+          </div>
         </div>
       </div>
     </section>
@@ -63,106 +114,152 @@
 .about-page { padding-top: 0; }
 
 .page-hero {
-  position: relative; height: 40vh; min-height: 300px; display: flex; align-items: center; justify-content: center;
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%); overflow: hidden;
+  position: relative; height: 30vh; min-height: 220px; display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, #365227 0%, #3D8740 100%); overflow: hidden;
 }
 .page-hero-overlay { position: absolute; inset: 0; background: radial-gradient(circle at 30% 50%, rgba(140, 153, 38, 0.2) 0%, transparent 60%); }
 .page-hero-content { position: relative; z-index: 2; text-align: center; color: white; }
-.page-hero-content h1 { font-size: 3rem; margin-bottom: 10px; color: white; }
+.page-hero-content h1 { font-size: 2.8rem; margin-bottom: 10px; color: white; }
 .page-hero-content p { font-size: 1.1rem; opacity: 0.9; }
 
-.section-padding { padding: 80px 20px; }
+.section-padding { padding: 60px 20px; }
 
-.about-grid {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 60px;
-  align-items: start;
-}
-
-.about-text h2 { font-size: 2.5rem; margin-bottom: 25px; }
-.about-text p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 20px; line-height: 1.8; }
-
-.about-stats {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.about-stat-card {
-  background: white;
-  border: 1px solid var(--border-color);
-  border-radius: 20px;
-  padding: 30px;
+.section-title {
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #365227;
 }
 
-.stat-num {
+.about-section {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-text-block p {
+  font-size: 1.08rem;
+  color: #444;
+  margin-bottom: 22px;
+  line-height: 1.9;
+}
+
+/* Stats Strip */
+.stats-strip {
+  background: #365227;
+  padding: 40px 20px;
+}
+
+.stats-strip__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  text-align: center;
+}
+
+.stats-strip__value {
   display: block;
-  font-size: 2rem;
+  font-size: 2.4rem;
   font-weight: 800;
-  color: var(--primary-color);
-  margin-bottom: 5px;
+  color: #fff;
+  margin-bottom: 4px;
 }
 
-.stat-lbl {
-  font-size: 0.85rem;
-  color: var(--text-muted);
+.stats-strip__label {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.75);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
-.values-section {
-  padding: 0 20px 100px;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 50px;
-}
-
-.values-grid {
+/* Mission Grid */
+.mission-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr;
   gap: 30px;
 }
 
-.value-card {
-  text-align: center;
+.mission-card {
   background: white;
-  padding: 40px 30px;
-  border-radius: 24px;
-  border: 1px solid var(--border-color);
+  padding: 40px 32px;
+  border-radius: 20px;
+  border: 1px solid #e8e4da;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(54, 82, 39, 0.1);
+}
+
+.mission-icon {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+}
+
+.mission-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  color: #365227;
+}
+
+.mission-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.85;
+}
+
+/* Certifications */
+.certifications-section {
+  padding: 60px 20px 80px;
+  background: #f8f6f0;
+}
+
+.cert-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.cert-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
   transition: transform 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
 }
 
-.value-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(15, 76, 58, 0.08);
+.cert-badge:hover {
+  transform: scale(1.08);
 }
 
-.value-icon {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
+.cert-badge__icon {
+  width: 80px;
+  height: 80px;
 }
 
-.value-card h3 {
-  font-size: 1.3rem;
-  margin-bottom: 10px;
+.cert-badge__icon svg {
+  width: 100%;
+  height: 100%;
 }
 
-.value-card p {
-  color: var(--text-muted);
-  line-height: 1.6;
+.cert-badge span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #365227;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
-  .about-grid { grid-template-columns: 1fr; gap: 30px; }
-  .values-grid { grid-template-columns: 1fr; }
-  .page-hero-content h1 { font-size: 2.2rem; }
-  .about-text h2 { font-size: 2rem; }
+  .page-hero-content h1 { font-size: 2rem; }
+  .stats-strip__grid { grid-template-columns: repeat(2, 1fr); }
+  .mission-grid { grid-template-columns: 1fr; }
+  .section-title { font-size: 1.8rem; }
+}
+
+@media (max-width: 480px) {
+  .stats-strip__grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+  .stats-strip__value { font-size: 1.8rem; }
 }
 </style>
