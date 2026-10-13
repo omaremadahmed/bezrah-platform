@@ -52,6 +52,12 @@
             <a v-if="contactLinks.telegram" :href="contactLinks.telegram" target="_blank" rel="noopener noreferrer">
               Telegram
             </a>
+            <a href="https://www.linkedin.com/company/bezrah" target="_blank" rel="noopener noreferrer">
+              LinkedIn
+            </a>
+            <a href="https://www.facebook.com/bezrah" target="_blank" rel="noopener noreferrer">
+              Facebook
+            </a>
           </template>
           <p v-else class="site-footer__muted">{{ $t('footer.missingContact') }}</p>
 
