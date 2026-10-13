@@ -81,14 +81,14 @@ const railItems = computed(() => [
   },
   {
     key: 'linkedin',
-    href: 'https://www.linkedin.com/company/bezrah',
+    href: 'https://www.linkedin.com/company/bizrah.com',
     external: true,
     icon: icons.linkedin,
     tooltip: labels.value.linkedin,
   },
   {
     key: 'facebook',
-    href: 'https://www.facebook.com/bezrah',
+    href: 'https://www.facebook.com/share/18u9uu6wgn/?mibextid=wwXIfr',
     external: true,
     icon: icons.facebook,
     tooltip: labels.value.facebook,
