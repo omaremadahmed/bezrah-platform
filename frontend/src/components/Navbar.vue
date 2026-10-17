@@ -93,11 +93,6 @@
           <router-link v-for="item in drawerLinks" :key="item.to" :to="item.to" class="mobile-nav-link">
             {{ item.label }}
           </router-link>
-          <button type="button" class="mobile-nav-link mobile-nav-link--button" @click="openCartFromDrawer">
-            {{ cartLabel }} ({{ cartStore.itemCount }})
-          </button>
-
-
         </div>
 
         <router-link to="/quotation" class="mobile-quote-link">
@@ -114,23 +109,13 @@ import { useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import Logo from './Logo.vue'
 import { useAuthStore } from '../stores/auth'
-import { useCartStore } from '../stores/cart'
 
 const route = useRoute()
 const router = useRouter()
 const { locale, t } = useI18n()
 const authStore = useAuthStore()
-const cartStore = useCartStore()
 const isScrolled = ref(false)
 const mobileMenuOpen = ref(false)
-
-const cartLabel = computed(() => t('nav.cartShort'))
-const cartAriaLabel = computed(() => `${cartLabel.value} (${cartStore.itemCount})`)
-
-const openCartFromDrawer = () => {
-  closeMobileMenu()
-  cartStore.toggleCart()
-}
 
 const handleLogout = async () => {
   await authStore.logout()

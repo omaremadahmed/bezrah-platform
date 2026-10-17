@@ -52,10 +52,10 @@
             <a v-if="contactLinks.telegram" :href="contactLinks.telegram" target="_blank" rel="noopener noreferrer">
               Telegram
             </a>
-            <a href="https://www.linkedin.com/company/bezrah" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/company/bizrah.com" target="_blank" rel="noopener noreferrer">
               LinkedIn
             </a>
-            <a href="https://www.facebook.com/bezrah" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/share/18u9uu6wgn/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
               Facebook
             </a>
           </template>
